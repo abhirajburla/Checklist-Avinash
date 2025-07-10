@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Matching System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .upload-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .upload-section h3 {
+            color: #555;
+            margin-top: 0;
+        }
+        .file-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .file-info {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .progress-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #28a745;
+            transition: width 0.3s ease;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .results-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+        }
+        .file-list {
+            margin-top: 10px;
+        }
+        .file-item {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Checklist Matching System</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            Upload your construction drawings and specifications to match them against the master checklist
+        </p>
+
+        <form id="uploadForm">
+            <!-- Drawings Upload Section -->
+            <div class="upload-section">
+                <h3>📐 Upload Drawings</h3>
+                <div class="file-info">
+                    Select architectural, structural, mechanical, and electrical drawings (PDF only, max 800MB per file)
+                </div>
+                <input type="file" id="drawings" name="drawings" class="file-input" multiple accept=".pdf">
+                <div class="file-list" id="drawingsList"></div>
+            </div>
+
+            <!-- Specifications Upload Section -->
+            <div class="upload-section">
+                <h3>📋 Upload Specifications</h3>
+                <div class="file-info">
+                    Select project specification documents (PDF only, max 800MB per file)
+                </div>
+                <input type="file" id="specifications" name="specifications" class="file-input" multiple accept=".pdf">
+                <div class="file-list" id="specificationsList"></div>
+            </div>
+
+            <div style="text-align: center;">
+                <button type="button" class="btn" id="uploadDrawingsBtn" style="margin-right: 10px;">
+                    📐 Upload Drawings
+                </button>
+                <button type="button" class="btn" id="uploadSpecsBtn" style="margin-right: 10px;">
+                    📋 Upload Specifications
+                </button>
+                <button type="submit" class="btn" id="processBtn" style="display: none;">
+                    🚀 Process Documents
+                </button>
+            </div>
+        </form>
+
+        <!-- Status Messages -->
+        <div id="status" class="status"></div>
+
+        <!-- Progress Section -->
+        <div class="progress-section" id="progressSection">
+            <h3>Processing Progress</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+            <div id="progressText">Initializing...</div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="resultsSection">
+            <h3>Results</h3>
+            <div id="resultsContent"></div>
+            <button class="btn" id="downloadBtn" style="display: none;">
+                📥 Download Results (JSON)
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const uploadForm = document.getElementById('uploadForm');
+        const uploadDrawingsBtn = document.getElementById('uploadDrawingsBtn');
+        const uploadSpecsBtn = document.getElementById('uploadSpecsBtn');
+        const processBtn = document.getElementById('processBtn');
+        const statusDiv = document.getElementById('status');
+        const progressSection = document.getElementById('progressSection');
+        const resultsSection = document.getElementById('resultsSection');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        
+        let currentProcessId = null;
+        let currentTrackerId = null;
+        let uploadedFiles = { drawings: [], specifications: [] };
+
+        // Handle separate upload buttons
+        uploadDrawingsBtn.addEventListener('click', function() {
+            document.getElementById('drawings').click();
+        });
+
+        uploadSpecsBtn.addEventListener('click', function() {
+            document.getElementById('specifications').click();
+        });
+
+        // Show selected files
+        document.getElementById('drawings').addEventListener('change', function(e) {
+            showFileList(e.target.files, 'drawingsList');
+            uploadedFiles.drawings = Array.from(e.target.files);
+            checkUploadStatus();
+        });
+
+        document.getElementById('specifications').addEventListener('change', function(e) {
+            showFileList(e.target.files, 'specificationsList');
+            uploadedFiles.specifications = Array.from(e.target.files);
+            checkUploadStatus();
+        });
+
+        function checkUploadStatus() {
+            const hasDrawings = uploadedFiles.drawings.length > 0;
+            const hasSpecs = uploadedFiles.specifications.length > 0;
+            
+            if (hasDrawings || hasSpecs) {
+                processBtn.style.display = 'inline-block';
+                showStatus(`Ready to process: ${uploadedFiles.drawings.length} drawings, ${uploadedFiles.specifications.length} specifications`);
+            } else {
+                processBtn.style.display = 'none';
+                hideStatus();
+            }
+        }
+
+        function showFileList(files, listId) {
+            const listDiv = document.getElementById(listId);
+            listDiv.innerHTML = '';
+            
+            Array.from(files).forEach(file => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `📄 ${file.name} (${(file.size / (1024*1024)).toFixed(1)} MB)`;
+                listDiv.appendChild(fileItem);
+            });
+        }
+
+        function showStatus(message, isError = false) {
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${isError ? 'error' : 'success'}`;
+            statusDiv.style.display = 'block';
+        }
+
+        function hideStatus() {
+            statusDiv.style.display = 'none';
+        }
+
+        function showProgress() {
+            progressSection.style.display = 'block';
+            progressFill.style.width = '0%';
+            progressText.textContent = 'Uploading documents...';
+        }
+
+        function updateProgress(percentage, text) {
+            progressFill.style.width = percentage + '%';
+            progressText.textContent = text;
+        }
+
+        processBtn.addEventListener('click', async function(e) {
+            e.preventDefault();
+            console.log('=== PROCESS BUTTON CLICKED ===');
+            
+            if (uploadedFiles.drawings.length === 0 && uploadedFiles.specifications.length === 0) {
+                console.log('No files selected');
+                showStatus('Please select at least one file to upload', true);
+                return;
+            }
+
+            console.log(`Files to upload - Drawings: ${uploadedFiles.drawings.length}, Specifications: ${uploadedFiles.specifications.length}`);
+            
+            const formData = new FormData();
+            uploadedFiles.drawings.forEach(file => {
+                formData.append('drawings', file);
+                console.log(`Added drawing: ${file.name}`);
+            });
+            uploadedFiles.specifications.forEach(file => {
+                formData.append('specifications', file);
+                console.log(`Added specification: ${file.name}`);
+            });
+
+            processBtn.disabled = true;
+            hideStatus();
+            showProgress();
+            console.log('Starting upload process...');
+
+            try {
+                console.log('=== UPLOADING DOCUMENTS ===');
+                // Upload documents
+                const uploadResponse = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                console.log(`Upload response status: ${uploadResponse.status}`);
+                const uploadResult = await uploadResponse.json();
+                console.log('Upload result:', uploadResult);
+
+                if (!uploadResponse.ok) {
+                    console.error('Upload failed:', uploadResult);
+                    throw new Error(uploadResult.error || 'Upload failed');
+                }
+
+                console.log('Upload successful, starting processing...');
+                updateProgress(25, 'Documents uploaded successfully. Starting processing...');
+
+                // Start processing
+                console.log('=== STARTING PROCESSING ===');
+                const processData = {
+                    upload_id: uploadResult.upload_id
+                };
+                console.log('Process request data:', processData);
+                
+                const processResponse = await fetch('/process-documents', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(processData)
+                });
+
+                console.log(`Process response status: ${processResponse.status}`);
+                const processResult = await processResponse.json();
+                console.log('Process result:', processResult);
+
+                if (!processResponse.ok) {
+                    console.error('Processing failed:', processResult);
+                    throw new Error(processResult.error || 'Processing failed');
+                }
+
+                currentProcessId = processResult.process_id;
+                currentTrackerId = processResult.tracker_id;
+                console.log(`Process started - Process ID: ${currentProcessId}, Tracker ID: ${currentTrackerId}`);
+                console.log(`Processing ${processResult.total_items} items in ${processResult.batches} batches`);
+                
+                updateProgress(50, `Processing ${processResult.total_items} checklist items in ${processResult.batches} batches...`);
+
+                // Poll for progress
+                console.log('Starting progress polling...');
+                pollProgress();
+
+            } catch (error) {
+                console.error('Error:', error);
+                showStatus('Error: ' + error.message, true);
+                processBtn.disabled = false;
+                progressSection.style.display = 'none';
+            }
+        });
+
+        async function pollProgress() {
+            if (!currentTrackerId) {
+                console.log('No tracker ID available for polling');
+                return;
+            }
+
+            console.log(`=== POLLING PROGRESS for tracker: ${currentTrackerId} ===`);
+            try {
+                const response = await fetch(`/progress/${currentTrackerId}`);
+                console.log(`Progress response status: ${response.status}`);
+                
+                const result = await response.json();
+                console.log('Progress result:', result);
+
+                if (!response.ok) {
+                    console.error('Progress check failed:', result);
+                    throw new Error(result.error || 'Progress check failed');
+                }
+
+                const progress = result.progress;
+                const percentage = Math.round(progress.progress_percentage);
+                console.log(`Progress: ${percentage}% - Batch ${progress.current_batch}/${progress.total_batches} - Items: ${progress.items_processed}/${progress.total_items}`);
+                
+                updateProgress(50 + (percentage * 0.4), 
+                    `Processing batch ${progress.current_batch}/${progress.total_batches}... (${progress.items_processed}/${progress.total_items} items)`);
+
+                if (result.status === 'completed') {
+                    console.log('=== PROCESSING COMPLETED ===');
+                    updateProgress(100, 'Processing completed! Loading results...');
+                    loadResults();
+                } else if (result.status === 'failed') {
+                    console.error('Processing failed:', result.error);
+                    throw new Error(result.error || 'Processing failed');
+                } else {
+                    console.log('Processing still in progress, continuing to poll...');
+                    // Continue polling
+                    setTimeout(pollProgress, 2000);
+                }
+
+            } catch (error) {
+                console.error('Progress error:', error);
+                showStatus('Error: ' + error.message, true);
+                processBtn.disabled = false;
+                progressSection.style.display = 'none';
+            }
+        }
+
+        async function loadResults() {
+            console.log('=== LOADING RESULTS ===');
+            try {
+                console.log(`Fetching results for process: ${currentProcessId}`);
+                const response = await fetch(`/results/${currentProcessId}`);
+                console.log(`Results response status: ${response.status}`);
+                
+                const results = await response.json();
+                console.log('Results data:', results);
+
+                if (!response.ok) {
+                    console.error('Failed to load results:', results);
+                    throw new Error(results.error || 'Failed to load results');
+                }
+
+                console.log(`Results loaded - Total: ${results.total_items}, Found: ${results.found_items}, Not found: ${results.not_found_items}`);
+
+                // Show results
+                resultsSection.style.display = 'block';
+                const resultsContent = document.getElementById('resultsContent');
+                
+                resultsContent.innerHTML = `
+                    <p><strong>✅ Processing Complete!</strong></p>
+                    <p>Total checklist items: ${results.total_items}</p>
+                    <p>Items found: ${results.found_items}</p>
+                    <p>Items not found: ${results.not_found_items}</p>
+                `;
+
+                console.log('Results displayed in UI');
+
+                // Show download button
+                const downloadBtn = document.getElementById('downloadBtn');
+                downloadBtn.style.display = 'inline-block';
+                downloadBtn.onclick = () => {
+                    console.log(`Downloading results for process: ${currentProcessId}`);
+                    // Use the server-side download endpoint for structured JSON
+                    window.location.href = `/download/${currentProcessId}`;
+                };
+
+                console.log('Download button enabled');
+                showStatus('Processing completed successfully!');
+                processBtn.disabled = false;
+
+            } catch (error) {
+                console.error('Results error:', error);
+                showStatus('Error loading results: ' + error.message, true);
+                processBtn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html> 
