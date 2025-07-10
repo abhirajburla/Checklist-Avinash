@@ -172,9 +172,14 @@
         <div class="results-section" id="resultsSection">
             <h3>Results</h3>
             <div id="resultsContent"></div>
-            <button class="btn" id="downloadBtn" style="display: none;">
-                📥 Download Results (JSON)
-            </button>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" id="downloadBtn" style="display: none; margin-right: 10px;">
+                    📥 Download Results (JSON)
+                </button>
+                <button class="btn" id="downloadExcelBtn" style="display: none; background-color: #28a745;">
+                    📊 Download Results (Excel)
+                </button>
+            </div>
         </div>
     </div>
 
@@ -428,16 +433,23 @@
 
                 console.log('Results displayed in UI');
 
-                // Show download button
+                // Show download buttons
                 const downloadBtn = document.getElementById('downloadBtn');
+                const downloadExcelBtn = document.getElementById('downloadExcelBtn');
+                
                 downloadBtn.style.display = 'inline-block';
                 downloadBtn.onclick = () => {
-                    console.log(`Downloading results for process: ${currentProcessId}`);
-                    // Use the server-side download endpoint for structured JSON
+                    console.log(`Downloading JSON results for process: ${currentProcessId}`);
                     window.location.href = `/download/${currentProcessId}`;
                 };
 
-                console.log('Download button enabled');
+                downloadExcelBtn.style.display = 'inline-block';
+                downloadExcelBtn.onclick = () => {
+                    console.log(`Downloading Excel results for process: ${currentProcessId}`);
+                    window.location.href = `/download-excel/${currentProcessId}`;
+                };
+
+                console.log('Download buttons enabled');
                 showStatus('Processing completed successfully!');
                 processBtn.disabled = false;
 

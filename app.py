@@ -328,6 +328,56 @@ def download_results(process_id):
         logger.error(f"Download traceback: {traceback.format_exc()}")
         return jsonify({"error": "Download failed"}), 500
 
+@app.route('/download-excel/<process_id>')
+def download_excel_results(process_id):
+    """Download results as Excel file"""
+    try:
+        # Find the tracker that contains this process_id
+        tracker_id = None
+        for tid, status in processing_status.items():
+            if status.get('process_id') == process_id:
+                tracker_id = tid
+                break
+        
+        if not tracker_id:
+            logger.error(f"Process {process_id} not found in any tracker")
+            return jsonify({"error": "Process not found"}), 404
+        
+        status = processing_status[tracker_id]
+        
+        if status['status'] != 'completed':
+            logger.warning(f"Process {process_id} not completed yet. Status: {status['status']}")
+            return jsonify({"error": "Processing not completed"}), 400
+        
+        # Get actual results
+        results = status.get('results', [])
+        
+        # Create the data structure expected by the Excel generator
+        output_data = {
+            "checklist_results": results
+        }
+        
+        # Use the matching engine's output generator to create Excel file
+        matching_engine.output_generator.output_cache[process_id] = output_data
+        
+        # Generate Excel file
+        excel_filepath = matching_engine.output_generator.generate_excel_output(process_id)
+        
+        logger.info(f"Excel file generated: {excel_filepath}")
+        
+        return send_file(
+            excel_filepath,
+            as_attachment=True,
+            download_name=f'checklist_results_{process_id}.xlsx',
+            mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        )
+        
+    except Exception as e:
+        logger.error(f"Excel download error: {str(e)}")
+        import traceback
+        logger.error(f"Excel download traceback: {traceback.format_exc()}")
+        return jsonify({"error": "Excel download failed"}), 500
+
 # Keep the old endpoints for backward compatibility
 @app.route('/process', methods=['POST'])
 def process_checklist():

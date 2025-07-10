@@ -845,3 +845,519 @@
 2025-07-10 16:28:46 | src.matching_engine | INFO | Cleaned up process: bea34b3c-e527-4bfa-9493-5a7b7893222d
 2025-07-10 16:28:52 | __main__ | INFO | Download data prepared with 9 results
 2025-07-10 16:28:52 | __main__ | INFO | Temporary file created: C:\Users\kinga\AppData\Local\Temp\tmpq1y_zui1.json
+2025-07-10 16:31:31 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:31:31 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:31:31 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:31:31 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:31:31 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:31:31 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:31:31 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:31:31 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:31:31 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:31:31 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:31:31 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:31:31 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:31:31 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:31:31 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:31:31 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:31:31 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:31:31 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:31:33 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:31:33 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:31:33 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:31:33 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:31:33 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:31:33 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:31:33 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:31:33 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:31:33 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:31:33 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:31:33 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:31:33 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:31:33 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:31:33 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:31:33 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:31:33 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:31:33 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:31:33 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:31:38 | src.document_handler | INFO | File processed successfully: Input - Specifications few pages.pdf -> specification_c49a410750194cc4ac6134fa2d179dab.pdf
+2025-07-10 16:31:38 | src.document_handler | INFO | Upload processed successfully: {'upload_id': '98da91f8-08b2-4db6-a9a6-82d02697c16a', 'upload_dir': 'uploads\\98da91f8-08b2-4db6-a9a6-82d02697c16a', 'total_files': 1, 'drawings_count': 0, 'specifications_count': 1, 'errors_count': 0, 'files': {'drawings': [], 'specifications': [{'original_name': 'Input - Specifications few pages.pdf', 'saved_name': 'specification_c49a410750194cc4ac6134fa2d179dab.pdf', 'file_path': 'uploads\\98da91f8-08b2-4db6-a9a6-82d02697c16a\\specification_c49a410750194cc4ac6134fa2d179dab.pdf', 'file_size': 0, 'file_type': 'specification', 'pdf_info': {'pages': 1, 'title': 'specification_c49a410750194cc4ac6134fa2d179dab.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 119503}}], 'errors': []}}
+2025-07-10 16:31:38 | __main__ | INFO | Upload successful - Upload ID: 98da91f8-08b2-4db6-a9a6-82d02697c16a
+2025-07-10 16:31:38 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:31:38 | src.output_generator | INFO | Created progress tracker 3429a566-4f08-441c-b9a0-13aa2fd3e2c4 for process 2aa5319e-736a-409d-84ec-6bb4655e7d81
+2025-07-10 16:31:38 | src.gemini_client | INFO | Uploading 1 documents to Gemini
+2025-07-10 16:31:42 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: 36aad7379c4d75674b96d5ad77e1a811
+2025-07-10 16:31:42 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:31:50 | src.document_handler | INFO | File processed successfully: Input - Construction Drawing one page.pdf -> drawing_2b7181c3768e4f38b427450bc03ef940.pdf
+2025-07-10 16:31:50 | src.document_handler | INFO | File processed successfully: Input - Specifications few pages.pdf -> specification_909b7d3360cb4d58976bbe9dfcc1b05a.pdf
+2025-07-10 16:31:50 | src.document_handler | INFO | Upload processed successfully: {'upload_id': '7f9e3046-e391-4853-b38e-8fe0cd250d6f', 'upload_dir': 'uploads\\7f9e3046-e391-4853-b38e-8fe0cd250d6f', 'total_files': 2, 'drawings_count': 1, 'specifications_count': 1, 'errors_count': 0, 'files': {'drawings': [{'original_name': 'Input - Construction Drawing one page.pdf', 'saved_name': 'drawing_2b7181c3768e4f38b427450bc03ef940.pdf', 'file_path': 'uploads\\7f9e3046-e391-4853-b38e-8fe0cd250d6f\\drawing_2b7181c3768e4f38b427450bc03ef940.pdf', 'file_size': 0, 'file_type': 'drawing', 'pdf_info': {'pages': 1, 'title': 'drawing_2b7181c3768e4f38b427450bc03ef940.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 127364}}], 'specifications': [{'original_name': 'Input - Specifications few pages.pdf', 'saved_name': 'specification_909b7d3360cb4d58976bbe9dfcc1b05a.pdf', 'file_path': 'uploads\\7f9e3046-e391-4853-b38e-8fe0cd250d6f\\specification_909b7d3360cb4d58976bbe9dfcc1b05a.pdf', 'file_size': 0, 'file_type': 'specification', 'pdf_info': {'pages': 1, 'title': 'specification_909b7d3360cb4d58976bbe9dfcc1b05a.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 119503}}], 'errors': []}}
+2025-07-10 16:31:50 | __main__ | INFO | Upload successful - Upload ID: 7f9e3046-e391-4853-b38e-8fe0cd250d6f
+2025-07-10 16:31:50 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:31:50 | src.output_generator | INFO | Created progress tracker 7a7c638a-260b-42e1-8bbd-663080b4859f for process 52efac91-886f-437d-8306-ec7773ddf92b
+2025-07-10 16:31:50 | src.gemini_client | INFO | Uploading 2 documents to Gemini
+2025-07-10 16:31:57 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: 81ea9907722bd9d0c06df31cec431183
+2025-07-10 16:31:57 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:32:15 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:32:15 | src.gemini_client | INFO | Found 5 items, 5 not found
+2025-07-10 16:32:15 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:32:27 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:32:27 | src.gemini_client | INFO | Found 5 items, 5 not found
+2025-07-10 16:32:27 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:32:31 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:32:31 | src.gemini_client | INFO | Found 0 items, 10 not found
+2025-07-10 16:32:31 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:32:41 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:32:41 | src.gemini_client | INFO | Found 0 items, 10 not found
+2025-07-10 16:32:41 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:32:55 | src.gemini_client | INFO | Processed 6 checklist items
+2025-07-10 16:32:55 | src.gemini_client | INFO | Found 0 items, 6 not found
+2025-07-10 16:32:55 | src.output_generator | INFO | Updated progress for 7a7c638a-260b-42e1-8bbd-663080b4859f: 33.3% complete
+2025-07-10 16:32:55 | src.output_generator | INFO | Updated progress for 7a7c638a-260b-42e1-8bbd-663080b4859f: 66.7% complete
+2025-07-10 16:32:55 | src.output_generator | INFO | Updated progress for 7a7c638a-260b-42e1-8bbd-663080b4859f: 100.0% complete
+2025-07-10 16:32:55 | src.matching_engine | INFO | Completed processing with 26 validated results
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:32:55 | src.output_generator | INFO | Compiled final output for process 52efac91-886f-437d-8306-ec7773ddf92b
+2025-07-10 16:32:55 | src.output_generator | INFO | Updated progress for 7a7c638a-260b-42e1-8bbd-663080b4859f: 100.0% complete
+2025-07-10 16:32:55 | src.matching_engine | INFO | Processing completed for 52efac91-886f-437d-8306-ec7773ddf92b: 5/26 items found
+2025-07-10 16:33:02 | src.gemini_client | INFO | Processed 6 checklist items
+2025-07-10 16:33:02 | src.gemini_client | INFO | Found 3 items, 3 not found
+2025-07-10 16:33:02 | src.output_generator | INFO | Updated progress for 3429a566-4f08-441c-b9a0-13aa2fd3e2c4: 33.3% complete
+2025-07-10 16:33:02 | src.output_generator | INFO | Updated progress for 3429a566-4f08-441c-b9a0-13aa2fd3e2c4: 66.7% complete
+2025-07-10 16:33:02 | src.output_generator | INFO | Updated progress for 3429a566-4f08-441c-b9a0-13aa2fd3e2c4: 100.0% complete
+2025-07-10 16:33:02 | src.matching_engine | INFO | Completed processing with 26 validated results
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | ERROR | Error formatting checklist item: Missing required fields for checklist item
+2025-07-10 16:33:02 | src.output_generator | INFO | Compiled final output for process 2aa5319e-736a-409d-84ec-6bb4655e7d81
+2025-07-10 16:33:02 | src.output_generator | INFO | Updated progress for 3429a566-4f08-441c-b9a0-13aa2fd3e2c4: 100.0% complete
+2025-07-10 16:33:02 | src.matching_engine | INFO | Processing completed for 2aa5319e-736a-409d-84ec-6bb4655e7d81: 8/26 items found
+2025-07-10 16:33:23 | src.gemini_client | INFO | Cleaned up cache: 81ea9907722bd9d0c06df31cec431183
+2025-07-10 16:33:23 | src.matching_engine | INFO | Cleaned up process: 52efac91-886f-437d-8306-ec7773ddf92b
+2025-07-10 16:33:27 | __main__ | INFO | Download data prepared with 26 results
+2025-07-10 16:33:27 | __main__ | INFO | Temporary file created: C:\Users\kinga\AppData\Local\Temp\tmpl3fo304l.json
+2025-07-10 16:33:33 | src.gemini_client | INFO | Cleaned up cache: 36aad7379c4d75674b96d5ad77e1a811
+2025-07-10 16:33:33 | src.matching_engine | INFO | Cleaned up process: 2aa5319e-736a-409d-84ec-6bb4655e7d81
+2025-07-10 16:35:24 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:35:24 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:35:24 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:35:24 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:35:24 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:35:24 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:35:24 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:35:24 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:35:24 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:35:24 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:35:24 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:35:24 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:35:24 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:35:24 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:35:24 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:35:24 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:35:24 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:35:24 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:35:25 | src.document_handler | INFO | File processed successfully: drawing.pdf -> drawing_4c1d4902ab844df8b41e1a034d804f91.pdf
+2025-07-10 16:35:25 | src.document_handler | INFO | File processed successfully: spec.pdf -> specification_304f1f29ae7140e7a6066e82c2093347.pdf
+2025-07-10 16:35:25 | src.document_handler | INFO | Upload processed successfully: {'upload_id': '048bb1f2-210f-4944-994e-2e5c1390730a', 'upload_dir': 'uploads\\048bb1f2-210f-4944-994e-2e5c1390730a', 'total_files': 2, 'drawings_count': 1, 'specifications_count': 1, 'errors_count': 0, 'files': {'drawings': [{'original_name': 'drawing.pdf', 'saved_name': 'drawing_4c1d4902ab844df8b41e1a034d804f91.pdf', 'file_path': 'uploads\\048bb1f2-210f-4944-994e-2e5c1390730a\\drawing_4c1d4902ab844df8b41e1a034d804f91.pdf', 'file_size': 0, 'file_type': 'drawing', 'pdf_info': {'pages': 1, 'title': 'drawing_4c1d4902ab844df8b41e1a034d804f91.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 127364}}], 'specifications': [{'original_name': 'spec.pdf', 'saved_name': 'specification_304f1f29ae7140e7a6066e82c2093347.pdf', 'file_path': 'uploads\\048bb1f2-210f-4944-994e-2e5c1390730a\\specification_304f1f29ae7140e7a6066e82c2093347.pdf', 'file_size': 0, 'file_type': 'specification', 'pdf_info': {'pages': 1, 'title': 'specification_304f1f29ae7140e7a6066e82c2093347.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 119503}}], 'errors': []}}
+2025-07-10 16:35:25 | __main__ | INFO | Upload successful - Upload ID: 048bb1f2-210f-4944-994e-2e5c1390730a
+2025-07-10 16:35:27 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:35:27 | src.output_generator | INFO | Created progress tracker 619bf176-9924-4cff-a60e-78965fbbd328 for process 7c089d2a-c28d-45d0-a3eb-3bfabb1b7524
+2025-07-10 16:35:27 | src.gemini_client | INFO | Uploading 2 documents to Gemini
+2025-07-10 16:35:33 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: 02e18d5b9358f4b27341f7e2c85fe779
+2025-07-10 16:35:33 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:36:03 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:36:03 | src.gemini_client | INFO | Found 4 items, 6 not found
+2025-07-10 16:36:03 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:36:18 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:36:18 | src.gemini_client | INFO | Found 0 items, 10 not found
+2025-07-10 16:36:18 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:36:44 | src.gemini_client | INFO | Processed 6 checklist items
+2025-07-10 16:36:44 | src.gemini_client | INFO | Found 3 items, 3 not found
+2025-07-10 16:36:44 | src.output_generator | INFO | Updated progress for 619bf176-9924-4cff-a60e-78965fbbd328: 33.3% complete
+2025-07-10 16:36:44 | src.output_generator | INFO | Updated progress for 619bf176-9924-4cff-a60e-78965fbbd328: 66.7% complete
+2025-07-10 16:36:44 | src.output_generator | INFO | Updated progress for 619bf176-9924-4cff-a60e-78965fbbd328: 100.0% complete
+2025-07-10 16:36:44 | src.matching_engine | INFO | Completed processing with 26 validated results
+2025-07-10 16:36:44 | src.output_generator | INFO | Compiled final output for process 7c089d2a-c28d-45d0-a3eb-3bfabb1b7524
+2025-07-10 16:36:44 | src.output_generator | INFO | Updated progress for 619bf176-9924-4cff-a60e-78965fbbd328: 100.0% complete
+2025-07-10 16:36:44 | src.matching_engine | INFO | Processing completed for 7c089d2a-c28d-45d0-a3eb-3bfabb1b7524: 7/26 items found
+2025-07-10 16:36:47 | src.gemini_client | INFO | Cleaned up cache: 02e18d5b9358f4b27341f7e2c85fe779
+2025-07-10 16:36:47 | src.matching_engine | INFO | Cleaned up process: 7c089d2a-c28d-45d0-a3eb-3bfabb1b7524
+2025-07-10 16:37:32 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:37:32 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:37:32 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:37:32 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:37:32 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:37:32 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:37:32 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:37:32 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:37:32 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:37:32 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:37:32 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:37:32 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:37:32 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:37:32 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:37:32 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:37:32 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:37:32 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:37:35 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:37:35 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:37:35 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:37:35 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:37:35 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:37:35 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:37:35 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:37:35 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:37:35 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:37:35 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:37:35 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:37:35 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:37:35 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:37:35 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:37:35 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:37:35 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:37:35 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:37:35 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:37:45 | src.document_handler | INFO | File processed successfully: Input - Construction Drawing one page.pdf -> drawing_31fa1e044b1a4ccdbb6a94cc762a0a6f.pdf
+2025-07-10 16:37:45 | src.document_handler | INFO | File processed successfully: Input - Specifications few pages.pdf -> specification_5320a491e49f480c95d597c4f87a9569.pdf
+2025-07-10 16:37:45 | src.document_handler | INFO | Upload processed successfully: {'upload_id': '2fe438f8-9704-4e5a-bb71-96720fbf515f', 'upload_dir': 'uploads\\2fe438f8-9704-4e5a-bb71-96720fbf515f', 'total_files': 2, 'drawings_count': 1, 'specifications_count': 1, 'errors_count': 0, 'files': {'drawings': [{'original_name': 'Input - Construction Drawing one page.pdf', 'saved_name': 'drawing_31fa1e044b1a4ccdbb6a94cc762a0a6f.pdf', 'file_path': 'uploads\\2fe438f8-9704-4e5a-bb71-96720fbf515f\\drawing_31fa1e044b1a4ccdbb6a94cc762a0a6f.pdf', 'file_size': 0, 'file_type': 'drawing', 'pdf_info': {'pages': 1, 'title': 'drawing_31fa1e044b1a4ccdbb6a94cc762a0a6f.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 127364}}], 'specifications': [{'original_name': 'Input - Specifications few pages.pdf', 'saved_name': 'specification_5320a491e49f480c95d597c4f87a9569.pdf', 'file_path': 'uploads\\2fe438f8-9704-4e5a-bb71-96720fbf515f\\specification_5320a491e49f480c95d597c4f87a9569.pdf', 'file_size': 0, 'file_type': 'specification', 'pdf_info': {'pages': 1, 'title': 'specification_5320a491e49f480c95d597c4f87a9569.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 119503}}], 'errors': []}}
+2025-07-10 16:37:45 | __main__ | INFO | Upload successful - Upload ID: 2fe438f8-9704-4e5a-bb71-96720fbf515f
+2025-07-10 16:37:45 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:37:45 | src.output_generator | INFO | Created progress tracker 1eedfd69-f53d-4fbf-9316-b5d7b1c78ef9 for process 36fd331d-7850-4edd-bb6e-ec27f4ec1cde
+2025-07-10 16:37:45 | src.gemini_client | INFO | Uploading 2 documents to Gemini
+2025-07-10 16:37:52 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: 2bef5d2b2f149af87449c0d2a672177d
+2025-07-10 16:37:52 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:38:26 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:38:26 | src.gemini_client | INFO | Found 6 items, 4 not found
+2025-07-10 16:38:26 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:38:43 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:38:43 | src.gemini_client | INFO | Found 0 items, 10 not found
+2025-07-10 16:38:43 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:39:06 | src.gemini_client | INFO | Processed 6 checklist items
+2025-07-10 16:39:06 | src.gemini_client | INFO | Found 0 items, 6 not found
+2025-07-10 16:39:06 | src.output_generator | INFO | Updated progress for 1eedfd69-f53d-4fbf-9316-b5d7b1c78ef9: 33.3% complete
+2025-07-10 16:39:06 | src.output_generator | INFO | Updated progress for 1eedfd69-f53d-4fbf-9316-b5d7b1c78ef9: 66.7% complete
+2025-07-10 16:39:06 | src.output_generator | INFO | Updated progress for 1eedfd69-f53d-4fbf-9316-b5d7b1c78ef9: 100.0% complete
+2025-07-10 16:39:06 | src.matching_engine | INFO | Completed processing with 26 validated results
+2025-07-10 16:39:06 | src.output_generator | INFO | Compiled final output for process 36fd331d-7850-4edd-bb6e-ec27f4ec1cde
+2025-07-10 16:39:06 | src.output_generator | INFO | Updated progress for 1eedfd69-f53d-4fbf-9316-b5d7b1c78ef9: 100.0% complete
+2025-07-10 16:39:06 | src.matching_engine | INFO | Processing completed for 36fd331d-7850-4edd-bb6e-ec27f4ec1cde: 6/26 items found
+2025-07-10 16:39:09 | src.gemini_client | INFO | Cleaned up cache: 2bef5d2b2f149af87449c0d2a672177d
+2025-07-10 16:39:09 | src.matching_engine | INFO | Cleaned up process: 36fd331d-7850-4edd-bb6e-ec27f4ec1cde
+2025-07-10 16:39:44 | __main__ | INFO | Download data prepared with 26 results
+2025-07-10 16:39:44 | __main__ | INFO | Temporary file created: C:\Users\kinga\AppData\Local\Temp\tmp6lm9qdk8.json
+2025-07-10 16:42:54 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:42:54 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:42:54 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:42:54 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:42:54 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:42:54 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:42:54 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:42:54 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:42:54 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:42:55 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:42:55 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:42:55 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:42:55 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:42:55 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:42:55 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:42:55 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:42:55 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:42:55 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:43:08 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:43:08 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:43:08 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:43:08 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:43:08 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:43:08 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:43:08 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:43:08 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:43:08 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:43:08 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:43:08 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:43:08 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:43:08 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:43:08 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:43:08 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:43:08 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:43:08 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:43:08 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:43:24 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:43:24 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:43:24 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:43:24 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:43:24 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:43:24 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:43:24 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:43:24 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:43:24 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:43:24 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:43:24 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:43:24 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:43:24 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:43:24 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:43:24 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:43:24 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:43:24 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:43:24 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:43:50 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:43:50 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:43:50 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:43:50 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:43:50 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:43:50 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:43:50 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:43:50 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:43:50 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:43:50 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:43:50 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:43:50 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:43:50 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:43:50 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:43:50 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:43:50 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:43:50 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:43:55 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:43:55 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:43:55 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:43:55 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:43:55 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:43:55 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:43:55 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:43:55 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:43:55 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:43:55 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:43:55 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:43:55 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:43:55 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:43:55 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:43:55 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:43:55 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:43:55 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:43:55 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:44:02 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:44:02 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:44:02 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:44:02 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:44:02 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:44:02 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:44:02 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:44:02 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:44:02 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:44:02 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:44:02 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:44:02 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:44:02 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:44:02 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:44:02 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:44:02 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:44:02 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:44:02 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:44:02 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:44:02 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:44:03 | src.output_generator | INFO | Generated Excel output: results\test_results.xlsx
+2025-07-10 16:44:03 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:44:03 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:44:03 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:44:03 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:44:03 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:44:03 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:44:03 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:44:03 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:44:03 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:44:03 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:44:03 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:44:03 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:44:03 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:44:03 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:44:03 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:44:03 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:44:03 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:44:03 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:44:18 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:44:18 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:44:18 | src.output_generator | INFO | Generated Excel output: results\test_results.xlsx
+2025-07-10 16:44:43 | src.document_handler | INFO | File processed successfully: Input - Construction Drawings-1-10.pdf -> drawing_0785946d9a504941b7c45f697aae5971.pdf
+2025-07-10 16:44:43 | src.document_handler | INFO | File processed successfully: Input - Specifications few pages.pdf -> specification_8e131d963582464880024cdcff815ac5.pdf
+2025-07-10 16:44:43 | src.document_handler | INFO | Upload processed successfully: {'upload_id': '161031d1-1256-4cc8-808a-4cb388ba0478', 'upload_dir': 'uploads\\161031d1-1256-4cc8-808a-4cb388ba0478', 'total_files': 2, 'drawings_count': 1, 'specifications_count': 1, 'errors_count': 0, 'files': {'drawings': [{'original_name': 'Input - Construction Drawings-1-10.pdf', 'saved_name': 'drawing_0785946d9a504941b7c45f697aae5971.pdf', 'file_path': 'uploads\\161031d1-1256-4cc8-808a-4cb388ba0478\\drawing_0785946d9a504941b7c45f697aae5971.pdf', 'file_size': 0, 'file_type': 'drawing', 'pdf_info': {'pages': 1, 'title': 'drawing_0785946d9a504941b7c45f697aae5971.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 1413478}}], 'specifications': [{'original_name': 'Input - Specifications few pages.pdf', 'saved_name': 'specification_8e131d963582464880024cdcff815ac5.pdf', 'file_path': 'uploads\\161031d1-1256-4cc8-808a-4cb388ba0478\\specification_8e131d963582464880024cdcff815ac5.pdf', 'file_size': 0, 'file_type': 'specification', 'pdf_info': {'pages': 1, 'title': 'specification_8e131d963582464880024cdcff815ac5.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 119503}}], 'errors': []}}
+2025-07-10 16:44:43 | __main__ | INFO | Upload successful - Upload ID: 161031d1-1256-4cc8-808a-4cb388ba0478
+2025-07-10 16:44:43 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:44:43 | src.output_generator | INFO | Created progress tracker 20ece75a-e2ca-4ae5-854c-8b03ec818c3a for process dfaadd5e-f4c2-4e91-9d2c-d1aacfea6e49
+2025-07-10 16:44:43 | src.gemini_client | INFO | Uploading 2 documents to Gemini
+2025-07-10 16:44:51 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: 81ac4247ebd14c700bb3696f295f4e47
+2025-07-10 16:44:51 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:45:19 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:45:19 | src.gemini_client | INFO | Found 6 items, 4 not found
+2025-07-10 16:45:19 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:45:35 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:45:35 | src.gemini_client | INFO | Found 0 items, 10 not found
+2025-07-10 16:45:35 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:45:53 | src.gemini_client | INFO | Processed 6 checklist items
+2025-07-10 16:45:53 | src.gemini_client | INFO | Found 0 items, 6 not found
+2025-07-10 16:45:53 | src.output_generator | INFO | Updated progress for 20ece75a-e2ca-4ae5-854c-8b03ec818c3a: 33.3% complete
+2025-07-10 16:45:53 | src.output_generator | INFO | Updated progress for 20ece75a-e2ca-4ae5-854c-8b03ec818c3a: 66.7% complete
+2025-07-10 16:45:53 | src.output_generator | INFO | Updated progress for 20ece75a-e2ca-4ae5-854c-8b03ec818c3a: 100.0% complete
+2025-07-10 16:45:53 | src.matching_engine | INFO | Completed processing with 26 validated results
+2025-07-10 16:45:53 | src.output_generator | INFO | Compiled final output for process dfaadd5e-f4c2-4e91-9d2c-d1aacfea6e49
+2025-07-10 16:45:53 | src.output_generator | INFO | Updated progress for 20ece75a-e2ca-4ae5-854c-8b03ec818c3a: 100.0% complete
+2025-07-10 16:45:53 | src.matching_engine | INFO | Processing completed for dfaadd5e-f4c2-4e91-9d2c-d1aacfea6e49: 6/26 items found
+2025-07-10 16:45:57 | src.gemini_client | INFO | Cleaned up cache: 81ac4247ebd14c700bb3696f295f4e47
+2025-07-10 16:45:57 | src.matching_engine | INFO | Cleaned up process: dfaadd5e-f4c2-4e91-9d2c-d1aacfea6e49
+2025-07-10 16:46:36 | __main__ | INFO | Download data prepared with 26 results
+2025-07-10 16:46:36 | __main__ | INFO | Temporary file created: C:\Users\kinga\AppData\Local\Temp\tmpqfof3fh1.json
+2025-07-10 16:46:59 | src.output_generator | INFO | Generated Excel output: results\checklist_results_c27eb922-873c-43e5-beb7-02125d44e9a7_20250710_164659.xlsx
+2025-07-10 16:46:59 | __main__ | INFO | Excel file generated: results\checklist_results_c27eb922-873c-43e5-beb7-02125d44e9a7_20250710_164659.xlsx
+2025-07-10 16:49:58 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:49:58 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:49:58 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:49:58 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:49:58 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:49:58 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:49:58 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:49:58 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:49:58 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:49:58 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:49:58 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:49:58 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:49:58 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:49:58 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:49:58 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:49:58 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:49:58 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:49:58 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:50:00 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:50:00 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:50:00 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:50:00 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:50:00 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:50:00 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:50:00 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:50:00 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:50:00 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:50:00 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:50:00 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:50:00 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:50:00 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:50:00 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:50:00 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:50:00 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:50:00 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:50:00 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:50:04 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:50:04 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:50:05 | src.output_generator | INFO | Generated Excel output: results\test_results.xlsx
+2025-07-10 16:50:20 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:50:20 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:50:20 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:50:20 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:50:20 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:50:20 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:50:20 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:50:20 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:50:20 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:50:20 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:50:20 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:50:20 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:50:20 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-10 16:50:20 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-10 16:50:20 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:50:20 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=10
+2025-07-10 16:50:20 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-10 16:50:20 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:50:20 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Loaded master checklist with 26 items
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Successfully loaded and cleaned 26 checklist items
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:50:20 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-10 16:50:20 | werkzeug | WARNING |  * Debugger is active!
+2025-07-10 16:50:21 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-10 16:50:21 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-10 16:50:22 | src.output_generator | INFO | Generated Excel output: results\test_results.xlsx
+2025-07-10 16:51:17 | src.document_handler | INFO | File processed successfully: Input - Construction Drawing one page.pdf -> drawing_27f75d7e8e4340509308878f074147aa.pdf
+2025-07-10 16:51:17 | src.document_handler | INFO | File processed successfully: Input - Specifications few pages.pdf -> specification_e3ceb8d8d5994b95a901676b463aee29.pdf
+2025-07-10 16:51:17 | src.document_handler | INFO | Upload processed successfully: {'upload_id': 'db543bab-e90b-4b30-9606-d49e45d2182d', 'upload_dir': 'uploads\\db543bab-e90b-4b30-9606-d49e45d2182d', 'total_files': 2, 'drawings_count': 1, 'specifications_count': 1, 'errors_count': 0, 'files': {'drawings': [{'original_name': 'Input - Construction Drawing one page.pdf', 'saved_name': 'drawing_27f75d7e8e4340509308878f074147aa.pdf', 'file_path': 'uploads\\db543bab-e90b-4b30-9606-d49e45d2182d\\drawing_27f75d7e8e4340509308878f074147aa.pdf', 'file_size': 0, 'file_type': 'drawing', 'pdf_info': {'pages': 1, 'title': 'drawing_27f75d7e8e4340509308878f074147aa.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 127364}}], 'specifications': [{'original_name': 'Input - Specifications few pages.pdf', 'saved_name': 'specification_e3ceb8d8d5994b95a901676b463aee29.pdf', 'file_path': 'uploads\\db543bab-e90b-4b30-9606-d49e45d2182d\\specification_e3ceb8d8d5994b95a901676b463aee29.pdf', 'file_size': 0, 'file_type': 'specification', 'pdf_info': {'pages': 1, 'title': 'specification_e3ceb8d8d5994b95a901676b463aee29.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 119503}}], 'errors': []}}
+2025-07-10 16:51:17 | __main__ | INFO | Upload successful - Upload ID: db543bab-e90b-4b30-9606-d49e45d2182d
+2025-07-10 16:51:17 | src.checklist_processor | INFO | Created 3 batches of size 10
+2025-07-10 16:51:17 | src.output_generator | INFO | Created progress tracker a08501ce-df10-46f1-8d89-3218f8a79115 for process 032b9373-309a-45c3-ad80-e9dd1c6c3c13
+2025-07-10 16:51:17 | src.gemini_client | INFO | Uploading 2 documents to Gemini
+2025-07-10 16:51:26 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: 1dcc400c68479c6b45d65a11930756e0
+2025-07-10 16:51:26 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:51:58 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:51:58 | src.gemini_client | INFO | Found 5 items, 5 not found
+2025-07-10 16:51:58 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:52:15 | src.gemini_client | INFO | Processed 10 checklist items
+2025-07-10 16:52:15 | src.gemini_client | INFO | Found 0 items, 10 not found
+2025-07-10 16:52:15 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-10 16:52:30 | src.gemini_client | INFO | Processed 6 checklist items
+2025-07-10 16:52:30 | src.gemini_client | INFO | Found 0 items, 6 not found
+2025-07-10 16:52:30 | src.output_generator | INFO | Updated progress for a08501ce-df10-46f1-8d89-3218f8a79115: 33.3% complete
+2025-07-10 16:52:30 | src.output_generator | INFO | Updated progress for a08501ce-df10-46f1-8d89-3218f8a79115: 66.7% complete
+2025-07-10 16:52:30 | src.output_generator | INFO | Updated progress for a08501ce-df10-46f1-8d89-3218f8a79115: 100.0% complete
+2025-07-10 16:52:30 | src.matching_engine | INFO | Completed processing with 26 validated results
+2025-07-10 16:52:30 | src.output_generator | INFO | Compiled final output for process 032b9373-309a-45c3-ad80-e9dd1c6c3c13
+2025-07-10 16:52:30 | src.output_generator | INFO | Updated progress for a08501ce-df10-46f1-8d89-3218f8a79115: 100.0% complete
+2025-07-10 16:52:30 | src.matching_engine | INFO | Processing completed for 032b9373-309a-45c3-ad80-e9dd1c6c3c13: 5/26 items found
+2025-07-10 16:53:00 | src.gemini_client | INFO | Cleaned up cache: 1dcc400c68479c6b45d65a11930756e0
+2025-07-10 16:53:00 | src.matching_engine | INFO | Cleaned up process: 032b9373-309a-45c3-ad80-e9dd1c6c3c13
+2025-07-10 16:53:05 | src.output_generator | INFO | Generated Excel output: results\checklist_results_f116d761-345f-441c-8642-bc479b02d3b8_20250710_165305.xlsx
+2025-07-10 16:53:05 | __main__ | INFO | Excel file generated: results\checklist_results_f116d761-345f-441c-8642-bc479b02d3b8_20250710_165305.xlsx
+2025-07-10 16:53:25 | __main__ | INFO | Download data prepared with 26 results
+2025-07-10 16:53:25 | __main__ | INFO | Temporary file created: C:\Users\kinga\AppData\Local\Temp\tmpxp9b7ymv.json

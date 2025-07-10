@@ -13,6 +13,7 @@ from typing import Dict, Any, List, Optional
 from pathlib import Path
 from dataclasses import dataclass, asdict
 from enum import Enum
+import pandas as pd
 
 try:
     from .config import Config
@@ -211,18 +212,18 @@ class OutputGenerator:
         """Format a raw checklist item into structured format (Phase 4)"""
         try:
             # If required fields are missing, treat as error
-            if not raw_item.get("category") or not raw_item.get("description"):
+            if not raw_item.get("category") or not raw_item.get("checklist"):
                 raise ValueError("Missing required fields for checklist item")
             return ChecklistItem(
-                item_id=str(raw_item.get("item_id", "")),
+                item_id=str(raw_item.get("row_id", "")),
                 category=str(raw_item.get("category", "")),
-                description=str(raw_item.get("description", "")),
+                description=str(raw_item.get("checklist", "")),
                 found=bool(raw_item.get("found", False)),
-                confidence_score=float(raw_item.get("confidence_score", 0.0)),
-                sheet_references=raw_item.get("sheet_references", []),
-                sheet_reasoning=str(raw_item.get("sheet_reasoning", "")),
-                spec_references=raw_item.get("spec_references", []),
-                spec_reasoning=str(raw_item.get("spec_reasoning", "")),
+                confidence_score=float(raw_item.get("validation_score", 0.0)),
+                sheet_references=raw_item.get("sheet_number", "").split(", ") if raw_item.get("sheet_number") else [],
+                sheet_reasoning=str(raw_item.get("reasoning", "")),
+                spec_references=raw_item.get("spec_section", "").split(", ") if raw_item.get("spec_section") else [],
+                spec_reasoning=str(raw_item.get("reasoning", "")),
                 notes=str(raw_item.get("notes", "")),
                 processing_time=float(raw_item.get("processing_time", 0.0))
             )
@@ -375,6 +376,69 @@ class OutputGenerator:
             
         except Exception as e:
             logger.error(f"Error saving output to file: {e}")
+            raise
+    
+    def generate_excel_output(self, process_id: str, filename: Optional[str] = None) -> str:
+        """Generate Excel output with specified columns from JSON data"""
+        if process_id not in self.output_cache:
+            raise ValueError(f"No output cached for process {process_id}")
+        
+        if not filename:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"checklist_results_{process_id}_{timestamp}.xlsx"
+        
+        filepath = Path(self.config.RESULTS_FOLDER) / filename
+        
+        try:
+            # Get the cached output data
+            output_data = self.output_cache[process_id]
+            checklist_results = output_data.get("checklist_results", [])
+            
+            # Prepare data for Excel
+            excel_data = []
+            for item in checklist_results:
+                excel_data.append({
+                    "Category": item.get("category", ""),
+                    "Scope of Work": item.get("scope_of_work", ""),
+                    "Checklist": item.get("checklist", ""),
+                    "Sector": item.get("sector", ""),
+                    "Sheet Number": item.get("sheet_number", ""),
+                    "Specification Reference": item.get("spec_section", ""),
+                    "Notes": item.get("notes", ""),
+                    "Reasoning": item.get("reasoning", "")
+                })
+            
+            # Create DataFrame and save to Excel
+            df = pd.DataFrame(excel_data)
+            
+            # Create Excel writer with formatting
+            with pd.ExcelWriter(filepath, engine='openpyxl') as writer:
+                df.to_excel(writer, sheet_name='Checklist Results', index=False)
+                
+                # Get the workbook and worksheet for formatting
+                workbook = writer.book
+                worksheet = writer.sheets['Checklist Results']
+                
+                # Auto-adjust column widths
+                for column in worksheet.columns:
+                    max_length = 0
+                    column_letter = column[0].column_letter
+                    
+                    for cell in column:
+                        try:
+                            if len(str(cell.value)) > max_length:
+                                max_length = len(str(cell.value))
+                        except:
+                            pass
+                    
+                    adjusted_width = min(max_length + 2, 50)  # Cap at 50 characters
+                    worksheet.column_dimensions[column_letter].width = adjusted_width
+            
+            logger.info(f"Generated Excel output: {filepath}")
+            return str(filepath)
+            
+        except Exception as e:
+            logger.error(f"Error generating Excel output: {e}")
             raise
     
     def cleanup_tracker(self, tracker_id: str) -> bool:
