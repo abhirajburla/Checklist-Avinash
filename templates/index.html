@@ -153,6 +153,9 @@
                 <button type="submit" class="btn" id="processBtn" style="display: none;">
                     🚀 Process Documents
                 </button>
+                <button type="button" class="btn" id="tokenUsageBtn" style="background-color: #17a2b8; margin-left: 10px;">
+                    💰 Token Usage
+                </button>
             </div>
         </form>
 
@@ -188,6 +191,7 @@
         const uploadDrawingsBtn = document.getElementById('uploadDrawingsBtn');
         const uploadSpecsBtn = document.getElementById('uploadSpecsBtn');
         const processBtn = document.getElementById('processBtn');
+        const tokenUsageBtn = document.getElementById('tokenUsageBtn');
         const statusDiv = document.getElementById('status');
         const progressSection = document.getElementById('progressSection');
         const resultsSection = document.getElementById('resultsSection');
@@ -205,6 +209,42 @@
 
         uploadSpecsBtn.addEventListener('click', function() {
             document.getElementById('specifications').click();
+        });
+
+        // Handle token usage button
+        tokenUsageBtn.addEventListener('click', async function() {
+            try {
+                console.log('=== TOKEN USAGE BUTTON CLICKED ===');
+                const response = await fetch('/token-usage');
+                console.log(`Token usage response status: ${response.status}`);
+                
+                const result = await response.json();
+                console.log('Token usage result:', result);
+
+                if (!response.ok) {
+                    console.error('Token usage failed:', result);
+                    throw new Error(result.error || 'Failed to get token usage');
+                }
+
+                // Display token usage information
+                const tokenData = result.token_usage;
+                const message = `
+Token Usage Summary:
+• Total calls: ${tokenData.total_calls}
+• Input tokens: ${tokenData.total_input_tokens.toLocaleString()}
+• Output tokens: ${tokenData.total_output_tokens.toLocaleString()}
+• Cached tokens: ${tokenData.total_cached_tokens.toLocaleString()}
+• Total cost: $${tokenData.total_cost.toFixed(6)}
+• Model: ${tokenData.model}
+• Supports thinking: ${tokenData.supports_thinking ? 'Yes' : 'No'}
+                `;
+                
+                showStatus(message, false);
+                
+            } catch (error) {
+                console.error('Token usage error:', error);
+                showStatus('Error getting token usage: ' + error.message, true);
+            }
         });
 
         // Show selected files
