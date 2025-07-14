@@ -75,7 +75,7 @@ class ChecklistProcessor:
         
         return df
     
-    def create_batches(self, batch_size: int = 10) -> List[List[Dict]]:  # Changed from 50 to 10
+    def create_batches(self, batch_size: int = 50) -> List[List[Dict]]:  # Use config default of 50
         """Create batches of checklist items for processing"""
         if self.master_checklist is None:
             logger.error("Master checklist not loaded")
@@ -158,7 +158,7 @@ class ChecklistProcessor:
             if not self.load_master_checklist():
                 return False
             
-            self.batches = self.create_batches()
+            self.batches = self.create_batches(self.config.BATCH_SIZE)
             logger.info("Checklist processor initialized successfully")
             return True
             

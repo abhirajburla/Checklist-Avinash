@@ -19,6 +19,7 @@ This system helps General Contractors and Subcontractors by:
 - **Progress Tracking**: Real-time progress monitoring with status updates
 - **JSON Output**: Structured results matching the master checklist format
 - **Reference Extraction**: Identifies sheet numbers and specification sections
+- **Token Tracking & Cost Monitoring**: Real-time tracking of API usage and costs
 
 ## 📁 Project Structure
 
@@ -27,8 +28,7 @@ Checklist-Avinash/
 ├── app.py                          # Main Flask application
 ├── requirements.txt                # Python dependencies
 ├── README.md                       # This file
-├── MASTER CHECKLIST_TEST_50.csv   # Test checklist data (50 items)
-├── MASTER CHECKLIST.csv           # Full master checklist data (1,300+ items)
+├── MASTER CHECKLIST.csv           # Master checklist data (1,300+ items)
 ├── Prompts.txt                     # Existing prompts from scope builder
 ├── .env                           # Environment variables (contains GEMINI_API_KEY)
 ├── src/                           # Source code modules
@@ -72,8 +72,7 @@ Checklist-Avinash/
    ```
 
 4. **Verify master checklist**
-   - Ensure `MASTER CHECKLIST_TEST_50.csv` is in the project root (for testing)
-   - For production, use `MASTER CHECKLIST.csv` (1,300+ items)
+   - Ensure `MASTER CHECKLIST.csv` is in the project root
    - The file should contain columns: Category, Scope of Work, Checklist, Sector
 
 5. **Run the application**
@@ -137,6 +136,8 @@ The system expects a CSV file with the following columns:
 - `POST /process` - Start checklist processing
 - `GET /status/<process_id>` - Get processing status
 - `GET /results/<process_id>` - Get final results
+- `GET /token-usage` - Get token usage and cost summary
+- `POST /reset-token-tracking` - Reset token tracking for new session
 
 ## ⚙️ Configuration
 
@@ -145,6 +146,9 @@ Key configuration options in `src/config.py`:
 - `MAX_CONTENT_LENGTH`: Maximum file size (default: 800MB)
 - `GEMINI_MODEL`: Gemini model to use (default: gemini-2.5-pro)
 - `ENABLE_CONTEXT_CACHING`: Enable/disable context caching (default: true)
+- `ENABLE_TOKEN_TRACKING`: Enable/disable token usage tracking (default: true)
+- `LOG_TOKEN_USAGE`: Log detailed token usage information (default: true)
+- `LOG_COST_BREAKDOWN`: Log cost breakdowns (default: true)
 
 ## 🧪 Development Status
 

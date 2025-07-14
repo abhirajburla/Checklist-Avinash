@@ -27,6 +27,19 @@ class Config:
     # Processing configuration
     BATCH_SIZE = int(os.getenv('BATCH_SIZE', '50'))  # Process 50 checklist items at a time
     MAX_RETRIES = int(os.getenv('MAX_RETRIES', '3'))
+
+    # Timeout configuration
+    GEMINI_API_TIMEOUT = int(os.getenv('GEMINI_API_TIMEOUT', '300'))  # 5 minutes for Gemini API calls
+    PROCESSING_TIMEOUT = int(os.getenv('PROCESSING_TIMEOUT', '3600'))  # 60 minutes for overall processing
+    BATCH_TIMEOUT = int(os.getenv('BATCH_TIMEOUT', '600'))  # 10 minutes per batch
+    UPLOAD_TIMEOUT = int(os.getenv('UPLOAD_TIMEOUT', '300'))  # 5 minutes for file uploads
+
+    # JSON storage configuration
+    ENABLE_JSON_STORAGE = os.getenv('ENABLE_JSON_STORAGE', 'true').lower() == 'true'
+    JSON_STORAGE_FOLDER = os.getenv('JSON_STORAGE_FOLDER', 'json_outputs')
+
+    # Gemini model configuration
+    GEMINI_MAX_OUTPUT_TOKENS = int(os.getenv('GEMINI_MAX_OUTPUT_TOKENS', '65536'))  # 64K tokens for large JSON responses
     
     # Phase 3 Enhanced Processing Configuration
     ENABLE_SYSTEM_INSTRUCTIONS = os.getenv('ENABLE_SYSTEM_INSTRUCTIONS', 'true').lower() == 'true'
@@ -40,8 +53,8 @@ class Config:
     
     # Enhanced batch processing configuration
     MAX_CONCURRENT_BATCHES = int(os.getenv('MAX_CONCURRENT_BATCHES', '3'))
-    BATCH_RETRY_DELAY = float(os.getenv('BATCH_RETRY_DELAY', '2.0'))
-    BATCH_BACKOFF_FACTOR = float(os.getenv('BATCH_BACKOFF_FACTOR', '2.0'))
+    BATCH_RETRY_DELAY = float(os.getenv('BATCH_RETRY_DELAY', '5.0'))  # Increased to 5s
+    BATCH_BACKOFF_FACTOR = float(os.getenv('BATCH_BACKOFF_FACTOR', '3.0'))  # Increased to 3.0
     
     # Reference validation configuration
     MIN_CONFIDENCE_SCORE = float(os.getenv('MIN_CONFIDENCE_SCORE', '0.7'))
@@ -56,7 +69,7 @@ class Config:
     CACHE_TTL = int(os.getenv('CACHE_TTL', '3600'))  # 1 hour cache TTL
     
     # Master checklist configuration
-    MASTER_CHECKLIST_PATH = os.getenv('MASTER_CHECKLIST_PATH', 'MASTER CHECKLIST_TEST_50.csv')
+    MASTER_CHECKLIST_PATH = os.getenv('MASTER_CHECKLIST_PATH', 'MASTER CHECKLIST.csv')
     
     # Document processing configuration
     MAX_DOCUMENT_PAGES = int(os.getenv('MAX_DOCUMENT_PAGES', '1000'))  # Gemini limit
@@ -65,6 +78,23 @@ class Config:
     # Logging configuration
     LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')
     LOG_FILE = os.getenv('LOG_FILE', 'logs/app.log')
+    
+    def is_allowed_file(self, filename: str) -> bool:
+        """Check if file type is allowed"""
+        if not filename:
+            return False
+        return '.' in filename and \
+               filename.rsplit('.', 1)[1].lower() in self.ALLOWED_EXTENSIONS
+    
+    def get_file_size_limit_mb(self) -> float:
+        """Get file size limit in MB"""
+        return self.MAX_CONTENT_LENGTH / (1024 * 1024)
+    
+    # Token tracking configuration
+    ENABLE_TOKEN_TRACKING = os.getenv('ENABLE_TOKEN_TRACKING', 'true').lower() == 'true'
+    TOKEN_TRACKING_LOG_FILE = os.getenv('TOKEN_TRACKING_LOG_FILE', 'logs/token_usage.log')
+    LOG_TOKEN_USAGE = os.getenv('LOG_TOKEN_USAGE', 'true').lower() == 'true'
+    LOG_COST_BREAKDOWN = os.getenv('LOG_COST_BREAKDOWN', 'true').lower() == 'true'
     
     @classmethod
     def validate_config(cls):
@@ -80,17 +110,4 @@ class Config:
         if errors:
             raise ValueError(f"Configuration errors: {', '.join(errors)}")
         
-        return True
-    
-    @classmethod
-    def get_file_size_limit_mb(cls):
-        """Get file size limit in MB"""
-        return cls.MAX_CONTENT_LENGTH / (1024 * 1024)
-    
-    @classmethod
-    def is_allowed_file(cls, filename):
-        """Check if file extension is allowed"""
-        if not filename:
-            return False
-        return '.' in filename and \
-               filename.rsplit('.', 1)[1].lower() in cls.ALLOWED_EXTENSIONS 
+        return True 

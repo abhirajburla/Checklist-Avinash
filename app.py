@@ -106,9 +106,9 @@ def process_documents():
             if not checklist_processor.load_master_checklist():
                 logger.error("Failed to load master checklist")
                 return jsonify({"error": "Failed to load master checklist"}), 500
-            checklist_processor.create_batches()
+            checklist_processor.create_batches(checklist_processor.config.BATCH_SIZE)
         
-        batches = checklist_processor.create_batches()
+        batches = checklist_processor.create_batches(checklist_processor.config.BATCH_SIZE)
         total_batches = len(batches)
         total_items = checklist_processor.get_total_items()
         
@@ -141,7 +141,7 @@ def process_documents():
                 engine_process_id = matching_result["process_id"]
                 
                 # Wait for matching engine to complete
-                max_wait_time = 300  # 5 minutes
+                max_wait_time = matching_engine.config.PROCESSING_TIMEOUT  # Use configurable timeout
                 wait_interval = 2  # 2 seconds
                 elapsed_time = 0
                 
@@ -159,7 +159,7 @@ def process_documents():
                     elapsed_time += wait_interval
                 
                 if elapsed_time >= max_wait_time:
-                    raise Exception("Matching engine processing timed out")
+                    raise Exception(f"Matching engine processing timed out after {max_wait_time} seconds")
                 
                 # Get final results from matching engine
                 results_data = matching_engine.get_results(engine_process_id)
@@ -175,6 +175,15 @@ def process_documents():
                 
                 # Clean up matching engine process
                 matching_engine.cleanup_process(engine_process_id)
+                
+                # Create combined JSON at the end of processing
+                try:
+                    logger.info(f"Creating combined JSON for session: {upload_id}, process: {process_id}")
+                    combined_file_path = matching_engine.enhanced_batch_processor.create_combined_json(upload_id, process_id)
+                    logger.info(f"Combined JSON created successfully: {combined_file_path}")
+                except Exception as e:
+                    logger.error(f"Error creating combined JSON: {e}")
+                    # Don't fail the entire process if combined JSON creation fails
                 
                 # Mark as completed
                 processing_status[tracker_id]['status'] = 'completed'
@@ -267,7 +276,7 @@ def get_results(process_id):
 
 @app.route('/download/<process_id>')
 def download_results(process_id):
-    """Download results as JSON file"""
+    """Download results as combined JSON file with all successful and failed responses"""
     try:
         # Find the tracker that contains this process_id
         tracker_id = None
@@ -286,39 +295,59 @@ def download_results(process_id):
             logger.warning(f"Process {process_id} not completed yet. Status: {status['status']}")
             return jsonify({"error": "Processing not completed"}), 400
         
-        # Get actual results
-        results = status.get('results', [])
+        # Get session ID from upload_id (use upload_id as session_id for simplicity)
+        upload_id = status.get('upload_id', 'unknown')
+        session_id = upload_id
         
-        found_items = sum(1 for item in results if item.get('found', False))
-        not_found_items = len(results) - found_items
+        # Try to get existing combined JSON file
+        combined_file_path = matching_engine.enhanced_batch_processor.get_combined_json_path(session_id, process_id)
         
-        # Create download data
-        download_data = {
-            "process_id": process_id,
-            "timestamp": datetime.now().isoformat(),
-            "total_items": len(results),
-            "found_items": found_items,
-            "not_found_items": not_found_items,
-            "processing_time": "Processing completed",
-            "results": results
-        }
+        if not combined_file_path:
+            # Create combined JSON if it doesn't exist
+            logger.info(f"Creating combined JSON for session: {session_id}, process: {process_id}")
+            combined_file_path = matching_engine.enhanced_batch_processor.create_combined_json(session_id, process_id)
         
-        logger.info(f"Download data prepared with {len(download_data['results'])} results")
+        if not combined_file_path or not os.path.exists(combined_file_path):
+            logger.warning(f"Combined JSON file not found, falling back to basic results")
+            
+            # Fallback to basic results
+            results = status.get('results', [])
+            found_items = sum(1 for item in results if item.get('found', False))
+            not_found_items = len(results) - found_items
+            
+            download_data = {
+                "process_id": process_id,
+                "timestamp": datetime.now().isoformat(),
+                "total_items": len(results),
+                "found_items": found_items,
+                "not_found_items": not_found_items,
+                "processing_time": "Processing completed",
+                "results": results,
+                "note": "Combined JSON not available, showing basic results only"
+            }
+            
+            # Create temporary file
+            import tempfile
+            temp_file = tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.json')
+            json.dump(download_data, temp_file, indent=2)
+            temp_file.close()
+            
+            logger.info(f"Fallback temporary file created: {temp_file.name}")
+            
+            return send_file(
+                temp_file.name,
+                as_attachment=True,
+                download_name=f'checklist_results_{process_id}.json',
+                mimetype='application/json'
+            )
         
-        # Create temporary file
-        import tempfile
-        import os
-        
-        temp_file = tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.json')
-        json.dump(download_data, temp_file, indent=2)
-        temp_file.close()
-        
-        logger.info(f"Temporary file created: {temp_file.name}")
+        # Return the combined JSON file
+        logger.info(f"Serving combined JSON file: {combined_file_path}")
         
         return send_file(
-            temp_file.name,
+            combined_file_path,
             as_attachment=True,
-            download_name=f'checklist_results_{process_id}.json',
+            download_name=f'combined_checklist_results_{process_id}.json',
             mimetype='application/json'
         )
         
@@ -393,6 +422,85 @@ def get_status(process_id):
         "process_id": process_id,
         "message": "Processing completed"
     })
+
+@app.route('/token-usage')
+def get_token_usage():
+    """Get token usage summary for the current session"""
+    try:
+        token_summary = gemini_client.get_token_usage_summary()
+        return jsonify({
+            "success": True,
+            "token_usage": token_summary
+        })
+    except Exception as e:
+        logger.error(f"Token usage error: {str(e)}")
+        return jsonify({"error": "Failed to get token usage"}), 500
+
+@app.route('/reset-token-tracking', methods=['POST'])
+def reset_token_tracking():
+    """Reset token tracking for new session"""
+    try:
+        gemini_client.reset_token_tracking()
+        return jsonify({"message": "Token tracking reset successfully"})
+    except Exception as e:
+        logger.error(f"Error resetting token tracking: {e}")
+        return jsonify({"error": "Failed to reset token tracking"}), 500
+
+@app.route('/json-storage/stats')
+def get_json_storage_stats():
+    """Get JSON storage statistics"""
+    try:
+        stats = gemini_client.json_storage.get_storage_stats()
+        return jsonify(stats)
+    except Exception as e:
+        logger.error(f"Error getting JSON storage stats: {e}")
+        return jsonify({"error": "Failed to get storage stats"}), 500
+
+@app.route('/json-storage/cleanup', methods=['POST'])
+def cleanup_json_storage():
+    """Clean up old JSON files"""
+    try:
+        data = request.get_json() or {}
+        days = data.get('days', 7)
+        deleted_count = gemini_client.json_storage.cleanup_old_files(days)
+        return jsonify({
+            "message": f"Cleaned up {deleted_count} old files",
+            "deleted_count": deleted_count,
+            "days": days
+        })
+    except Exception as e:
+        logger.error(f"Error cleaning up JSON storage: {e}")
+        return jsonify({"error": "Failed to cleanup storage"}), 500
+
+@app.route('/json-storage/combine/<session_id>')
+def combine_json_responses(session_id):
+    """Combine all responses from a session"""
+    try:
+        combined_file = gemini_client.json_storage.combine_responses(session_id)
+        if combined_file:
+            return jsonify({
+                "message": "Responses combined successfully",
+                "file_path": combined_file
+            })
+        else:
+            return jsonify({"error": "Failed to combine responses"}), 500
+    except Exception as e:
+        logger.error(f"Error combining responses: {e}")
+        return jsonify({"error": "Failed to combine responses"}), 500
+
+@app.route('/json-storage/session/<session_id>')
+def get_session_responses(session_id):
+    """Get all responses for a specific session"""
+    try:
+        responses = gemini_client.json_storage.get_session_responses(session_id)
+        return jsonify({
+            "session_id": session_id,
+            "total_responses": len(responses),
+            "responses": responses
+        })
+    except Exception as e:
+        logger.error(f"Error getting session responses: {e}")
+        return jsonify({"error": "Failed to get session responses"}), 500
 
 if __name__ == '__main__':
     # Create necessary directories

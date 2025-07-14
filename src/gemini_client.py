@@ -10,12 +10,16 @@ try:
     from .prompt_templates import PromptTemplates
     from .system_instructions import SystemInstructions
     from .schemas import validate_batch_result
+    from .token_tracker import TokenTracker, TokenUsage
+    from .json_storage import JSONStorage
 except ImportError:
     from config import Config
     from logger_config import LoggerConfig
     from prompt_templates import PromptTemplates
     from system_instructions import SystemInstructions
     from schemas import validate_batch_result
+    from token_tracker import TokenTracker, TokenUsage
+    from json_storage import JSONStorage
 
 logger = LoggerConfig.get_logger(__name__)
 
@@ -26,6 +30,8 @@ class GeminiClient:
         self.config = Config()
         self.prompts = PromptTemplates()
         self.system_instructions = SystemInstructions()
+        self.token_tracker = TokenTracker()
+        self.json_storage = JSONStorage()
         
         # Configure Gemini API
         genai.configure(api_key=self.config.GEMINI_API_KEY)
@@ -37,7 +43,7 @@ class GeminiClient:
                 temperature=0.1,  # Low temperature for consistent results
                 top_p=0.8,
                 top_k=40,
-                max_output_tokens=8192,
+                max_output_tokens=self.config.GEMINI_MAX_OUTPUT_TOKENS,  # Use configurable value (64K default)
             )
         )
         
@@ -46,6 +52,44 @@ class GeminiClient:
         self.cache_metadata = {}
         
         logger.info(f"GeminiClient initialized with model: {self.config.GEMINI_MODEL}")
+        logger.info(f"API timeout: {self.config.GEMINI_API_TIMEOUT}s, Batch timeout: {self.config.BATCH_TIMEOUT}s")
+    
+    def _track_token_usage(self, response, operation: str = "API Call"):
+        """Track token usage from Gemini response"""
+        try:
+            # Extract token usage from response
+            usage_metadata = response.usage_metadata
+            if usage_metadata:
+                # Extract thoughts tokens if available (for thinking models)
+                thoughts_tokens = getattr(usage_metadata, 'thoughts_token_count', 0)
+                
+                # Check if this is a thinking model response
+                is_thinking = self.token_tracker.is_thinking_model() and thoughts_tokens > 0
+                
+                usage = TokenUsage(
+                    input_tokens=usage_metadata.prompt_token_count,
+                    output_tokens=usage_metadata.candidates_token_count,
+                    cached_tokens=usage_metadata.cached_content_token_count,
+                    thoughts_tokens=thoughts_tokens
+                )
+                self.token_tracker.log_token_usage(usage, operation, is_thinking)
+                
+                # Log additional debugging info
+                logger.debug(f"Token usage details:")
+                logger.debug(f"  Prompt tokens: {usage_metadata.prompt_token_count}")
+                logger.debug(f"  Candidates tokens: {usage_metadata.candidates_token_count}")
+                logger.debug(f"  Cached tokens: {usage_metadata.cached_content_token_count}")
+                logger.debug(f"  Thoughts tokens: {thoughts_tokens}")
+                logger.debug(f"  Is thinking: {is_thinking}")
+            else:
+                logger.warning("No token usage metadata available in response")
+        except Exception as e:
+            logger.error(f"Error tracking token usage: {e}")
+            logger.error(f"Response object: {type(response)}")
+            if hasattr(response, 'usage_metadata'):
+                logger.error(f"Usage metadata exists: {response.usage_metadata}")
+            else:
+                logger.error("No usage_metadata attribute found")
     
     def upload_documents(self, file_paths: List[str]) -> Dict[str, Any]:
         """Upload documents to Gemini with context caching"""
@@ -200,8 +244,16 @@ class GeminiClient:
             # Generate content with structured output (model is always gemini-2.5-flash)
             response = self.model.generate_content(contents)
             
+            # Track token usage
+            self._track_token_usage(response, "Checklist Batch Matching")
+            
             # Parse the structured response
             try:
+                # Check if response has valid text
+                if not hasattr(response, 'text') or not response.text:
+                    logger.error("Invalid response: No text content available")
+                    return self._create_fallback_results(checklist_batch)
+                
                 # Parse JSON response and validate with schema
                 result = json.loads(response.text)
                 batch_result = validate_batch_result(result)
@@ -256,9 +308,13 @@ class GeminiClient:
                 
             except Exception as e:
                 logger.error(f"Error parsing structured response: {e}")
-                logger.error(f"Response text: {response.text}")
-                # Fallback to manual JSON parsing if structured output fails
-                return self._parse_fallback_response(response.text, checklist_batch)
+                if hasattr(response, 'text') and response.text:
+                    logger.error(f"Response text: {response.text}")
+                    # Fallback to manual JSON parsing if structured output fails
+                    return self._parse_fallback_response(response.text, checklist_batch)
+                else:
+                    logger.error("No response text available for fallback parsing")
+                    return self._create_fallback_results(checklist_batch)
             
         except Exception as e:
             logger.error(f"Error matching checklist batch: {e}")
@@ -316,25 +372,56 @@ class GeminiClient:
             
             # Wait for response with timeout
             try:
-                response = response_queue.get(timeout=60)  # 60 second timeout
+                response = response_queue.get(timeout=self.config.GEMINI_API_TIMEOUT)  # Use configurable timeout
+                
+                # Track token usage
+                self._track_token_usage(response, "Checklist Batch Matching with System Instructions")
+                
             except queue.Empty:
-                logger.error("Gemini API call timed out")
+                logger.error(f"Gemini API call timed out after {self.config.GEMINI_API_TIMEOUT} seconds")
                 return self._create_fallback_results(checklist_batch)
             except Exception as e:
                 logger.error(f"Error in Gemini API call: {e}")
                 return self._create_fallback_results(checklist_batch)
             
+            # Check if response is valid and has text content
+            if not hasattr(response, 'text') or not response.text:
+                logger.error("Invalid response: No text content available")
+                logger.error(f"Response object: {type(response)}")
+                if hasattr(response, 'candidates') and response.candidates:
+                    logger.error(f"Finish reason: {response.candidates[0].finish_reason}")
+                return self._create_fallback_results(checklist_batch)
+            
+            # Store the raw response for debugging
+            response_text = response.text
+            batch_index = checklist_batch[0].get('row_id', 0) // self.config.BATCH_SIZE if checklist_batch else 0
+            
             # Parse the response
             try:
                 # Clean the response text - remove markdown code blocks if present
-                response_text = response.text.strip()
-                if response_text.startswith("```json"):
-                    response_text = response_text[7:]  # Remove "```json"
-                if response_text.endswith("```"):
-                    response_text = response_text[:-3]  # Remove "```"
-                response_text = response_text.strip()
+                cleaned_response_text = response_text.strip()
+                if cleaned_response_text.startswith("```json"):
+                    cleaned_response_text = cleaned_response_text[7:]  # Remove "```json"
+                if cleaned_response_text.endswith("```"):
+                    cleaned_response_text = cleaned_response_text[:-3]  # Remove "```"
+                cleaned_response_text = cleaned_response_text.strip()
                 
-                result = json.loads(response_text)
+                # Store the response before parsing
+                metadata = {
+                    "batch_size": len(checklist_batch),
+                    "cache_id": cache_id,
+                    "model": self.config.GEMINI_MODEL,
+                    "timeout_used": self.config.GEMINI_API_TIMEOUT
+                }
+                self.json_storage.store_response(
+                    response_text, 
+                    batch_index, 
+                    "checklist_matching", 
+                    True, 
+                    metadata
+                )
+                
+                result = json.loads(cleaned_response_text)
                 matches = result.get("matches", [])
                 
                 # Validate references against actual documents
@@ -392,9 +479,26 @@ class GeminiClient:
                 
             except json.JSONDecodeError as e:
                 logger.error(f"Error parsing Gemini response: {e}")
-                logger.error(f"Response text: {response.text}")
+                logger.error(f"Response text: {response_text}")
+                
+                # Store failed response with error details
+                metadata = {
+                    "batch_size": len(checklist_batch),
+                    "cache_id": cache_id,
+                    "model": self.config.GEMINI_MODEL,
+                    "timeout_used": self.config.GEMINI_API_TIMEOUT,
+                    "json_error": str(e)
+                }
+                self.json_storage.store_failed_response(
+                    response_text, 
+                    batch_index, 
+                    f"JSON parsing error: {e}",
+                    "checklist_matching", 
+                    metadata
+                )
+                
                 # Try fallback parsing
-                return self._parse_fallback_response(response.text, checklist_batch)
+                return self._parse_fallback_response(response_text, checklist_batch)
                 
         except Exception as e:
             logger.error(f"Error in match_checklist_batch_with_system_instructions: {e}")
@@ -433,6 +537,9 @@ class GeminiClient:
             # Use generate_content with file and prompt
             response = self.model.generate_content([gemini_file, prompt])
             
+            # Track token usage
+            self._track_token_usage(response, "Sheet Information Extraction")
+            
             # Parse response
             try:
                 result = json.loads(response.text)
@@ -462,6 +569,9 @@ class GeminiClient:
             
             # Use generate_content with file and prompt
             response = self.model.generate_content([gemini_file, prompt])
+            
+            # Track token usage
+            self._track_token_usage(response, "Specification Information Extraction")
             
             # Parse response
             try:
@@ -495,6 +605,9 @@ class GeminiClient:
             
             # Use generate_content with files and prompt
             response = self.model.generate_content(contents)
+            
+            # Track token usage
+            self._track_token_usage(response, "Document Summary Creation")
             
             # Parse response
             try:
@@ -554,7 +667,15 @@ class GeminiClient:
         return {
             "cache_count": len(self.context_cache),
             "cache_metadata": self.cache_metadata
-        } 
+        }
+    
+    def get_token_usage_summary(self) -> Dict[str, Any]:
+        """Get token usage summary for the current session"""
+        return self.token_tracker.get_session_summary()
+    
+    def reset_token_tracking(self):
+        """Reset token tracking for a new session"""
+        self.token_tracker.reset_session() 
 
     def _validate_references(self, matches: List[Dict], uploaded_files: List[Dict]) -> List[Dict]:
         """Validate that extracted references actually exist in the uploaded documents"""

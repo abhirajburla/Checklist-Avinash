@@ -6,7 +6,7 @@ Provides advanced batch processing with retry logic, error handling, and validat
 import asyncio
 import time
 import logging
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from dataclasses import dataclass
 from enum import Enum
 import traceback
@@ -16,11 +16,13 @@ try:
     from .system_instructions import SystemInstructions
     from .reference_validator import ReferenceValidator
     from .logger_config import LoggerConfig
+    from .json_combiner import JSONCombiner
 except ImportError:
     from gemini_client import GeminiClient
     from system_instructions import SystemInstructions
     from reference_validator import ReferenceValidator
     from logger_config import LoggerConfig
+    from json_combiner import JSONCombiner
 
 logger = LoggerConfig.get_logger(__name__)
 
@@ -54,15 +56,16 @@ class EnhancedBatchProcessor:
         self.config = config
         self.system_instructions = SystemInstructions()
         self.reference_validator = ReferenceValidator()
-        self.max_concurrent_batches = 1  # Process one at a time to avoid overwhelming Gemini
+        self.json_combiner = JSONCombiner()
+        self.max_concurrent_batches = config.MAX_CONCURRENT_BATCHES if hasattr(config, 'MAX_CONCURRENT_BATCHES') else 3  # Use config value
         
         # Retry configuration
         self.max_retries = config.MAX_RETRIES if hasattr(config, 'MAX_RETRIES') else 3
-        self.batch_size = 10  # Reduced batch size for smaller prompts
-        self.retry_delay = 2.0  # seconds
-        self.backoff_factor = 2.0
+        self.batch_size = config.BATCH_SIZE if hasattr(config, 'BATCH_SIZE') else 50  # Use config batch size
+        self.retry_delay = config.BATCH_RETRY_DELAY if hasattr(config, 'BATCH_RETRY_DELAY') else 5.0  # Use config
+        self.backoff_factor = config.BATCH_BACKOFF_FACTOR if hasattr(config, 'BATCH_BACKOFF_FACTOR') else 3.0  # Use config
         
-        logger.info(f"EnhancedBatchProcessor initialized with max_retries={self.max_retries}, batch_size={self.batch_size}")
+        logger.info(f"EnhancedBatchProcessor initialized with max_retries={self.max_retries}, batch_size={self.batch_size}, retry_delay={self.retry_delay}, backoff_factor={self.backoff_factor}, max_concurrent_batches={self.max_concurrent_batches}")
     
     async def process_batch_with_retry(
         self, 
@@ -445,21 +448,57 @@ IMPORTANT:
         batches: List[List[Dict]], 
         cache_id: str, 
         document_context: str
-    ) -> List[BatchResult]:
+    ) -> List[List[Dict]]:
         """Process multiple batches synchronously (no asyncio)"""
+        
+        logger.info(f"=== ENHANCED BATCH PROCESSOR SYNC: STARTING PROCESSING OF {len(batches)} BATCHES ===")
+        logger.info(f"Cache ID: {cache_id}")
+        logger.info(f"Document context length: {len(document_context)} characters")
         
         batch_results = []
         for batch_index, batch in enumerate(batches):
             try:
+                logger.info(f"Processing batch {batch_index + 1}/{len(batches)} with {len(batch)} items")
+                
+                # Get system instructions
                 system_instructions = self.system_instructions.get_checklist_matching_instructions()
-                prompt = self._create_enhanced_prompt(batch, document_context, system_instructions)
+                
+                # Process with Gemini
                 result = self.gemini_client.match_checklist_batch_with_system_instructions(
                     batch, cache_id, document_context, system_instructions
                 )
-                batch_results.append(result)
+                
+                # Validate and clean the result
+                validated_result = self._validate_and_clean_result(result, batch)
+                batch_results.append(validated_result)
+                
+                logger.info(f"Completed batch {batch_index + 1} with {len(validated_result)} results")
+                
             except Exception as e:
                 logger.error(f"Exception while processing batch {batch_index}: {e}")
-                raise
+                # Create fallback results for this batch
+                fallback_results = []
+                for item in batch:
+                    fallback_item = {
+                        'row_id': item.get('row_id', batch_index * len(batch) + batch.index(item) + 1),
+                        'category': item['Category'],
+                        'scope_of_work': item['Scope of Work'],
+                        'checklist': item['Checklist'],
+                        'sector': item['Sector'],
+                        'found': False,
+                        'sheet_number': '',
+                        'spec_section': '',
+                        'notes': '',
+                        'reasoning': f'Processing failed: {str(e)}',
+                        'confidence': 'LOW',
+                        'validation_score': 0.0
+                    }
+                    fallback_results.append(fallback_item)
+                
+                batch_results.append(fallback_results)
+                logger.info(f"Added fallback results for batch {batch_index + 1}")
+        
+        logger.info(f"=== ENHANCED BATCH PROCESSOR SYNC: COMPLETED PROCESSING {len(batch_results)} BATCHES ===")
         return batch_results
 
     def _process_single_batch_sync(
@@ -504,4 +543,30 @@ IMPORTANT:
             
         except Exception as e:
             logger.error(f"Error processing batch {batch_index}: {e}")
-            raise 
+            raise
+    
+    def create_combined_json(self, session_id: str, process_id: str) -> str:
+        """Create combined JSON file from all successful and failed responses"""
+        try:
+            logger.info(f"Creating combined JSON for session: {session_id}, process: {process_id}")
+            
+            # Combine all JSON outputs
+            combined_data = self.json_combiner.combine_all_json_outputs(session_id, process_id)
+            
+            # Save the combined JSON
+            combined_file_path = self.json_combiner.save_combined_json(combined_data, session_id, process_id)
+            
+            logger.info(f"Combined JSON created successfully: {combined_file_path}")
+            return combined_file_path
+            
+        except Exception as e:
+            logger.error(f"Error creating combined JSON: {e}")
+            raise
+    
+    def get_combined_json_path(self, session_id: str, process_id: str) -> Optional[str]:
+        """Get the path to the combined JSON file"""
+        try:
+            return self.json_combiner.get_combined_json_path(session_id, process_id)
+        except Exception as e:
+            logger.error(f"Error getting combined JSON path: {e}")
+            return None 
