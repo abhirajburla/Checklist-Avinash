@@ -6641,3 +6641,1755 @@
 2025-07-14 15:53:57 | src.checklist_processor | INFO | Created 27 batches of size 50
 2025-07-14 15:53:57 | src.output_generator | INFO | Created progress tracker 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee for process d8b56a08-348f-45f4-bf6d-c36378b21420
 2025-07-14 15:53:57 | src.gemini_client | INFO | Uploading 1 documents to Gemini
+2025-07-14 15:54:12 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: f562ab3668862d40e3f019d829bb1348
+2025-07-14 15:54:12 | src.enhanced_batch_processor | INFO | === ENHANCED BATCH PROCESSOR SYNC: STARTING PROCESSING OF 27 BATCHES ===
+2025-07-14 15:54:12 | src.enhanced_batch_processor | INFO | Cache ID: f562ab3668862d40e3f019d829bb1348
+2025-07-14 15:54:12 | src.enhanced_batch_processor | INFO | Document context length: 65 characters
+2025-07-14 15:54:12 | src.enhanced_batch_processor | INFO | Processing batch 1/27 with 50 items
+2025-07-14 15:54:12 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 15:55:35 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 15:55:35 | src.token_tracker | INFO |    📥 Input tokens: 14,243
+2025-07-14 15:55:35 | src.token_tracker | INFO |    📤 Output tokens: 5,458
+2025-07-14 15:55:35 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 15:55:35 | src.token_tracker | INFO |    💰 Input cost: $0.002136
+2025-07-14 15:55:35 | src.token_tracker | INFO |    💰 Output cost: $0.003275
+2025-07-14 15:55:35 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 15:55:35 | src.token_tracker | INFO |    💰 Total cost: $0.005411
+2025-07-14 15:55:35 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 15:55:35 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 15:55:35 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 15:55:35 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 15:55:35 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 15:55:35 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 15:55:35 | src.token_tracker | INFO |    🔢 Total calls: 1
+2025-07-14 15:55:35 | src.token_tracker | INFO |    📥 Total input tokens: 14,243
+2025-07-14 15:55:35 | src.token_tracker | INFO |    📤 Total output tokens: 5,458
+2025-07-14 15:55:35 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 15:55:35 | src.token_tracker | INFO |    💰 Total session cost: $0.005411
+2025-07-14 15:55:35 | src.json_storage | INFO | Stored checklist_matching response for batch 0 at json_outputs\responses\checklist_matching_batch_000_20250714_155535_session_1752488735.json
+2025-07-14 15:55:35 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 15:55:35 | src.gemini_client | INFO | Found 4 items, 46 not found
+2025-07-14 15:55:35 | src.enhanced_batch_processor | INFO | Completed batch 1 with 50 results
+2025-07-14 15:55:35 | src.enhanced_batch_processor | INFO | Processing batch 2/27 with 50 items
+2025-07-14 15:55:35 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 15:56:20 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 15:56:20 | src.token_tracker | INFO |    📥 Input tokens: 14,334
+2025-07-14 15:56:20 | src.token_tracker | INFO |    📤 Output tokens: 5,772
+2025-07-14 15:56:20 | src.token_tracker | INFO |    💾 Cached tokens: 13,633
+2025-07-14 15:56:20 | src.token_tracker | INFO |    💰 Input cost: $0.002150
+2025-07-14 15:56:20 | src.token_tracker | INFO |    💰 Output cost: $0.003463
+2025-07-14 15:56:20 | src.token_tracker | INFO |    💰 Cached cost: $0.000511
+2025-07-14 15:56:20 | src.token_tracker | INFO |    💰 Total cost: $0.006125
+2025-07-14 15:56:20 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 15:56:20 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 15:56:20 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 15:56:20 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 15:56:20 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 15:56:20 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 15:56:20 | src.token_tracker | INFO |    🔢 Total calls: 2
+2025-07-14 15:56:20 | src.token_tracker | INFO |    📥 Total input tokens: 28,577
+2025-07-14 15:56:20 | src.token_tracker | INFO |    📤 Total output tokens: 11,230
+2025-07-14 15:56:20 | src.token_tracker | INFO |    💾 Total cached tokens: 13,633
+2025-07-14 15:56:20 | src.token_tracker | INFO |    💰 Total session cost: $0.011536
+2025-07-14 15:56:20 | src.json_storage | INFO | Stored checklist_matching response for batch 1 at json_outputs\responses\checklist_matching_batch_001_20250714_155620_session_1752488780.json
+2025-07-14 15:56:20 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 15:56:20 | src.gemini_client | INFO | Found 9 items, 41 not found
+2025-07-14 15:56:20 | src.enhanced_batch_processor | INFO | Completed batch 2 with 50 results
+2025-07-14 15:56:20 | src.enhanced_batch_processor | INFO | Processing batch 3/27 with 50 items
+2025-07-14 15:56:20 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 15:57:31 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 15:57:31 | src.token_tracker | INFO |    📥 Input tokens: 14,156
+2025-07-14 15:57:31 | src.token_tracker | INFO |    📤 Output tokens: 6,968
+2025-07-14 15:57:31 | src.token_tracker | INFO |    💾 Cached tokens: 13,501
+2025-07-14 15:57:31 | src.token_tracker | INFO |    💰 Input cost: $0.002123
+2025-07-14 15:57:31 | src.token_tracker | INFO |    💰 Output cost: $0.004181
+2025-07-14 15:57:31 | src.token_tracker | INFO |    💰 Cached cost: $0.000506
+2025-07-14 15:57:31 | src.token_tracker | INFO |    💰 Total cost: $0.006810
+2025-07-14 15:57:31 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 15:57:31 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 15:57:31 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 15:57:31 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 15:57:31 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 15:57:31 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 15:57:31 | src.token_tracker | INFO |    🔢 Total calls: 3
+2025-07-14 15:57:31 | src.token_tracker | INFO |    📥 Total input tokens: 42,733
+2025-07-14 15:57:31 | src.token_tracker | INFO |    📤 Total output tokens: 18,198
+2025-07-14 15:57:31 | src.token_tracker | INFO |    💾 Total cached tokens: 27,134
+2025-07-14 15:57:31 | src.token_tracker | INFO |    💰 Total session cost: $0.018346
+2025-07-14 15:57:31 | src.json_storage | INFO | Stored checklist_matching response for batch 2 at json_outputs\responses\checklist_matching_batch_002_20250714_155731_session_1752488851.json
+2025-07-14 15:57:31 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 15:57:31 | src.gemini_client | INFO | Found 18 items, 32 not found
+2025-07-14 15:57:31 | src.enhanced_batch_processor | INFO | Completed batch 3 with 50 results
+2025-07-14 15:57:31 | src.enhanced_batch_processor | INFO | Processing batch 4/27 with 50 items
+2025-07-14 15:57:31 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 15:58:19 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 15:58:19 | src.token_tracker | INFO |    📥 Input tokens: 14,037
+2025-07-14 15:58:19 | src.token_tracker | INFO |    📤 Output tokens: 5,585
+2025-07-14 15:58:19 | src.token_tracker | INFO |    💾 Cached tokens: 13,413
+2025-07-14 15:58:19 | src.token_tracker | INFO |    💰 Input cost: $0.002106
+2025-07-14 15:58:19 | src.token_tracker | INFO |    💰 Output cost: $0.003351
+2025-07-14 15:58:19 | src.token_tracker | INFO |    💰 Cached cost: $0.000503
+2025-07-14 15:58:19 | src.token_tracker | INFO |    💰 Total cost: $0.005960
+2025-07-14 15:58:19 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 15:58:19 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 15:58:19 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 15:58:19 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 15:58:19 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 15:58:19 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 15:58:19 | src.token_tracker | INFO |    🔢 Total calls: 4
+2025-07-14 15:58:19 | src.token_tracker | INFO |    📥 Total input tokens: 56,770
+2025-07-14 15:58:19 | src.token_tracker | INFO |    📤 Total output tokens: 23,783
+2025-07-14 15:58:19 | src.token_tracker | INFO |    💾 Total cached tokens: 40,547
+2025-07-14 15:58:19 | src.token_tracker | INFO |    💰 Total session cost: $0.024306
+2025-07-14 15:58:19 | src.json_storage | INFO | Stored checklist_matching response for batch 3 at json_outputs\responses\checklist_matching_batch_003_20250714_155819_session_1752488899.json
+2025-07-14 15:58:19 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 15:58:19 | src.gemini_client | INFO | Found 15 items, 35 not found
+2025-07-14 15:58:19 | src.enhanced_batch_processor | INFO | Completed batch 4 with 50 results
+2025-07-14 15:58:19 | src.enhanced_batch_processor | INFO | Processing batch 5/27 with 50 items
+2025-07-14 15:58:19 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:00:09 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:00:09 | src.token_tracker | INFO |    📥 Input tokens: 14,126
+2025-07-14 16:00:09 | src.token_tracker | INFO |    📤 Output tokens: 5,459
+2025-07-14 16:00:09 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 16:00:09 | src.token_tracker | INFO |    💰 Input cost: $0.002119
+2025-07-14 16:00:09 | src.token_tracker | INFO |    💰 Output cost: $0.003275
+2025-07-14 16:00:09 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 16:00:09 | src.token_tracker | INFO |    💰 Total cost: $0.005394
+2025-07-14 16:00:09 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:00:09 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:00:09 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:00:09 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:00:09 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:00:09 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:00:09 | src.token_tracker | INFO |    🔢 Total calls: 5
+2025-07-14 16:00:09 | src.token_tracker | INFO |    📥 Total input tokens: 70,896
+2025-07-14 16:00:09 | src.token_tracker | INFO |    📤 Total output tokens: 29,242
+2025-07-14 16:00:09 | src.token_tracker | INFO |    💾 Total cached tokens: 40,547
+2025-07-14 16:00:09 | src.token_tracker | INFO |    💰 Total session cost: $0.029700
+2025-07-14 16:00:09 | src.json_storage | INFO | Stored checklist_matching response for batch 4 at json_outputs\responses\checklist_matching_batch_004_20250714_160009_session_1752489009.json
+2025-07-14 16:00:09 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:00:09 | src.gemini_client | INFO | Found 10 items, 40 not found
+2025-07-14 16:00:09 | src.enhanced_batch_processor | INFO | Completed batch 5 with 50 results
+2025-07-14 16:00:09 | src.enhanced_batch_processor | INFO | Processing batch 6/27 with 50 items
+2025-07-14 16:00:09 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:01:01 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:01:01 | src.token_tracker | INFO |    📥 Input tokens: 14,077
+2025-07-14 16:01:01 | src.token_tracker | INFO |    📤 Output tokens: 5,136
+2025-07-14 16:01:01 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 16:01:01 | src.token_tracker | INFO |    💰 Input cost: $0.002112
+2025-07-14 16:01:01 | src.token_tracker | INFO |    💰 Output cost: $0.003082
+2025-07-14 16:01:01 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 16:01:01 | src.token_tracker | INFO |    💰 Total cost: $0.005193
+2025-07-14 16:01:01 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:01:01 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:01:01 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:01:01 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:01:01 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:01:01 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:01:01 | src.token_tracker | INFO |    🔢 Total calls: 6
+2025-07-14 16:01:01 | src.token_tracker | INFO |    📥 Total input tokens: 84,973
+2025-07-14 16:01:01 | src.token_tracker | INFO |    📤 Total output tokens: 34,378
+2025-07-14 16:01:01 | src.token_tracker | INFO |    💾 Total cached tokens: 40,547
+2025-07-14 16:01:01 | src.token_tracker | INFO |    💰 Total session cost: $0.034893
+2025-07-14 16:01:01 | src.json_storage | INFO | Stored checklist_matching response for batch 5 at json_outputs\responses\checklist_matching_batch_005_20250714_160101_session_1752489061.json
+2025-07-14 16:01:01 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:01:01 | src.gemini_client | INFO | Found 10 items, 40 not found
+2025-07-14 16:01:01 | src.enhanced_batch_processor | INFO | Completed batch 6 with 50 results
+2025-07-14 16:01:01 | src.enhanced_batch_processor | INFO | Processing batch 7/27 with 50 items
+2025-07-14 16:01:01 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:02:00 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:02:00 | src.token_tracker | INFO |    📥 Input tokens: 14,013
+2025-07-14 16:02:00 | src.token_tracker | INFO |    📤 Output tokens: 6,601
+2025-07-14 16:02:00 | src.token_tracker | INFO |    💾 Cached tokens: 13,395
+2025-07-14 16:02:00 | src.token_tracker | INFO |    💰 Input cost: $0.002102
+2025-07-14 16:02:00 | src.token_tracker | INFO |    💰 Output cost: $0.003961
+2025-07-14 16:02:00 | src.token_tracker | INFO |    💰 Cached cost: $0.000502
+2025-07-14 16:02:00 | src.token_tracker | INFO |    💰 Total cost: $0.006565
+2025-07-14 16:02:00 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:02:00 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:02:00 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:02:00 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:02:00 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:02:00 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:02:00 | src.token_tracker | INFO |    🔢 Total calls: 7
+2025-07-14 16:02:00 | src.token_tracker | INFO |    📥 Total input tokens: 98,986
+2025-07-14 16:02:00 | src.token_tracker | INFO |    📤 Total output tokens: 40,979
+2025-07-14 16:02:00 | src.token_tracker | INFO |    💾 Total cached tokens: 53,942
+2025-07-14 16:02:00 | src.token_tracker | INFO |    💰 Total session cost: $0.041458
+2025-07-14 16:02:00 | src.json_storage | INFO | Stored checklist_matching response for batch 6 at json_outputs\responses\checklist_matching_batch_006_20250714_160200_session_1752489120.json
+2025-07-14 16:02:00 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:02:00 | src.gemini_client | INFO | Found 23 items, 27 not found
+2025-07-14 16:02:00 | src.enhanced_batch_processor | INFO | Completed batch 7 with 50 results
+2025-07-14 16:02:00 | src.enhanced_batch_processor | INFO | Processing batch 8/27 with 50 items
+2025-07-14 16:02:00 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:03:18 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:03:18 | src.token_tracker | INFO |    📥 Input tokens: 14,046
+2025-07-14 16:03:18 | src.token_tracker | INFO |    📤 Output tokens: 6,312
+2025-07-14 16:03:18 | src.token_tracker | INFO |    💾 Cached tokens: 13,420
+2025-07-14 16:03:18 | src.token_tracker | INFO |    💰 Input cost: $0.002107
+2025-07-14 16:03:18 | src.token_tracker | INFO |    💰 Output cost: $0.003787
+2025-07-14 16:03:18 | src.token_tracker | INFO |    💰 Cached cost: $0.000503
+2025-07-14 16:03:18 | src.token_tracker | INFO |    💰 Total cost: $0.006397
+2025-07-14 16:03:18 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:03:18 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:03:18 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:03:18 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:03:18 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:03:18 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:03:18 | src.token_tracker | INFO |    🔢 Total calls: 8
+2025-07-14 16:03:18 | src.token_tracker | INFO |    📥 Total input tokens: 113,032
+2025-07-14 16:03:18 | src.token_tracker | INFO |    📤 Total output tokens: 47,291
+2025-07-14 16:03:18 | src.token_tracker | INFO |    💾 Total cached tokens: 67,362
+2025-07-14 16:03:18 | src.token_tracker | INFO |    💰 Total session cost: $0.047855
+2025-07-14 16:03:18 | src.json_storage | INFO | Stored checklist_matching response for batch 7 at json_outputs\responses\checklist_matching_batch_007_20250714_160318_session_1752489198.json
+2025-07-14 16:03:18 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:03:18 | src.gemini_client | INFO | Found 17 items, 33 not found
+2025-07-14 16:03:18 | src.enhanced_batch_processor | INFO | Completed batch 8 with 50 results
+2025-07-14 16:03:18 | src.enhanced_batch_processor | INFO | Processing batch 9/27 with 50 items
+2025-07-14 16:03:18 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:04:19 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:04:19 | src.token_tracker | INFO |    📥 Input tokens: 13,938
+2025-07-14 16:04:19 | src.token_tracker | INFO |    📤 Output tokens: 6,508
+2025-07-14 16:04:19 | src.token_tracker | INFO |    💾 Cached tokens: 13,340
+2025-07-14 16:04:19 | src.token_tracker | INFO |    💰 Input cost: $0.002091
+2025-07-14 16:04:19 | src.token_tracker | INFO |    💰 Output cost: $0.003905
+2025-07-14 16:04:19 | src.token_tracker | INFO |    💰 Cached cost: $0.000500
+2025-07-14 16:04:19 | src.token_tracker | INFO |    💰 Total cost: $0.006496
+2025-07-14 16:04:19 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:04:19 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:04:19 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:04:19 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:04:19 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:04:19 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:04:19 | src.token_tracker | INFO |    🔢 Total calls: 9
+2025-07-14 16:04:19 | src.token_tracker | INFO |    📥 Total input tokens: 126,970
+2025-07-14 16:04:19 | src.token_tracker | INFO |    📤 Total output tokens: 53,799
+2025-07-14 16:04:19 | src.token_tracker | INFO |    💾 Total cached tokens: 80,702
+2025-07-14 16:04:19 | src.token_tracker | INFO |    💰 Total session cost: $0.054351
+2025-07-14 16:04:19 | src.json_storage | INFO | Stored checklist_matching response for batch 8 at json_outputs\responses\checklist_matching_batch_008_20250714_160419_session_1752489259.json
+2025-07-14 16:04:19 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:04:19 | src.gemini_client | INFO | Found 16 items, 34 not found
+2025-07-14 16:04:19 | src.enhanced_batch_processor | INFO | Completed batch 9 with 50 results
+2025-07-14 16:04:19 | src.enhanced_batch_processor | INFO | Processing batch 10/27 with 50 items
+2025-07-14 16:04:19 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:05:19 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:05:19 | src.token_tracker | INFO |    📥 Input tokens: 14,077
+2025-07-14 16:05:19 | src.token_tracker | INFO |    📤 Output tokens: 6,836
+2025-07-14 16:05:19 | src.token_tracker | INFO |    💾 Cached tokens: 13,442
+2025-07-14 16:05:19 | src.token_tracker | INFO |    💰 Input cost: $0.002112
+2025-07-14 16:05:19 | src.token_tracker | INFO |    💰 Output cost: $0.004102
+2025-07-14 16:05:19 | src.token_tracker | INFO |    💰 Cached cost: $0.000504
+2025-07-14 16:05:19 | src.token_tracker | INFO |    💰 Total cost: $0.006717
+2025-07-14 16:05:19 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:05:19 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:05:19 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:05:19 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:05:19 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:05:19 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:05:19 | src.token_tracker | INFO |    🔢 Total calls: 10
+2025-07-14 16:05:19 | src.token_tracker | INFO |    📥 Total input tokens: 141,047
+2025-07-14 16:05:19 | src.token_tracker | INFO |    📤 Total output tokens: 60,635
+2025-07-14 16:05:19 | src.token_tracker | INFO |    💾 Total cached tokens: 94,144
+2025-07-14 16:05:19 | src.token_tracker | INFO |    💰 Total session cost: $0.061068
+2025-07-14 16:05:19 | src.json_storage | INFO | Stored checklist_matching response for batch 9 at json_outputs\responses\checklist_matching_batch_009_20250714_160519_session_1752489319.json
+2025-07-14 16:05:19 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:05:19 | src.gemini_client | INFO | Found 25 items, 25 not found
+2025-07-14 16:05:19 | src.enhanced_batch_processor | INFO | Completed batch 10 with 50 results
+2025-07-14 16:05:19 | src.enhanced_batch_processor | INFO | Processing batch 11/27 with 50 items
+2025-07-14 16:05:19 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:06:22 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:06:22 | src.token_tracker | INFO |    📥 Input tokens: 14,020
+2025-07-14 16:06:22 | src.token_tracker | INFO |    📤 Output tokens: 5,972
+2025-07-14 16:06:22 | src.token_tracker | INFO |    💾 Cached tokens: 13,400
+2025-07-14 16:06:22 | src.token_tracker | INFO |    💰 Input cost: $0.002103
+2025-07-14 16:06:22 | src.token_tracker | INFO |    💰 Output cost: $0.003583
+2025-07-14 16:06:22 | src.token_tracker | INFO |    💰 Cached cost: $0.000503
+2025-07-14 16:06:22 | src.token_tracker | INFO |    💰 Total cost: $0.006189
+2025-07-14 16:06:22 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:06:22 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:06:22 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:06:22 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:06:22 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:06:22 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:06:22 | src.token_tracker | INFO |    🔢 Total calls: 11
+2025-07-14 16:06:22 | src.token_tracker | INFO |    📥 Total input tokens: 155,067
+2025-07-14 16:06:22 | src.token_tracker | INFO |    📤 Total output tokens: 66,607
+2025-07-14 16:06:22 | src.token_tracker | INFO |    💾 Total cached tokens: 107,544
+2025-07-14 16:06:22 | src.token_tracker | INFO |    💰 Total session cost: $0.067257
+2025-07-14 16:06:22 | src.json_storage | INFO | Stored checklist_matching response for batch 10 at json_outputs\responses\checklist_matching_batch_010_20250714_160622_session_1752489382.json
+2025-07-14 16:06:22 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:06:22 | src.gemini_client | INFO | Found 10 items, 40 not found
+2025-07-14 16:06:22 | src.enhanced_batch_processor | INFO | Completed batch 11 with 50 results
+2025-07-14 16:06:22 | src.enhanced_batch_processor | INFO | Processing batch 12/27 with 50 items
+2025-07-14 16:06:22 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:07:33 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:07:33 | src.token_tracker | INFO |    📥 Input tokens: 14,091
+2025-07-14 16:07:33 | src.token_tracker | INFO |    📤 Output tokens: 5,661
+2025-07-14 16:07:33 | src.token_tracker | INFO |    💾 Cached tokens: 13,453
+2025-07-14 16:07:33 | src.token_tracker | INFO |    💰 Input cost: $0.002114
+2025-07-14 16:07:33 | src.token_tracker | INFO |    💰 Output cost: $0.003397
+2025-07-14 16:07:33 | src.token_tracker | INFO |    💰 Cached cost: $0.000504
+2025-07-14 16:07:33 | src.token_tracker | INFO |    💰 Total cost: $0.006015
+2025-07-14 16:07:33 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:07:33 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:07:33 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:07:33 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:07:33 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:07:33 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:07:33 | src.token_tracker | INFO |    🔢 Total calls: 12
+2025-07-14 16:07:33 | src.token_tracker | INFO |    📥 Total input tokens: 169,158
+2025-07-14 16:07:33 | src.token_tracker | INFO |    📤 Total output tokens: 72,268
+2025-07-14 16:07:33 | src.token_tracker | INFO |    💾 Total cached tokens: 120,997
+2025-07-14 16:07:34 | src.token_tracker | INFO |    💰 Total session cost: $0.073272
+2025-07-14 16:07:34 | src.json_storage | INFO | Stored checklist_matching response for batch 11 at json_outputs\responses\checklist_matching_batch_011_20250714_160734_session_1752489454.json
+2025-07-14 16:07:34 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:07:34 | src.gemini_client | INFO | Found 4 items, 46 not found
+2025-07-14 16:07:34 | src.enhanced_batch_processor | INFO | Completed batch 12 with 50 results
+2025-07-14 16:07:34 | src.enhanced_batch_processor | INFO | Processing batch 13/27 with 50 items
+2025-07-14 16:07:34 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:08:48 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:08:48 | src.token_tracker | INFO |    📥 Input tokens: 14,134
+2025-07-14 16:08:48 | src.token_tracker | INFO |    📤 Output tokens: 6,970
+2025-07-14 16:08:48 | src.token_tracker | INFO |    💾 Cached tokens: 13,485
+2025-07-14 16:08:48 | src.token_tracker | INFO |    💰 Input cost: $0.002120
+2025-07-14 16:08:48 | src.token_tracker | INFO |    💰 Output cost: $0.004182
+2025-07-14 16:08:48 | src.token_tracker | INFO |    💰 Cached cost: $0.000506
+2025-07-14 16:08:48 | src.token_tracker | INFO |    💰 Total cost: $0.006808
+2025-07-14 16:08:48 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:08:48 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:08:48 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:08:48 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:08:48 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:08:48 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:08:48 | src.token_tracker | INFO |    🔢 Total calls: 13
+2025-07-14 16:08:48 | src.token_tracker | INFO |    📥 Total input tokens: 183,292
+2025-07-14 16:08:48 | src.token_tracker | INFO |    📤 Total output tokens: 79,238
+2025-07-14 16:08:48 | src.token_tracker | INFO |    💾 Total cached tokens: 134,482
+2025-07-14 16:08:48 | src.token_tracker | INFO |    💰 Total session cost: $0.080080
+2025-07-14 16:08:48 | src.json_storage | INFO | Stored checklist_matching response for batch 12 at json_outputs\responses\checklist_matching_batch_012_20250714_160848_session_1752489528.json
+2025-07-14 16:08:48 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:08:48 | src.gemini_client | INFO | Found 23 items, 27 not found
+2025-07-14 16:08:48 | src.enhanced_batch_processor | INFO | Completed batch 13 with 50 results
+2025-07-14 16:08:48 | src.enhanced_batch_processor | INFO | Processing batch 14/27 with 50 items
+2025-07-14 16:08:48 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:09:42 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:09:42 | src.token_tracker | INFO |    📥 Input tokens: 14,094
+2025-07-14 16:09:42 | src.token_tracker | INFO |    📤 Output tokens: 6,121
+2025-07-14 16:09:42 | src.token_tracker | INFO |    💾 Cached tokens: 13,456
+2025-07-14 16:09:42 | src.token_tracker | INFO |    💰 Input cost: $0.002114
+2025-07-14 16:09:42 | src.token_tracker | INFO |    💰 Output cost: $0.003673
+2025-07-14 16:09:42 | src.token_tracker | INFO |    💰 Cached cost: $0.000505
+2025-07-14 16:09:42 | src.token_tracker | INFO |    💰 Total cost: $0.006291
+2025-07-14 16:09:42 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:09:42 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:09:42 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:09:42 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:09:42 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:09:42 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:09:42 | src.token_tracker | INFO |    🔢 Total calls: 14
+2025-07-14 16:09:42 | src.token_tracker | INFO |    📥 Total input tokens: 197,386
+2025-07-14 16:09:42 | src.token_tracker | INFO |    📤 Total output tokens: 85,359
+2025-07-14 16:09:42 | src.token_tracker | INFO |    💾 Total cached tokens: 147,938
+2025-07-14 16:09:42 | src.token_tracker | INFO |    💰 Total session cost: $0.086371
+2025-07-14 16:09:42 | src.json_storage | INFO | Stored checklist_matching response for batch 13 at json_outputs\responses\checklist_matching_batch_013_20250714_160942_session_1752489582.json
+2025-07-14 16:09:42 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:09:42 | src.gemini_client | INFO | Found 18 items, 32 not found
+2025-07-14 16:09:42 | src.enhanced_batch_processor | INFO | Completed batch 14 with 50 results
+2025-07-14 16:09:42 | src.enhanced_batch_processor | INFO | Processing batch 15/27 with 50 items
+2025-07-14 16:09:42 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:11:03 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:11:03 | src.token_tracker | INFO |    📥 Input tokens: 13,956
+2025-07-14 16:11:03 | src.token_tracker | INFO |    📤 Output tokens: 6,981
+2025-07-14 16:11:03 | src.token_tracker | INFO |    💾 Cached tokens: 13,353
+2025-07-14 16:11:03 | src.token_tracker | INFO |    💰 Input cost: $0.002093
+2025-07-14 16:11:03 | src.token_tracker | INFO |    💰 Output cost: $0.004189
+2025-07-14 16:11:03 | src.token_tracker | INFO |    💰 Cached cost: $0.000501
+2025-07-14 16:11:03 | src.token_tracker | INFO |    💰 Total cost: $0.006783
+2025-07-14 16:11:03 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:11:03 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:11:03 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:11:03 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:11:03 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:11:03 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:11:03 | src.token_tracker | INFO |    🔢 Total calls: 15
+2025-07-14 16:11:03 | src.token_tracker | INFO |    📥 Total input tokens: 211,342
+2025-07-14 16:11:03 | src.token_tracker | INFO |    📤 Total output tokens: 92,340
+2025-07-14 16:11:03 | src.token_tracker | INFO |    💾 Total cached tokens: 161,291
+2025-07-14 16:11:03 | src.token_tracker | INFO |    💰 Total session cost: $0.093154
+2025-07-14 16:11:03 | src.json_storage | INFO | Stored checklist_matching response for batch 14 at json_outputs\responses\checklist_matching_batch_014_20250714_161103_session_1752489663.json
+2025-07-14 16:11:03 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:11:03 | src.gemini_client | INFO | Found 23 items, 27 not found
+2025-07-14 16:11:03 | src.enhanced_batch_processor | INFO | Completed batch 15 with 50 results
+2025-07-14 16:11:03 | src.enhanced_batch_processor | INFO | Processing batch 16/27 with 50 items
+2025-07-14 16:11:03 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:12:01 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:12:01 | src.token_tracker | INFO |    📥 Input tokens: 14,002
+2025-07-14 16:12:01 | src.token_tracker | INFO |    📤 Output tokens: 5,269
+2025-07-14 16:12:01 | src.token_tracker | INFO |    💾 Cached tokens: 13,387
+2025-07-14 16:12:01 | src.token_tracker | INFO |    💰 Input cost: $0.002100
+2025-07-14 16:12:01 | src.token_tracker | INFO |    💰 Output cost: $0.003161
+2025-07-14 16:12:01 | src.token_tracker | INFO |    💰 Cached cost: $0.000502
+2025-07-14 16:12:01 | src.token_tracker | INFO |    💰 Total cost: $0.005764
+2025-07-14 16:12:01 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:12:01 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:12:01 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:12:01 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:12:01 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:12:01 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:12:01 | src.token_tracker | INFO |    🔢 Total calls: 16
+2025-07-14 16:12:01 | src.token_tracker | INFO |    📥 Total input tokens: 225,344
+2025-07-14 16:12:01 | src.token_tracker | INFO |    📤 Total output tokens: 97,609
+2025-07-14 16:12:01 | src.token_tracker | INFO |    💾 Total cached tokens: 174,678
+2025-07-14 16:12:01 | src.token_tracker | INFO |    💰 Total session cost: $0.098917
+2025-07-14 16:12:01 | src.json_storage | INFO | Stored checklist_matching response for batch 15 at json_outputs\responses\checklist_matching_batch_015_20250714_161201_session_1752489721.json
+2025-07-14 16:12:01 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:12:01 | src.gemini_client | INFO | Found 14 items, 36 not found
+2025-07-14 16:12:01 | src.enhanced_batch_processor | INFO | Completed batch 16 with 50 results
+2025-07-14 16:12:01 | src.enhanced_batch_processor | INFO | Processing batch 17/27 with 50 items
+2025-07-14 16:12:01 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:13:15 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:13:15 | src.token_tracker | INFO |    📥 Input tokens: 14,191
+2025-07-14 16:13:15 | src.token_tracker | INFO |    📤 Output tokens: 8,009
+2025-07-14 16:13:15 | src.token_tracker | INFO |    💾 Cached tokens: 13,527
+2025-07-14 16:13:15 | src.token_tracker | INFO |    💰 Input cost: $0.002129
+2025-07-14 16:13:15 | src.token_tracker | INFO |    💰 Output cost: $0.004805
+2025-07-14 16:13:15 | src.token_tracker | INFO |    💰 Cached cost: $0.000507
+2025-07-14 16:13:15 | src.token_tracker | INFO |    💰 Total cost: $0.007441
+2025-07-14 16:13:15 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:13:15 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:13:15 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:13:15 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:13:15 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:13:15 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:13:15 | src.token_tracker | INFO |    🔢 Total calls: 17
+2025-07-14 16:13:15 | src.token_tracker | INFO |    📥 Total input tokens: 239,535
+2025-07-14 16:13:15 | src.token_tracker | INFO |    📤 Total output tokens: 105,618
+2025-07-14 16:13:15 | src.token_tracker | INFO |    💾 Total cached tokens: 188,205
+2025-07-14 16:13:15 | src.token_tracker | INFO |    💰 Total session cost: $0.106359
+2025-07-14 16:13:15 | src.json_storage | INFO | Stored checklist_matching response for batch 16 at json_outputs\responses\checklist_matching_batch_016_20250714_161315_session_1752489795.json
+2025-07-14 16:13:15 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:13:15 | src.gemini_client | INFO | Found 23 items, 27 not found
+2025-07-14 16:13:15 | src.enhanced_batch_processor | INFO | Completed batch 17 with 50 results
+2025-07-14 16:13:15 | src.enhanced_batch_processor | INFO | Processing batch 18/27 with 50 items
+2025-07-14 16:13:15 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:14:23 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:14:23 | src.token_tracker | INFO |    📥 Input tokens: 14,101
+2025-07-14 16:14:23 | src.token_tracker | INFO |    📤 Output tokens: 6,488
+2025-07-14 16:14:23 | src.token_tracker | INFO |    💾 Cached tokens: 13,460
+2025-07-14 16:14:23 | src.token_tracker | INFO |    💰 Input cost: $0.002115
+2025-07-14 16:14:23 | src.token_tracker | INFO |    💰 Output cost: $0.003893
+2025-07-14 16:14:23 | src.token_tracker | INFO |    💰 Cached cost: $0.000505
+2025-07-14 16:14:23 | src.token_tracker | INFO |    💰 Total cost: $0.006513
+2025-07-14 16:14:23 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:14:23 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:14:23 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:14:23 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:14:23 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:14:23 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:14:23 | src.token_tracker | INFO |    🔢 Total calls: 18
+2025-07-14 16:14:23 | src.token_tracker | INFO |    📥 Total input tokens: 253,636
+2025-07-14 16:14:23 | src.token_tracker | INFO |    📤 Total output tokens: 112,106
+2025-07-14 16:14:23 | src.token_tracker | INFO |    💾 Total cached tokens: 201,665
+2025-07-14 16:14:23 | src.token_tracker | INFO |    💰 Total session cost: $0.112871
+2025-07-14 16:14:23 | src.json_storage | INFO | Stored checklist_matching response for batch 17 at json_outputs\responses\checklist_matching_batch_017_20250714_161423_session_1752489863.json
+2025-07-14 16:14:23 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:14:23 | src.gemini_client | INFO | Found 13 items, 37 not found
+2025-07-14 16:14:23 | src.enhanced_batch_processor | INFO | Completed batch 18 with 50 results
+2025-07-14 16:14:23 | src.enhanced_batch_processor | INFO | Processing batch 19/27 with 50 items
+2025-07-14 16:14:23 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:15:23 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:15:23 | src.token_tracker | INFO |    📥 Input tokens: 13,992
+2025-07-14 16:15:23 | src.token_tracker | INFO |    📤 Output tokens: 5,656
+2025-07-14 16:15:23 | src.token_tracker | INFO |    💾 Cached tokens: 13,380
+2025-07-14 16:15:23 | src.token_tracker | INFO |    💰 Input cost: $0.002099
+2025-07-14 16:15:23 | src.token_tracker | INFO |    💰 Output cost: $0.003394
+2025-07-14 16:15:23 | src.token_tracker | INFO |    💰 Cached cost: $0.000502
+2025-07-14 16:15:23 | src.token_tracker | INFO |    💰 Total cost: $0.005994
+2025-07-14 16:15:23 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:15:23 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:15:23 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:15:23 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:15:23 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:15:23 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:15:23 | src.token_tracker | INFO |    🔢 Total calls: 19
+2025-07-14 16:15:23 | src.token_tracker | INFO |    📥 Total input tokens: 267,628
+2025-07-14 16:15:23 | src.token_tracker | INFO |    📤 Total output tokens: 117,762
+2025-07-14 16:15:23 | src.token_tracker | INFO |    💾 Total cached tokens: 215,045
+2025-07-14 16:15:23 | src.token_tracker | INFO |    💰 Total session cost: $0.118866
+2025-07-14 16:15:23 | src.json_storage | INFO | Stored checklist_matching response for batch 18 at json_outputs\responses\checklist_matching_batch_018_20250714_161523_session_1752489923.json
+2025-07-14 16:15:23 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:15:23 | src.gemini_client | INFO | Found 10 items, 40 not found
+2025-07-14 16:15:23 | src.enhanced_batch_processor | INFO | Completed batch 19 with 50 results
+2025-07-14 16:15:23 | src.enhanced_batch_processor | INFO | Processing batch 20/27 with 50 items
+2025-07-14 16:15:23 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:16:35 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:16:35 | src.token_tracker | INFO |    📥 Input tokens: 14,064
+2025-07-14 16:16:35 | src.token_tracker | INFO |    📤 Output tokens: 6,303
+2025-07-14 16:16:35 | src.token_tracker | INFO |    💾 Cached tokens: 13,433
+2025-07-14 16:16:35 | src.token_tracker | INFO |    💰 Input cost: $0.002110
+2025-07-14 16:16:35 | src.token_tracker | INFO |    💰 Output cost: $0.003782
+2025-07-14 16:16:35 | src.token_tracker | INFO |    💰 Cached cost: $0.000504
+2025-07-14 16:16:35 | src.token_tracker | INFO |    💰 Total cost: $0.006395
+2025-07-14 16:16:35 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:16:35 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:16:35 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:16:35 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:16:35 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:16:35 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:16:35 | src.token_tracker | INFO |    🔢 Total calls: 20
+2025-07-14 16:16:35 | src.token_tracker | INFO |    📥 Total input tokens: 281,692
+2025-07-14 16:16:35 | src.token_tracker | INFO |    📤 Total output tokens: 124,065
+2025-07-14 16:16:35 | src.token_tracker | INFO |    💾 Total cached tokens: 228,478
+2025-07-14 16:16:35 | src.token_tracker | INFO |    💰 Total session cost: $0.125261
+2025-07-14 16:16:35 | src.json_storage | INFO | Stored checklist_matching response for batch 19 at json_outputs\responses\checklist_matching_batch_019_20250714_161635_session_1752489995.json
+2025-07-14 16:16:35 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:16:35 | src.gemini_client | INFO | Found 22 items, 28 not found
+2025-07-14 16:16:35 | src.enhanced_batch_processor | INFO | Completed batch 20 with 50 results
+2025-07-14 16:16:35 | src.enhanced_batch_processor | INFO | Processing batch 21/27 with 50 items
+2025-07-14 16:16:35 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:17:08 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:17:08 | src.token_tracker | INFO |    📥 Input tokens: 14,024
+2025-07-14 16:17:08 | src.token_tracker | INFO |    📤 Output tokens: 6,413
+2025-07-14 16:17:08 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 16:17:08 | src.token_tracker | INFO |    💰 Input cost: $0.002104
+2025-07-14 16:17:08 | src.token_tracker | INFO |    💰 Output cost: $0.003848
+2025-07-14 16:17:08 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 16:17:08 | src.token_tracker | INFO |    💰 Total cost: $0.005951
+2025-07-14 16:17:08 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:17:08 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:17:08 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:17:08 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:17:08 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:17:08 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:17:08 | src.token_tracker | INFO |    🔢 Total calls: 21
+2025-07-14 16:17:08 | src.token_tracker | INFO |    📥 Total input tokens: 295,716
+2025-07-14 16:17:08 | src.token_tracker | INFO |    📤 Total output tokens: 130,478
+2025-07-14 16:17:08 | src.token_tracker | INFO |    💾 Total cached tokens: 228,478
+2025-07-14 16:17:08 | src.token_tracker | INFO |    💰 Total session cost: $0.131212
+2025-07-14 16:17:08 | src.json_storage | INFO | Stored checklist_matching response for batch 20 at json_outputs\responses\checklist_matching_batch_020_20250714_161708_session_1752490028.json
+2025-07-14 16:17:08 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:17:08 | src.gemini_client | INFO | Found 6 items, 44 not found
+2025-07-14 16:17:08 | src.enhanced_batch_processor | INFO | Completed batch 21 with 50 results
+2025-07-14 16:17:08 | src.enhanced_batch_processor | INFO | Processing batch 22/27 with 50 items
+2025-07-14 16:17:08 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:18:19 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:18:19 | src.token_tracker | INFO |    📥 Input tokens: 14,079
+2025-07-14 16:18:19 | src.token_tracker | INFO |    📤 Output tokens: 5,904
+2025-07-14 16:18:19 | src.token_tracker | INFO |    💾 Cached tokens: 13,444
+2025-07-14 16:18:19 | src.token_tracker | INFO |    💰 Input cost: $0.002112
+2025-07-14 16:18:19 | src.token_tracker | INFO |    💰 Output cost: $0.003542
+2025-07-14 16:18:19 | src.token_tracker | INFO |    💰 Cached cost: $0.000504
+2025-07-14 16:18:19 | src.token_tracker | INFO |    💰 Total cost: $0.006158
+2025-07-14 16:18:19 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:18:19 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:18:19 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:18:19 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:18:19 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:18:19 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:18:19 | src.token_tracker | INFO |    🔢 Total calls: 22
+2025-07-14 16:18:19 | src.token_tracker | INFO |    📥 Total input tokens: 309,795
+2025-07-14 16:18:19 | src.token_tracker | INFO |    📤 Total output tokens: 136,382
+2025-07-14 16:18:19 | src.token_tracker | INFO |    💾 Total cached tokens: 241,922
+2025-07-14 16:18:19 | src.token_tracker | INFO |    💰 Total session cost: $0.137371
+2025-07-14 16:18:19 | src.json_storage | INFO | Stored checklist_matching response for batch 21 at json_outputs\responses\checklist_matching_batch_021_20250714_161819_session_1752490099.json
+2025-07-14 16:18:19 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:18:19 | src.gemini_client | INFO | Found 22 items, 28 not found
+2025-07-14 16:18:19 | src.enhanced_batch_processor | INFO | Completed batch 22 with 50 results
+2025-07-14 16:18:19 | src.enhanced_batch_processor | INFO | Processing batch 23/27 with 50 items
+2025-07-14 16:18:19 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:19:40 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:19:40 | src.token_tracker | INFO |    📥 Input tokens: 14,112
+2025-07-14 16:19:40 | src.token_tracker | INFO |    📤 Output tokens: 7,349
+2025-07-14 16:19:40 | src.token_tracker | INFO |    💾 Cached tokens: 13,469
+2025-07-14 16:19:40 | src.token_tracker | INFO |    💰 Input cost: $0.002117
+2025-07-14 16:19:40 | src.token_tracker | INFO |    💰 Output cost: $0.004409
+2025-07-14 16:19:40 | src.token_tracker | INFO |    💰 Cached cost: $0.000505
+2025-07-14 16:19:40 | src.token_tracker | INFO |    💰 Total cost: $0.007031
+2025-07-14 16:19:40 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:19:40 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:19:40 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:19:40 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:19:40 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:19:40 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:19:40 | src.token_tracker | INFO |    🔢 Total calls: 23
+2025-07-14 16:19:40 | src.token_tracker | INFO |    📥 Total input tokens: 323,907
+2025-07-14 16:19:40 | src.token_tracker | INFO |    📤 Total output tokens: 143,731
+2025-07-14 16:19:40 | src.token_tracker | INFO |    💾 Total cached tokens: 255,391
+2025-07-14 16:19:40 | src.token_tracker | INFO |    💰 Total session cost: $0.144402
+2025-07-14 16:19:40 | src.json_storage | INFO | Stored checklist_matching response for batch 22 at json_outputs\responses\checklist_matching_batch_022_20250714_161940_session_1752490180.json
+2025-07-14 16:19:40 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:19:40 | src.gemini_client | INFO | Found 29 items, 21 not found
+2025-07-14 16:19:40 | src.enhanced_batch_processor | INFO | Completed batch 23 with 50 results
+2025-07-14 16:19:40 | src.enhanced_batch_processor | INFO | Processing batch 24/27 with 50 items
+2025-07-14 16:19:40 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:20:58 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:20:58 | src.token_tracker | INFO |    📥 Input tokens: 14,059
+2025-07-14 16:20:58 | src.token_tracker | INFO |    📤 Output tokens: 7,125
+2025-07-14 16:20:58 | src.token_tracker | INFO |    💾 Cached tokens: 13,429
+2025-07-14 16:20:58 | src.token_tracker | INFO |    💰 Input cost: $0.002109
+2025-07-14 16:20:58 | src.token_tracker | INFO |    💰 Output cost: $0.004275
+2025-07-14 16:20:58 | src.token_tracker | INFO |    💰 Cached cost: $0.000504
+2025-07-14 16:20:58 | src.token_tracker | INFO |    💰 Total cost: $0.006887
+2025-07-14 16:20:58 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:20:58 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:20:58 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:20:58 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:20:58 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:20:58 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:20:58 | src.token_tracker | INFO |    🔢 Total calls: 24
+2025-07-14 16:20:58 | src.token_tracker | INFO |    📥 Total input tokens: 337,966
+2025-07-14 16:20:58 | src.token_tracker | INFO |    📤 Total output tokens: 150,856
+2025-07-14 16:20:58 | src.token_tracker | INFO |    💾 Total cached tokens: 268,820
+2025-07-14 16:20:58 | src.token_tracker | INFO |    💰 Total session cost: $0.151289
+2025-07-14 16:20:58 | src.json_storage | INFO | Stored checklist_matching response for batch 23 at json_outputs\responses\checklist_matching_batch_023_20250714_162058_session_1752490258.json
+2025-07-14 16:20:58 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:20:58 | src.gemini_client | INFO | Found 33 items, 17 not found
+2025-07-14 16:20:58 | src.enhanced_batch_processor | INFO | Completed batch 24 with 50 results
+2025-07-14 16:20:58 | src.enhanced_batch_processor | INFO | Processing batch 25/27 with 50 items
+2025-07-14 16:20:58 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:22:17 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:22:17 | src.token_tracker | INFO |    📥 Input tokens: 14,114
+2025-07-14 16:22:17 | src.token_tracker | INFO |    📤 Output tokens: 6,105
+2025-07-14 16:22:17 | src.token_tracker | INFO |    💾 Cached tokens: 13,470
+2025-07-14 16:22:17 | src.token_tracker | INFO |    💰 Input cost: $0.002117
+2025-07-14 16:22:17 | src.token_tracker | INFO |    💰 Output cost: $0.003663
+2025-07-14 16:22:17 | src.token_tracker | INFO |    💰 Cached cost: $0.000505
+2025-07-14 16:22:17 | src.token_tracker | INFO |    💰 Total cost: $0.006285
+2025-07-14 16:22:17 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:22:17 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:22:17 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:22:17 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:22:17 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:22:17 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:22:17 | src.token_tracker | INFO |    🔢 Total calls: 25
+2025-07-14 16:22:17 | src.token_tracker | INFO |    📥 Total input tokens: 352,080
+2025-07-14 16:22:17 | src.token_tracker | INFO |    📤 Total output tokens: 156,961
+2025-07-14 16:22:17 | src.token_tracker | INFO |    💾 Total cached tokens: 282,290
+2025-07-14 16:22:17 | src.token_tracker | INFO |    💰 Total session cost: $0.157574
+2025-07-14 16:22:17 | src.json_storage | INFO | Stored checklist_matching response for batch 24 at json_outputs\responses\checklist_matching_batch_024_20250714_162217_session_1752490337.json
+2025-07-14 16:22:17 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:22:17 | src.gemini_client | INFO | Found 14 items, 36 not found
+2025-07-14 16:22:17 | src.enhanced_batch_processor | INFO | Completed batch 25 with 50 results
+2025-07-14 16:22:17 | src.enhanced_batch_processor | INFO | Processing batch 26/27 with 50 items
+2025-07-14 16:22:17 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:23:23 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:23:23 | src.token_tracker | INFO |    📥 Input tokens: 14,103
+2025-07-14 16:23:23 | src.token_tracker | INFO |    📤 Output tokens: 6,611
+2025-07-14 16:23:23 | src.token_tracker | INFO |    💾 Cached tokens: 13,462
+2025-07-14 16:23:23 | src.token_tracker | INFO |    💰 Input cost: $0.002115
+2025-07-14 16:23:23 | src.token_tracker | INFO |    💰 Output cost: $0.003967
+2025-07-14 16:23:23 | src.token_tracker | INFO |    💰 Cached cost: $0.000505
+2025-07-14 16:23:23 | src.token_tracker | INFO |    💰 Total cost: $0.006587
+2025-07-14 16:23:23 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:23:23 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:23:23 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:23:23 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:23:23 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:23:23 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:23:23 | src.token_tracker | INFO |    🔢 Total calls: 26
+2025-07-14 16:23:23 | src.token_tracker | INFO |    📥 Total input tokens: 366,183
+2025-07-14 16:23:23 | src.token_tracker | INFO |    📤 Total output tokens: 163,572
+2025-07-14 16:23:23 | src.token_tracker | INFO |    💾 Total cached tokens: 295,752
+2025-07-14 16:23:23 | src.token_tracker | INFO |    💰 Total session cost: $0.164161
+2025-07-14 16:23:23 | src.json_storage | INFO | Stored checklist_matching response for batch 25 at json_outputs\responses\checklist_matching_batch_025_20250714_162323_session_1752490403.json
+2025-07-14 16:23:23 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:23:23 | src.gemini_client | INFO | Found 21 items, 29 not found
+2025-07-14 16:23:23 | src.enhanced_batch_processor | INFO | Completed batch 26 with 50 results
+2025-07-14 16:23:23 | src.enhanced_batch_processor | INFO | Processing batch 27/27 with 50 items
+2025-07-14 16:23:23 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 16:24:33 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 16:24:33 | src.token_tracker | INFO |    📥 Input tokens: 13,997
+2025-07-14 16:24:33 | src.token_tracker | INFO |    📤 Output tokens: 6,246
+2025-07-14 16:24:33 | src.token_tracker | INFO |    💾 Cached tokens: 13,383
+2025-07-14 16:24:33 | src.token_tracker | INFO |    💰 Input cost: $0.002100
+2025-07-14 16:24:33 | src.token_tracker | INFO |    💰 Output cost: $0.003748
+2025-07-14 16:24:33 | src.token_tracker | INFO |    💰 Cached cost: $0.000502
+2025-07-14 16:24:33 | src.token_tracker | INFO |    💰 Total cost: $0.006349
+2025-07-14 16:24:33 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 16:24:33 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 16:24:33 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 16:24:33 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 16:24:33 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 16:24:33 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 16:24:33 | src.token_tracker | INFO |    🔢 Total calls: 27
+2025-07-14 16:24:33 | src.token_tracker | INFO |    📥 Total input tokens: 380,180
+2025-07-14 16:24:33 | src.token_tracker | INFO |    📤 Total output tokens: 169,818
+2025-07-14 16:24:33 | src.token_tracker | INFO |    💾 Total cached tokens: 309,135
+2025-07-14 16:24:33 | src.token_tracker | INFO |    💰 Total session cost: $0.170510
+2025-07-14 16:24:33 | src.json_storage | INFO | Stored checklist_matching response for batch 26 at json_outputs\responses\checklist_matching_batch_026_20250714_162433_session_1752490473.json
+2025-07-14 16:24:33 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 16:24:33 | src.gemini_client | INFO | Found 20 items, 30 not found
+2025-07-14 16:24:33 | src.enhanced_batch_processor | INFO | Completed batch 27 with 50 results
+2025-07-14 16:24:33 | src.enhanced_batch_processor | INFO | === ENHANCED BATCH PROCESSOR SYNC: COMPLETED PROCESSING 27 BATCHES ===
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 3.7% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 7.4% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 11.1% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 14.8% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 18.5% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 22.2% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 25.9% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 29.6% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 33.3% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 37.0% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 40.7% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 44.4% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 48.1% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 51.9% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 55.6% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 59.3% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 63.0% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 66.7% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 70.4% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 74.1% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 77.8% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 81.5% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 85.2% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 88.9% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 92.6% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 96.3% complete
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 100.0% complete
+2025-07-14 16:24:33 | src.matching_engine | INFO | Completed processing with 1350 validated results
+2025-07-14 16:24:33 | src.output_generator | INFO | Compiled final output for process d8b56a08-348f-45f4-bf6d-c36378b21420
+2025-07-14 16:24:33 | src.output_generator | INFO | Updated progress for 8f00d1b6-4d84-4686-98ab-88f0a9e4a3ee: 100.0% complete
+2025-07-14 16:24:33 | src.matching_engine | INFO | Processing completed for d8b56a08-348f-45f4-bf6d-c36378b21420: 452/1350 items found
+2025-07-14 16:24:34 | src.gemini_client | INFO | Cleaned up cache: f562ab3668862d40e3f019d829bb1348
+2025-07-14 16:24:34 | src.matching_engine | INFO | Cleaned up process: d8b56a08-348f-45f4-bf6d-c36378b21420
+2025-07-14 16:24:34 | __main__ | INFO | Creating combined JSON for session: 4e0f2957-82e6-404b-9967-5ee05be024de, process: 97226ef2-8f72-42ce-9b9b-5fa6dc809053
+2025-07-14 16:24:34 | src.enhanced_batch_processor | INFO | Creating combined JSON for session: 4e0f2957-82e6-404b-9967-5ee05be024de, process: 97226ef2-8f72-42ce-9b9b-5fa6dc809053
+2025-07-14 16:24:34 | src.json_combiner | INFO | Combining JSON outputs for session: 4e0f2957-82e6-404b-9967-5ee05be024de, process: 97226ef2-8f72-42ce-9b9b-5fa6dc809053
+2025-07-14 16:24:34 | src.json_combiner | INFO | Found 0 successful response files
+2025-07-14 16:24:34 | src.json_combiner | INFO | Found 0 failed response files
+2025-07-14 16:24:34 | src.json_combiner | INFO | Combined JSON created with 0 total responses
+2025-07-14 16:24:34 | src.json_combiner | INFO | Success rate: 0.00%
+2025-07-14 16:24:34 | src.json_combiner | INFO | Total tokens used: 0
+2025-07-14 16:24:34 | src.json_combiner | INFO | Total cost: $0.000000
+2025-07-14 16:24:34 | src.json_combiner | INFO | Combined JSON saved to: json_outputs\combined\combined_session_4e0f2957-82e6-404b-9967-5ee05be024de_process_97226ef2-8f72-42ce-9b9b-5fa6dc809053_20250714_162434.json
+2025-07-14 16:24:34 | src.enhanced_batch_processor | INFO | Combined JSON created successfully: json_outputs\combined\combined_session_4e0f2957-82e6-404b-9967-5ee05be024de_process_97226ef2-8f72-42ce-9b9b-5fa6dc809053_20250714_162434.json
+2025-07-14 16:24:34 | __main__ | INFO | Combined JSON created successfully: json_outputs\combined\combined_session_4e0f2957-82e6-404b-9967-5ee05be024de_process_97226ef2-8f72-42ce-9b9b-5fa6dc809053_20250714_162434.json
+2025-07-14 16:24:40 | __main__ | INFO | Serving combined JSON file: json_outputs\combined\combined_session_4e0f2957-82e6-404b-9967-5ee05be024de_process_97226ef2-8f72-42ce-9b9b-5fa6dc809053_20250714_162434.json
+2025-07-14 16:30:43 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 16:30:43 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 16:30:43 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 16:30:43 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 16:30:43 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 16:30:43 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 16:30:43 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 16:30:43 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 16:30:43 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 16:30:43 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 16:30:43 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 16:30:43 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 16:30:43 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 16:30:43 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 16:30:43 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 16:30:43 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 16:30:43 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 16:30:43 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 16:30:43 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 16:30:43 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 16:30:43 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 16:30:43 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 16:31:00 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 16:31:00 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 16:31:00 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 16:31:00 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 16:31:00 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 16:31:00 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 16:31:00 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 16:31:00 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 16:31:00 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 16:31:00 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 16:31:00 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 16:31:00 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 16:31:00 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 16:31:00 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 16:31:00 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 16:31:00 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 16:31:00 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 16:31:00 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 16:31:00 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 16:31:00 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 16:31:00 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 16:31:00 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 16:31:25 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 16:31:25 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 16:31:25 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 16:31:25 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 16:31:25 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 16:31:25 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 16:31:25 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 16:31:25 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 16:31:25 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 16:31:25 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 16:31:25 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 16:31:25 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 16:31:25 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 16:31:25 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 16:31:25 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 16:31:25 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 16:31:25 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 16:31:25 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 16:31:25 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 16:31:25 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 16:31:25 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 16:31:25 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 17:09:44 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 17:09:44 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:09:44 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 17:09:44 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 17:09:44 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 17:09:44 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 17:09:44 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 17:09:44 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:09:44 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:09:44 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 17:09:44 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:09:44 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 17:09:44 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:09:44 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:09:44 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:09:44 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:09:44 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 17:09:44 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:09:44 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:09:44 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:09:44 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:09:47 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 17:09:47 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:09:47 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 17:09:47 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 17:09:47 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 17:09:47 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 17:09:47 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 17:09:47 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:09:47 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:09:47 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 17:09:47 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:09:47 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 17:09:47 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:09:47 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:09:47 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:09:47 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:09:47 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 17:09:47 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:09:47 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:09:47 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:09:47 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:09:47 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 17:15:06 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 17:15:06 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:15:06 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 17:15:06 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 17:15:06 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 17:15:06 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 17:15:06 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 17:15:06 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:15:06 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:15:06 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 17:15:06 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:15:06 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 17:15:06 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:15:06 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:15:06 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:15:06 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:15:06 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 17:15:06 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:15:06 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:15:06 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:15:06 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:15:06 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 17:15:37 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 17:15:37 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:15:37 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 17:15:37 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 17:15:37 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 17:15:37 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 17:15:37 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 17:15:37 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:15:37 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:15:37 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 17:15:37 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:15:37 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 17:15:37 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:15:37 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:15:37 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:15:37 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:15:37 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 17:15:37 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:15:37 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:15:37 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:15:37 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:15:37 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 17:24:01 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 17:24:01 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:24:01 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 17:24:01 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 17:24:01 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 17:24:01 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 17:24:01 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 17:24:01 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:24:01 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:24:01 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 17:24:01 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:24:01 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 17:24:01 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:24:01 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:24:01 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:24:01 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:24:01 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 17:24:01 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:24:01 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:24:01 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:24:01 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:24:03 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 17:24:03 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:24:03 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 17:24:03 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 17:24:03 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 17:24:03 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 17:24:03 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 17:24:03 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:24:03 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:24:03 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 17:24:03 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:24:03 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 17:24:03 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:24:03 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:24:03 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:24:03 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:24:03 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 17:24:03 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:24:03 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:24:03 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:24:03 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:24:03 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 17:27:12 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 17:27:12 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:27:12 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 17:27:12 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 17:27:12 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 17:27:12 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 17:27:12 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 17:27:12 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:27:12 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:27:12 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 17:27:12 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:27:12 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 17:27:12 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:27:12 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:27:12 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:27:12 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:27:12 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 17:27:12 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:27:12 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:27:12 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:27:12 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:27:14 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 17:27:14 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:27:14 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 17:27:14 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 17:27:14 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 17:27:14 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 17:27:14 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 17:27:14 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:27:14 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:27:14 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 17:27:14 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:27:14 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 17:27:14 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:27:14 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:27:14 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:27:14 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:27:14 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 17:27:15 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:27:15 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:27:15 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:27:15 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:27:15 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 17:27:29 | src.document_handler | INFO | File processed successfully: Input - Construction Drawing one page.pdf -> drawing_1cb97b5935ff447daa97922d6bb13a62.pdf
+2025-07-14 17:27:29 | src.document_handler | INFO | Upload processed successfully: {'upload_id': '3b88a643-b57b-4a5d-881c-d3d7edfd581f', 'upload_dir': 'uploads\\3b88a643-b57b-4a5d-881c-d3d7edfd581f', 'total_files': 1, 'drawings_count': 1, 'specifications_count': 0, 'errors_count': 0, 'files': {'drawings': [{'original_name': 'Input - Construction Drawing one page.pdf', 'saved_name': 'drawing_1cb97b5935ff447daa97922d6bb13a62.pdf', 'file_path': 'uploads\\3b88a643-b57b-4a5d-881c-d3d7edfd581f\\drawing_1cb97b5935ff447daa97922d6bb13a62.pdf', 'file_size': 0, 'file_type': 'drawing', 'pdf_info': {'pages': 1, 'title': 'drawing_1cb97b5935ff447daa97922d6bb13a62.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 127364}}], 'specifications': [], 'errors': []}}
+2025-07-14 17:27:29 | __main__ | INFO | Upload successful - Upload ID: 3b88a643-b57b-4a5d-881c-d3d7edfd581f
+2025-07-14 17:27:29 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:27:29 | src.output_generator | INFO | Created progress tracker a39a3739-d9be-479c-b5d0-a628ae9d3d32 for process 781950b5-736c-45cc-8e7f-8f57eab38dda
+2025-07-14 17:27:29 | src.gemini_client | INFO | Uploading 1 documents to Gemini
+2025-07-14 17:27:32 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: 040450abde56aa63e1758448bf08bc95
+2025-07-14 17:27:32 | src.enhanced_batch_processor | INFO | === ENHANCED BATCH PROCESSOR SYNC: STARTING PROCESSING OF 27 BATCHES ===
+2025-07-14 17:27:32 | src.enhanced_batch_processor | INFO | Cache ID: 040450abde56aa63e1758448bf08bc95
+2025-07-14 17:27:32 | src.enhanced_batch_processor | INFO | Document context length: 65 characters
+2025-07-14 17:27:32 | src.enhanced_batch_processor | INFO | Processing batch 1/27 with 50 items
+2025-07-14 17:27:32 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 17:31:42 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 17:31:42 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:31:42 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 17:31:42 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 17:31:42 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 17:31:42 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 17:31:42 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 17:31:42 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:31:42 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:31:42 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 17:31:42 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:31:42 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 17:31:42 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:31:42 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:31:42 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:31:42 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:31:42 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 17:31:42 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:31:42 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:31:42 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:31:42 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:31:45 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 17:31:45 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:31:45 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 17:31:45 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 17:31:45 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 17:31:45 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 17:31:45 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 17:31:45 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 17:31:45 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:31:45 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 17:31:45 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 17:31:45 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 17:31:45 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:31:45 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:31:45 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:31:45 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:31:45 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 17:31:45 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 17:31:45 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 17:31:45 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 17:31:45 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 17:31:45 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 18:07:23 | src.document_handler | INFO | File processed successfully: FPHQ A0040.pdf -> drawing_1b109c361c6048bab2f5835f48448422.pdf
+2025-07-14 18:07:23 | src.document_handler | INFO | Upload processed successfully: {'upload_id': '61f2a955-eff4-4ff3-840e-92a4ebbfbef3', 'upload_dir': 'uploads\\61f2a955-eff4-4ff3-840e-92a4ebbfbef3', 'total_files': 1, 'drawings_count': 1, 'specifications_count': 0, 'errors_count': 0, 'files': {'drawings': [{'original_name': 'FPHQ A0040.pdf', 'saved_name': 'drawing_1b109c361c6048bab2f5835f48448422.pdf', 'file_path': 'uploads\\61f2a955-eff4-4ff3-840e-92a4ebbfbef3\\drawing_1b109c361c6048bab2f5835f48448422.pdf', 'file_size': 0, 'file_type': 'drawing', 'pdf_info': {'pages': 1, 'title': 'drawing_1b109c361c6048bab2f5835f48448422.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 131124}}], 'specifications': [], 'errors': []}}
+2025-07-14 18:07:23 | __main__ | INFO | Upload successful - Upload ID: 61f2a955-eff4-4ff3-840e-92a4ebbfbef3
+2025-07-14 18:07:23 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 18:07:23 | src.output_generator | INFO | Created progress tracker c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad for process b45c38ba-5d32-41c2-954c-1c5490024131
+2025-07-14 18:07:23 | src.gemini_client | INFO | Uploading 1 documents to Gemini
+2025-07-14 18:07:28 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: 8c7f0f3d9f8841365ae04a0a546ac6c2
+2025-07-14 18:07:28 | src.enhanced_batch_processor | INFO | === ENHANCED BATCH PROCESSOR SYNC: STARTING PROCESSING OF 27 BATCHES ===
+2025-07-14 18:07:28 | src.enhanced_batch_processor | INFO | Cache ID: 8c7f0f3d9f8841365ae04a0a546ac6c2
+2025-07-14 18:07:28 | src.enhanced_batch_processor | INFO | Document context length: 65 characters
+2025-07-14 18:07:28 | src.enhanced_batch_processor | INFO | Processing batch 1/27 with 50 items
+2025-07-14 18:07:28 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:08:16 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:08:16 | src.token_tracker | INFO |    📥 Input tokens: 3,407
+2025-07-14 18:08:16 | src.token_tracker | INFO |    📤 Output tokens: 6,047
+2025-07-14 18:08:16 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:08:16 | src.token_tracker | INFO |    💰 Input cost: $0.000511
+2025-07-14 18:08:16 | src.token_tracker | INFO |    💰 Output cost: $0.003628
+2025-07-14 18:08:16 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:08:16 | src.token_tracker | INFO |    💰 Total cost: $0.004139
+2025-07-14 18:08:16 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:08:16 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:08:16 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:08:16 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:08:16 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:08:16 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:08:16 | src.token_tracker | INFO |    🔢 Total calls: 1
+2025-07-14 18:08:16 | src.token_tracker | INFO |    📥 Total input tokens: 3,407
+2025-07-14 18:08:16 | src.token_tracker | INFO |    📤 Total output tokens: 6,047
+2025-07-14 18:08:16 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:08:16 | src.token_tracker | INFO |    💰 Total session cost: $0.004139
+2025-07-14 18:08:16 | src.json_storage | INFO | Stored checklist_matching response for batch 0 at json_outputs\responses\checklist_matching_batch_000_20250714_180816_session_1752496696.json
+2025-07-14 18:08:16 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:08:16 | src.gemini_client | INFO | Found 1 items, 49 not found
+2025-07-14 18:08:16 | src.enhanced_batch_processor | INFO | Completed batch 1 with 50 results
+2025-07-14 18:08:16 | src.enhanced_batch_processor | INFO | Processing batch 2/27 with 50 items
+2025-07-14 18:08:16 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:08:50 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:08:50 | src.token_tracker | INFO |    📥 Input tokens: 3,498
+2025-07-14 18:08:50 | src.token_tracker | INFO |    📤 Output tokens: 5,513
+2025-07-14 18:08:50 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:08:50 | src.token_tracker | INFO |    💰 Input cost: $0.000525
+2025-07-14 18:08:50 | src.token_tracker | INFO |    💰 Output cost: $0.003308
+2025-07-14 18:08:50 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:08:50 | src.token_tracker | INFO |    💰 Total cost: $0.003832
+2025-07-14 18:08:50 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:08:50 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:08:50 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:08:50 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:08:50 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:08:50 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:08:50 | src.token_tracker | INFO |    🔢 Total calls: 2
+2025-07-14 18:08:50 | src.token_tracker | INFO |    📥 Total input tokens: 6,905
+2025-07-14 18:08:50 | src.token_tracker | INFO |    📤 Total output tokens: 11,560
+2025-07-14 18:08:50 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:08:50 | src.token_tracker | INFO |    💰 Total session cost: $0.007972
+2025-07-14 18:08:50 | src.json_storage | INFO | Stored checklist_matching response for batch 1 at json_outputs\responses\checklist_matching_batch_001_20250714_180850_session_1752496730.json
+2025-07-14 18:08:50 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:08:50 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:08:50 | src.enhanced_batch_processor | INFO | Completed batch 2 with 50 results
+2025-07-14 18:08:50 | src.enhanced_batch_processor | INFO | Processing batch 3/27 with 50 items
+2025-07-14 18:08:50 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:09:33 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:09:33 | src.token_tracker | INFO |    📥 Input tokens: 3,320
+2025-07-14 18:09:33 | src.token_tracker | INFO |    📤 Output tokens: 6,461
+2025-07-14 18:09:33 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:09:33 | src.token_tracker | INFO |    💰 Input cost: $0.000498
+2025-07-14 18:09:33 | src.token_tracker | INFO |    💰 Output cost: $0.003877
+2025-07-14 18:09:33 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:09:33 | src.token_tracker | INFO |    💰 Total cost: $0.004375
+2025-07-14 18:09:33 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:09:33 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:09:33 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:09:33 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:09:33 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:09:33 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:09:33 | src.token_tracker | INFO |    🔢 Total calls: 3
+2025-07-14 18:09:33 | src.token_tracker | INFO |    📥 Total input tokens: 10,225
+2025-07-14 18:09:33 | src.token_tracker | INFO |    📤 Total output tokens: 18,021
+2025-07-14 18:09:33 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:09:33 | src.token_tracker | INFO |    💰 Total session cost: $0.012346
+2025-07-14 18:09:33 | src.json_storage | INFO | Stored checklist_matching response for batch 2 at json_outputs\responses\checklist_matching_batch_002_20250714_180933_session_1752496773.json
+2025-07-14 18:09:33 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:09:33 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:09:33 | src.enhanced_batch_processor | INFO | Completed batch 3 with 50 results
+2025-07-14 18:09:33 | src.enhanced_batch_processor | INFO | Processing batch 4/27 with 50 items
+2025-07-14 18:09:33 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:10:19 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:10:19 | src.token_tracker | INFO |    📥 Input tokens: 3,201
+2025-07-14 18:10:19 | src.token_tracker | INFO |    📤 Output tokens: 5,612
+2025-07-14 18:10:19 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:10:19 | src.token_tracker | INFO |    💰 Input cost: $0.000480
+2025-07-14 18:10:19 | src.token_tracker | INFO |    💰 Output cost: $0.003367
+2025-07-14 18:10:19 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:10:19 | src.token_tracker | INFO |    💰 Total cost: $0.003847
+2025-07-14 18:10:19 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:10:19 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:10:19 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:10:19 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:10:19 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:10:19 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:10:19 | src.token_tracker | INFO |    🔢 Total calls: 4
+2025-07-14 18:10:19 | src.token_tracker | INFO |    📥 Total input tokens: 13,426
+2025-07-14 18:10:19 | src.token_tracker | INFO |    📤 Total output tokens: 23,633
+2025-07-14 18:10:19 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:10:19 | src.token_tracker | INFO |    💰 Total session cost: $0.016194
+2025-07-14 18:10:19 | src.json_storage | INFO | Stored checklist_matching response for batch 3 at json_outputs\responses\checklist_matching_batch_003_20250714_181019_session_1752496819.json
+2025-07-14 18:10:19 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:10:19 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:10:19 | src.enhanced_batch_processor | INFO | Completed batch 4 with 50 results
+2025-07-14 18:10:19 | src.enhanced_batch_processor | INFO | Processing batch 5/27 with 50 items
+2025-07-14 18:10:19 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:10:58 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:10:58 | src.token_tracker | INFO |    📥 Input tokens: 3,290
+2025-07-14 18:10:58 | src.token_tracker | INFO |    📤 Output tokens: 6,015
+2025-07-14 18:10:58 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:10:58 | src.token_tracker | INFO |    💰 Input cost: $0.000494
+2025-07-14 18:10:58 | src.token_tracker | INFO |    💰 Output cost: $0.003609
+2025-07-14 18:10:58 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:10:58 | src.token_tracker | INFO |    💰 Total cost: $0.004103
+2025-07-14 18:10:58 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:10:58 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:10:58 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:10:58 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:10:58 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:10:58 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:10:58 | src.token_tracker | INFO |    🔢 Total calls: 5
+2025-07-14 18:10:58 | src.token_tracker | INFO |    📥 Total input tokens: 16,716
+2025-07-14 18:10:58 | src.token_tracker | INFO |    📤 Total output tokens: 29,648
+2025-07-14 18:10:58 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:10:58 | src.token_tracker | INFO |    💰 Total session cost: $0.020296
+2025-07-14 18:10:58 | src.json_storage | INFO | Stored checklist_matching response for batch 4 at json_outputs\responses\checklist_matching_batch_004_20250714_181058_session_1752496858.json
+2025-07-14 18:10:58 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:10:58 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:10:58 | src.enhanced_batch_processor | INFO | Completed batch 5 with 50 results
+2025-07-14 18:10:58 | src.enhanced_batch_processor | INFO | Processing batch 6/27 with 50 items
+2025-07-14 18:10:58 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:11:49 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:11:49 | src.token_tracker | INFO |    📥 Input tokens: 3,241
+2025-07-14 18:11:49 | src.token_tracker | INFO |    📤 Output tokens: 6,156
+2025-07-14 18:11:49 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:11:49 | src.token_tracker | INFO |    💰 Input cost: $0.000486
+2025-07-14 18:11:49 | src.token_tracker | INFO |    💰 Output cost: $0.003694
+2025-07-14 18:11:49 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:11:49 | src.token_tracker | INFO |    💰 Total cost: $0.004180
+2025-07-14 18:11:49 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:11:49 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:11:49 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:11:49 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:11:49 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:11:49 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:11:49 | src.token_tracker | INFO |    🔢 Total calls: 6
+2025-07-14 18:11:49 | src.token_tracker | INFO |    📥 Total input tokens: 19,957
+2025-07-14 18:11:49 | src.token_tracker | INFO |    📤 Total output tokens: 35,804
+2025-07-14 18:11:49 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:11:49 | src.token_tracker | INFO |    💰 Total session cost: $0.024476
+2025-07-14 18:11:49 | src.json_storage | INFO | Stored checklist_matching response for batch 5 at json_outputs\responses\checklist_matching_batch_005_20250714_181149_session_1752496909.json
+2025-07-14 18:11:49 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:11:49 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:11:49 | src.enhanced_batch_processor | INFO | Completed batch 6 with 50 results
+2025-07-14 18:11:49 | src.enhanced_batch_processor | INFO | Processing batch 7/27 with 50 items
+2025-07-14 18:11:49 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:12:27 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:12:27 | src.token_tracker | INFO |    📥 Input tokens: 3,177
+2025-07-14 18:12:27 | src.token_tracker | INFO |    📤 Output tokens: 5,545
+2025-07-14 18:12:27 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:12:27 | src.token_tracker | INFO |    💰 Input cost: $0.000477
+2025-07-14 18:12:27 | src.token_tracker | INFO |    💰 Output cost: $0.003327
+2025-07-14 18:12:27 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:12:27 | src.token_tracker | INFO |    💰 Total cost: $0.003804
+2025-07-14 18:12:27 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:12:27 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:12:27 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:12:27 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:12:27 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:12:27 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:12:27 | src.token_tracker | INFO |    🔢 Total calls: 7
+2025-07-14 18:12:27 | src.token_tracker | INFO |    📥 Total input tokens: 23,134
+2025-07-14 18:12:27 | src.token_tracker | INFO |    📤 Total output tokens: 41,349
+2025-07-14 18:12:27 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:12:27 | src.token_tracker | INFO |    💰 Total session cost: $0.028279
+2025-07-14 18:12:27 | src.json_storage | INFO | Stored checklist_matching response for batch 6 at json_outputs\responses\checklist_matching_batch_006_20250714_181227_session_1752496947.json
+2025-07-14 18:12:27 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:12:27 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:12:27 | src.enhanced_batch_processor | INFO | Completed batch 7 with 50 results
+2025-07-14 18:12:27 | src.enhanced_batch_processor | INFO | Processing batch 8/27 with 50 items
+2025-07-14 18:12:27 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:13:10 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:13:10 | src.token_tracker | INFO |    📥 Input tokens: 3,210
+2025-07-14 18:13:10 | src.token_tracker | INFO |    📤 Output tokens: 6,962
+2025-07-14 18:13:10 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:13:10 | src.token_tracker | INFO |    💰 Input cost: $0.000481
+2025-07-14 18:13:10 | src.token_tracker | INFO |    💰 Output cost: $0.004177
+2025-07-14 18:13:10 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:13:10 | src.token_tracker | INFO |    💰 Total cost: $0.004659
+2025-07-14 18:13:10 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:13:10 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:13:10 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:13:10 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:13:10 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:13:10 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:13:10 | src.token_tracker | INFO |    🔢 Total calls: 8
+2025-07-14 18:13:10 | src.token_tracker | INFO |    📥 Total input tokens: 26,344
+2025-07-14 18:13:10 | src.token_tracker | INFO |    📤 Total output tokens: 48,311
+2025-07-14 18:13:10 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:13:10 | src.token_tracker | INFO |    💰 Total session cost: $0.032938
+2025-07-14 18:13:10 | src.json_storage | INFO | Stored checklist_matching response for batch 7 at json_outputs\responses\checklist_matching_batch_007_20250714_181310_session_1752496990.json
+2025-07-14 18:13:10 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:13:10 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:13:10 | src.enhanced_batch_processor | INFO | Completed batch 8 with 50 results
+2025-07-14 18:13:10 | src.enhanced_batch_processor | INFO | Processing batch 9/27 with 50 items
+2025-07-14 18:13:10 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:14:03 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:14:03 | src.token_tracker | INFO |    📥 Input tokens: 3,102
+2025-07-14 18:14:03 | src.token_tracker | INFO |    📤 Output tokens: 6,334
+2025-07-14 18:14:03 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:14:03 | src.token_tracker | INFO |    💰 Input cost: $0.000465
+2025-07-14 18:14:03 | src.token_tracker | INFO |    💰 Output cost: $0.003800
+2025-07-14 18:14:03 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:14:03 | src.token_tracker | INFO |    💰 Total cost: $0.004266
+2025-07-14 18:14:03 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:14:03 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:14:03 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:14:03 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:14:03 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:14:03 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:14:03 | src.token_tracker | INFO |    🔢 Total calls: 9
+2025-07-14 18:14:03 | src.token_tracker | INFO |    📥 Total input tokens: 29,446
+2025-07-14 18:14:03 | src.token_tracker | INFO |    📤 Total output tokens: 54,645
+2025-07-14 18:14:03 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:14:03 | src.token_tracker | INFO |    💰 Total session cost: $0.037204
+2025-07-14 18:14:03 | src.json_storage | INFO | Stored checklist_matching response for batch 8 at json_outputs\responses\checklist_matching_batch_008_20250714_181403_session_1752497043.json
+2025-07-14 18:14:03 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:14:03 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:14:03 | src.enhanced_batch_processor | INFO | Completed batch 9 with 50 results
+2025-07-14 18:14:03 | src.enhanced_batch_processor | INFO | Processing batch 10/27 with 50 items
+2025-07-14 18:14:03 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:14:49 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:14:49 | src.token_tracker | INFO |    📥 Input tokens: 3,241
+2025-07-14 18:14:49 | src.token_tracker | INFO |    📤 Output tokens: 5,839
+2025-07-14 18:14:49 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:14:49 | src.token_tracker | INFO |    💰 Input cost: $0.000486
+2025-07-14 18:14:49 | src.token_tracker | INFO |    💰 Output cost: $0.003503
+2025-07-14 18:14:49 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:14:49 | src.token_tracker | INFO |    💰 Total cost: $0.003990
+2025-07-14 18:14:49 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:14:49 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:14:49 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:14:49 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:14:49 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:14:49 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:14:49 | src.token_tracker | INFO |    🔢 Total calls: 10
+2025-07-14 18:14:49 | src.token_tracker | INFO |    📥 Total input tokens: 32,687
+2025-07-14 18:14:49 | src.token_tracker | INFO |    📤 Total output tokens: 60,484
+2025-07-14 18:14:49 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:14:49 | src.token_tracker | INFO |    💰 Total session cost: $0.041193
+2025-07-14 18:14:49 | src.json_storage | INFO | Stored checklist_matching response for batch 9 at json_outputs\responses\checklist_matching_batch_009_20250714_181449_session_1752497089.json
+2025-07-14 18:14:49 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:14:49 | src.gemini_client | INFO | Found 4 items, 46 not found
+2025-07-14 18:14:49 | src.enhanced_batch_processor | INFO | Completed batch 10 with 50 results
+2025-07-14 18:14:49 | src.enhanced_batch_processor | INFO | Processing batch 11/27 with 50 items
+2025-07-14 18:14:49 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:15:31 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:15:31 | src.token_tracker | INFO |    📥 Input tokens: 3,184
+2025-07-14 18:15:31 | src.token_tracker | INFO |    📤 Output tokens: 5,673
+2025-07-14 18:15:31 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:15:31 | src.token_tracker | INFO |    💰 Input cost: $0.000478
+2025-07-14 18:15:31 | src.token_tracker | INFO |    💰 Output cost: $0.003404
+2025-07-14 18:15:31 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:15:31 | src.token_tracker | INFO |    💰 Total cost: $0.003881
+2025-07-14 18:15:31 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:15:31 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:15:31 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:15:31 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:15:31 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:15:31 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:15:31 | src.token_tracker | INFO |    🔢 Total calls: 11
+2025-07-14 18:15:31 | src.token_tracker | INFO |    📥 Total input tokens: 35,871
+2025-07-14 18:15:31 | src.token_tracker | INFO |    📤 Total output tokens: 66,157
+2025-07-14 18:15:31 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:15:31 | src.token_tracker | INFO |    💰 Total session cost: $0.045075
+2025-07-14 18:15:31 | src.json_storage | INFO | Stored checklist_matching response for batch 10 at json_outputs\responses\checklist_matching_batch_010_20250714_181531_session_1752497131.json
+2025-07-14 18:15:31 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:15:31 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:15:31 | src.enhanced_batch_processor | INFO | Completed batch 11 with 50 results
+2025-07-14 18:15:31 | src.enhanced_batch_processor | INFO | Processing batch 12/27 with 50 items
+2025-07-14 18:15:31 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:16:19 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:16:19 | src.token_tracker | INFO |    📥 Input tokens: 3,255
+2025-07-14 18:16:19 | src.token_tracker | INFO |    📤 Output tokens: 6,711
+2025-07-14 18:16:19 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:16:19 | src.token_tracker | INFO |    💰 Input cost: $0.000488
+2025-07-14 18:16:19 | src.token_tracker | INFO |    💰 Output cost: $0.004027
+2025-07-14 18:16:19 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:16:19 | src.token_tracker | INFO |    💰 Total cost: $0.004515
+2025-07-14 18:16:19 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:16:19 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:16:19 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:16:19 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:16:19 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:16:19 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:16:19 | src.token_tracker | INFO |    🔢 Total calls: 12
+2025-07-14 18:16:19 | src.token_tracker | INFO |    📥 Total input tokens: 39,126
+2025-07-14 18:16:19 | src.token_tracker | INFO |    📤 Total output tokens: 72,868
+2025-07-14 18:16:19 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:16:19 | src.token_tracker | INFO |    💰 Total session cost: $0.049590
+2025-07-14 18:16:19 | src.json_storage | INFO | Stored checklist_matching response for batch 11 at json_outputs\responses\checklist_matching_batch_011_20250714_181619_session_1752497179.json
+2025-07-14 18:16:19 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:16:19 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:16:19 | src.enhanced_batch_processor | INFO | Completed batch 12 with 50 results
+2025-07-14 18:16:19 | src.enhanced_batch_processor | INFO | Processing batch 13/27 with 50 items
+2025-07-14 18:16:19 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:17:23 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:17:23 | src.token_tracker | INFO |    📥 Input tokens: 3,298
+2025-07-14 18:17:23 | src.token_tracker | INFO |    📤 Output tokens: 4,956
+2025-07-14 18:17:23 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:17:23 | src.token_tracker | INFO |    💰 Input cost: $0.000495
+2025-07-14 18:17:23 | src.token_tracker | INFO |    💰 Output cost: $0.002974
+2025-07-14 18:17:23 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:17:23 | src.token_tracker | INFO |    💰 Total cost: $0.003468
+2025-07-14 18:17:23 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:17:23 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:17:23 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:17:23 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:17:23 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:17:23 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:17:23 | src.token_tracker | INFO |    🔢 Total calls: 13
+2025-07-14 18:17:23 | src.token_tracker | INFO |    📥 Total input tokens: 42,424
+2025-07-14 18:17:23 | src.token_tracker | INFO |    📤 Total output tokens: 77,824
+2025-07-14 18:17:23 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:17:23 | src.token_tracker | INFO |    💰 Total session cost: $0.053058
+2025-07-14 18:17:23 | src.json_storage | INFO | Stored checklist_matching response for batch 12 at json_outputs\responses\checklist_matching_batch_012_20250714_181723_session_1752497243.json
+2025-07-14 18:17:23 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:17:23 | src.gemini_client | INFO | Found 5 items, 45 not found
+2025-07-14 18:17:23 | src.enhanced_batch_processor | INFO | Completed batch 13 with 50 results
+2025-07-14 18:17:23 | src.enhanced_batch_processor | INFO | Processing batch 14/27 with 50 items
+2025-07-14 18:17:23 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:18:05 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:18:05 | src.token_tracker | INFO |    📥 Input tokens: 3,258
+2025-07-14 18:18:05 | src.token_tracker | INFO |    📤 Output tokens: 6,415
+2025-07-14 18:18:05 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:18:05 | src.token_tracker | INFO |    💰 Input cost: $0.000489
+2025-07-14 18:18:05 | src.token_tracker | INFO |    💰 Output cost: $0.003849
+2025-07-14 18:18:05 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:18:05 | src.token_tracker | INFO |    💰 Total cost: $0.004338
+2025-07-14 18:18:05 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:18:05 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:18:05 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:18:05 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:18:05 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:18:05 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:18:05 | src.token_tracker | INFO |    🔢 Total calls: 14
+2025-07-14 18:18:05 | src.token_tracker | INFO |    📥 Total input tokens: 45,682
+2025-07-14 18:18:05 | src.token_tracker | INFO |    📤 Total output tokens: 84,239
+2025-07-14 18:18:05 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:18:05 | src.token_tracker | INFO |    💰 Total session cost: $0.057396
+2025-07-14 18:18:05 | src.json_storage | INFO | Stored checklist_matching response for batch 13 at json_outputs\responses\checklist_matching_batch_013_20250714_181805_session_1752497285.json
+2025-07-14 18:18:05 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:18:05 | src.gemini_client | INFO | Found 1 items, 49 not found
+2025-07-14 18:18:05 | src.enhanced_batch_processor | INFO | Completed batch 14 with 50 results
+2025-07-14 18:18:05 | src.enhanced_batch_processor | INFO | Processing batch 15/27 with 50 items
+2025-07-14 18:18:05 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:18:45 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:18:45 | src.token_tracker | INFO |    📥 Input tokens: 3,120
+2025-07-14 18:18:45 | src.token_tracker | INFO |    📤 Output tokens: 5,422
+2025-07-14 18:18:45 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:18:45 | src.token_tracker | INFO |    💰 Input cost: $0.000468
+2025-07-14 18:18:45 | src.token_tracker | INFO |    💰 Output cost: $0.003253
+2025-07-14 18:18:45 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:18:45 | src.token_tracker | INFO |    💰 Total cost: $0.003721
+2025-07-14 18:18:45 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:18:45 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:18:45 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:18:45 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:18:45 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:18:45 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:18:45 | src.token_tracker | INFO |    🔢 Total calls: 15
+2025-07-14 18:18:45 | src.token_tracker | INFO |    📥 Total input tokens: 48,802
+2025-07-14 18:18:45 | src.token_tracker | INFO |    📤 Total output tokens: 89,661
+2025-07-14 18:18:45 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:18:45 | src.token_tracker | INFO |    💰 Total session cost: $0.061117
+2025-07-14 18:18:45 | src.json_storage | INFO | Stored checklist_matching response for batch 14 at json_outputs\responses\checklist_matching_batch_014_20250714_181845_session_1752497325.json
+2025-07-14 18:18:45 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:18:45 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:18:45 | src.enhanced_batch_processor | INFO | Completed batch 15 with 50 results
+2025-07-14 18:18:45 | src.enhanced_batch_processor | INFO | Processing batch 16/27 with 50 items
+2025-07-14 18:18:45 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:19:16 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:19:16 | src.token_tracker | INFO |    📥 Input tokens: 3,166
+2025-07-14 18:19:16 | src.token_tracker | INFO |    📤 Output tokens: 6,314
+2025-07-14 18:19:16 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:19:16 | src.token_tracker | INFO |    💰 Input cost: $0.000475
+2025-07-14 18:19:16 | src.token_tracker | INFO |    💰 Output cost: $0.003788
+2025-07-14 18:19:16 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:19:16 | src.token_tracker | INFO |    💰 Total cost: $0.004263
+2025-07-14 18:19:16 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:19:16 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:19:16 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:19:16 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:19:16 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:19:16 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:19:16 | src.token_tracker | INFO |    🔢 Total calls: 16
+2025-07-14 18:19:16 | src.token_tracker | INFO |    📥 Total input tokens: 51,968
+2025-07-14 18:19:16 | src.token_tracker | INFO |    📤 Total output tokens: 95,975
+2025-07-14 18:19:16 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:19:16 | src.token_tracker | INFO |    💰 Total session cost: $0.065380
+2025-07-14 18:19:16 | src.json_storage | INFO | Stored checklist_matching response for batch 15 at json_outputs\responses\checklist_matching_batch_015_20250714_181916_session_1752497356.json
+2025-07-14 18:19:16 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:19:16 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:19:16 | src.enhanced_batch_processor | INFO | Completed batch 16 with 50 results
+2025-07-14 18:19:16 | src.enhanced_batch_processor | INFO | Processing batch 17/27 with 50 items
+2025-07-14 18:19:16 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:20:03 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:20:03 | src.token_tracker | INFO |    📥 Input tokens: 3,355
+2025-07-14 18:20:03 | src.token_tracker | INFO |    📤 Output tokens: 6,165
+2025-07-14 18:20:03 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:20:03 | src.token_tracker | INFO |    💰 Input cost: $0.000503
+2025-07-14 18:20:03 | src.token_tracker | INFO |    💰 Output cost: $0.003699
+2025-07-14 18:20:03 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:20:03 | src.token_tracker | INFO |    💰 Total cost: $0.004202
+2025-07-14 18:20:03 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:20:03 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:20:03 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:20:03 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:20:03 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:20:03 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:20:03 | src.token_tracker | INFO |    🔢 Total calls: 17
+2025-07-14 18:20:03 | src.token_tracker | INFO |    📥 Total input tokens: 55,323
+2025-07-14 18:20:03 | src.token_tracker | INFO |    📤 Total output tokens: 102,140
+2025-07-14 18:20:03 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:20:03 | src.token_tracker | INFO |    💰 Total session cost: $0.069582
+2025-07-14 18:20:03 | src.json_storage | INFO | Stored checklist_matching response for batch 16 at json_outputs\responses\checklist_matching_batch_016_20250714_182003_session_1752497403.json
+2025-07-14 18:20:03 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:20:03 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:20:03 | src.enhanced_batch_processor | INFO | Completed batch 17 with 50 results
+2025-07-14 18:20:03 | src.enhanced_batch_processor | INFO | Processing batch 18/27 with 50 items
+2025-07-14 18:20:03 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:20:46 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:20:46 | src.token_tracker | INFO |    📥 Input tokens: 3,265
+2025-07-14 18:20:46 | src.token_tracker | INFO |    📤 Output tokens: 5,917
+2025-07-14 18:20:46 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:20:46 | src.token_tracker | INFO |    💰 Input cost: $0.000490
+2025-07-14 18:20:46 | src.token_tracker | INFO |    💰 Output cost: $0.003550
+2025-07-14 18:20:46 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:20:46 | src.token_tracker | INFO |    💰 Total cost: $0.004040
+2025-07-14 18:20:46 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:20:46 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:20:46 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:20:46 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:20:46 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:20:46 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:20:46 | src.token_tracker | INFO |    🔢 Total calls: 18
+2025-07-14 18:20:46 | src.token_tracker | INFO |    📥 Total input tokens: 58,588
+2025-07-14 18:20:46 | src.token_tracker | INFO |    📤 Total output tokens: 108,057
+2025-07-14 18:20:46 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:20:46 | src.token_tracker | INFO |    💰 Total session cost: $0.073622
+2025-07-14 18:20:46 | src.json_storage | INFO | Stored checklist_matching response for batch 17 at json_outputs\responses\checklist_matching_batch_017_20250714_182046_session_1752497446.json
+2025-07-14 18:20:46 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:20:46 | src.gemini_client | INFO | Found 2 items, 48 not found
+2025-07-14 18:20:46 | src.enhanced_batch_processor | INFO | Completed batch 18 with 50 results
+2025-07-14 18:20:46 | src.enhanced_batch_processor | INFO | Processing batch 19/27 with 50 items
+2025-07-14 18:20:46 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:21:26 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:21:26 | src.token_tracker | INFO |    📥 Input tokens: 3,156
+2025-07-14 18:21:26 | src.token_tracker | INFO |    📤 Output tokens: 5,515
+2025-07-14 18:21:26 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:21:26 | src.token_tracker | INFO |    💰 Input cost: $0.000473
+2025-07-14 18:21:26 | src.token_tracker | INFO |    💰 Output cost: $0.003309
+2025-07-14 18:21:26 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:21:26 | src.token_tracker | INFO |    💰 Total cost: $0.003782
+2025-07-14 18:21:26 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:21:26 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:21:26 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:21:26 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:21:26 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:21:26 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:21:26 | src.token_tracker | INFO |    🔢 Total calls: 19
+2025-07-14 18:21:26 | src.token_tracker | INFO |    📥 Total input tokens: 61,744
+2025-07-14 18:21:26 | src.token_tracker | INFO |    📤 Total output tokens: 113,572
+2025-07-14 18:21:26 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:21:26 | src.token_tracker | INFO |    💰 Total session cost: $0.077405
+2025-07-14 18:21:26 | src.json_storage | INFO | Stored checklist_matching response for batch 18 at json_outputs\responses\checklist_matching_batch_018_20250714_182126_session_1752497486.json
+2025-07-14 18:21:26 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:21:26 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:21:26 | src.enhanced_batch_processor | INFO | Completed batch 19 with 50 results
+2025-07-14 18:21:26 | src.enhanced_batch_processor | INFO | Processing batch 20/27 with 50 items
+2025-07-14 18:21:26 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:21:53 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:21:53 | src.token_tracker | INFO |    📥 Input tokens: 3,228
+2025-07-14 18:21:53 | src.token_tracker | INFO |    📤 Output tokens: 337
+2025-07-14 18:21:53 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:21:53 | src.token_tracker | INFO |    💰 Input cost: $0.000484
+2025-07-14 18:21:53 | src.token_tracker | INFO |    💰 Output cost: $0.000202
+2025-07-14 18:21:53 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:21:53 | src.token_tracker | INFO |    💰 Total cost: $0.000686
+2025-07-14 18:21:53 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:21:53 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:21:53 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:21:53 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:21:53 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:21:53 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:21:53 | src.token_tracker | INFO |    🔢 Total calls: 20
+2025-07-14 18:21:53 | src.token_tracker | INFO |    📥 Total input tokens: 64,972
+2025-07-14 18:21:53 | src.token_tracker | INFO |    📤 Total output tokens: 113,909
+2025-07-14 18:21:53 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:21:53 | src.token_tracker | INFO |    💰 Total session cost: $0.078091
+2025-07-14 18:21:53 | src.json_storage | INFO | Stored checklist_matching response for batch 19 at json_outputs\responses\checklist_matching_batch_019_20250714_182153_session_1752497513.json
+2025-07-14 18:21:53 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:21:53 | src.gemini_client | INFO | Found 2 items, 48 not found
+2025-07-14 18:21:53 | src.enhanced_batch_processor | INFO | Completed batch 20 with 50 results
+2025-07-14 18:21:53 | src.enhanced_batch_processor | INFO | Processing batch 21/27 with 50 items
+2025-07-14 18:21:53 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:22:36 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:22:36 | src.token_tracker | INFO |    📥 Input tokens: 3,188
+2025-07-14 18:22:36 | src.token_tracker | INFO |    📤 Output tokens: 5,700
+2025-07-14 18:22:36 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:22:36 | src.token_tracker | INFO |    💰 Input cost: $0.000478
+2025-07-14 18:22:36 | src.token_tracker | INFO |    💰 Output cost: $0.003420
+2025-07-14 18:22:36 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:22:36 | src.token_tracker | INFO |    💰 Total cost: $0.003898
+2025-07-14 18:22:36 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:22:36 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:22:36 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:22:36 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:22:36 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:22:36 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:22:36 | src.token_tracker | INFO |    🔢 Total calls: 21
+2025-07-14 18:22:36 | src.token_tracker | INFO |    📥 Total input tokens: 68,160
+2025-07-14 18:22:36 | src.token_tracker | INFO |    📤 Total output tokens: 119,609
+2025-07-14 18:22:36 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:22:36 | src.token_tracker | INFO |    💰 Total session cost: $0.081989
+2025-07-14 18:22:36 | src.json_storage | INFO | Stored checklist_matching response for batch 20 at json_outputs\responses\checklist_matching_batch_020_20250714_182236_session_1752497556.json
+2025-07-14 18:22:36 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:22:36 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:22:36 | src.enhanced_batch_processor | INFO | Completed batch 21 with 50 results
+2025-07-14 18:22:36 | src.enhanced_batch_processor | INFO | Processing batch 22/27 with 50 items
+2025-07-14 18:22:36 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:23:23 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:23:23 | src.token_tracker | INFO |    📥 Input tokens: 3,243
+2025-07-14 18:23:23 | src.token_tracker | INFO |    📤 Output tokens: 6,647
+2025-07-14 18:23:23 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:23:23 | src.token_tracker | INFO |    💰 Input cost: $0.000486
+2025-07-14 18:23:23 | src.token_tracker | INFO |    💰 Output cost: $0.003988
+2025-07-14 18:23:23 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:23:23 | src.token_tracker | INFO |    💰 Total cost: $0.004475
+2025-07-14 18:23:23 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:23:23 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:23:23 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:23:23 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:23:23 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:23:23 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:23:23 | src.token_tracker | INFO |    🔢 Total calls: 22
+2025-07-14 18:23:23 | src.token_tracker | INFO |    📥 Total input tokens: 71,403
+2025-07-14 18:23:23 | src.token_tracker | INFO |    📤 Total output tokens: 126,256
+2025-07-14 18:23:23 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:23:23 | src.token_tracker | INFO |    💰 Total session cost: $0.086464
+2025-07-14 18:23:23 | src.json_storage | INFO | Stored checklist_matching response for batch 21 at json_outputs\responses\checklist_matching_batch_021_20250714_182323_session_1752497603.json
+2025-07-14 18:23:23 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:23:23 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:23:23 | src.enhanced_batch_processor | INFO | Completed batch 22 with 50 results
+2025-07-14 18:23:23 | src.enhanced_batch_processor | INFO | Processing batch 23/27 with 50 items
+2025-07-14 18:23:23 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:24:23 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:24:23 | src.token_tracker | INFO |    📥 Input tokens: 3,276
+2025-07-14 18:24:23 | src.token_tracker | INFO |    📤 Output tokens: 6,571
+2025-07-14 18:24:23 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:24:23 | src.token_tracker | INFO |    💰 Input cost: $0.000491
+2025-07-14 18:24:23 | src.token_tracker | INFO |    💰 Output cost: $0.003943
+2025-07-14 18:24:23 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:24:23 | src.token_tracker | INFO |    💰 Total cost: $0.004434
+2025-07-14 18:24:23 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:24:23 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:24:23 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:24:23 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:24:23 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:24:23 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:24:23 | src.token_tracker | INFO |    🔢 Total calls: 23
+2025-07-14 18:24:23 | src.token_tracker | INFO |    📥 Total input tokens: 74,679
+2025-07-14 18:24:23 | src.token_tracker | INFO |    📤 Total output tokens: 132,827
+2025-07-14 18:24:23 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:24:23 | src.token_tracker | INFO |    💰 Total session cost: $0.090898
+2025-07-14 18:24:23 | src.json_storage | INFO | Stored checklist_matching response for batch 22 at json_outputs\responses\checklist_matching_batch_022_20250714_182423_session_1752497663.json
+2025-07-14 18:24:23 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:24:23 | src.gemini_client | INFO | Found 7 items, 43 not found
+2025-07-14 18:24:23 | src.enhanced_batch_processor | INFO | Completed batch 23 with 50 results
+2025-07-14 18:24:23 | src.enhanced_batch_processor | INFO | Processing batch 24/27 with 50 items
+2025-07-14 18:24:23 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:24:51 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:24:51 | src.token_tracker | INFO |    📥 Input tokens: 3,223
+2025-07-14 18:24:51 | src.token_tracker | INFO |    📤 Output tokens: 444
+2025-07-14 18:24:51 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:24:51 | src.token_tracker | INFO |    💰 Input cost: $0.000483
+2025-07-14 18:24:51 | src.token_tracker | INFO |    💰 Output cost: $0.000266
+2025-07-14 18:24:51 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:24:51 | src.token_tracker | INFO |    💰 Total cost: $0.000750
+2025-07-14 18:24:51 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:24:51 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:24:51 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:24:51 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:24:51 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:24:51 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:24:51 | src.token_tracker | INFO |    🔢 Total calls: 24
+2025-07-14 18:24:51 | src.token_tracker | INFO |    📥 Total input tokens: 77,902
+2025-07-14 18:24:51 | src.token_tracker | INFO |    📤 Total output tokens: 133,271
+2025-07-14 18:24:51 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:24:51 | src.token_tracker | INFO |    💰 Total session cost: $0.091648
+2025-07-14 18:24:51 | src.json_storage | INFO | Stored checklist_matching response for batch 23 at json_outputs\responses\checklist_matching_batch_023_20250714_182451_session_1752497691.json
+2025-07-14 18:24:51 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:24:51 | src.gemini_client | INFO | Found 2 items, 48 not found
+2025-07-14 18:24:51 | src.enhanced_batch_processor | INFO | Completed batch 24 with 50 results
+2025-07-14 18:24:51 | src.enhanced_batch_processor | INFO | Processing batch 25/27 with 50 items
+2025-07-14 18:24:51 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:25:38 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:25:38 | src.token_tracker | INFO |    📥 Input tokens: 3,278
+2025-07-14 18:25:38 | src.token_tracker | INFO |    📤 Output tokens: 6,032
+2025-07-14 18:25:38 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:25:38 | src.token_tracker | INFO |    💰 Input cost: $0.000492
+2025-07-14 18:25:38 | src.token_tracker | INFO |    💰 Output cost: $0.003619
+2025-07-14 18:25:38 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:25:38 | src.token_tracker | INFO |    💰 Total cost: $0.004111
+2025-07-14 18:25:38 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:25:38 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:25:38 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:25:38 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:25:38 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:25:38 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:25:38 | src.token_tracker | INFO |    🔢 Total calls: 25
+2025-07-14 18:25:38 | src.token_tracker | INFO |    📥 Total input tokens: 81,180
+2025-07-14 18:25:38 | src.token_tracker | INFO |    📤 Total output tokens: 139,303
+2025-07-14 18:25:38 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:25:38 | src.token_tracker | INFO |    💰 Total session cost: $0.095759
+2025-07-14 18:25:38 | src.json_storage | INFO | Stored checklist_matching response for batch 24 at json_outputs\responses\checklist_matching_batch_024_20250714_182538_session_1752497738.json
+2025-07-14 18:25:38 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:25:38 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:25:38 | src.enhanced_batch_processor | INFO | Completed batch 25 with 50 results
+2025-07-14 18:25:38 | src.enhanced_batch_processor | INFO | Processing batch 26/27 with 50 items
+2025-07-14 18:25:38 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:26:11 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:26:11 | src.token_tracker | INFO |    📥 Input tokens: 3,267
+2025-07-14 18:26:11 | src.token_tracker | INFO |    📤 Output tokens: 5,383
+2025-07-14 18:26:11 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:26:11 | src.token_tracker | INFO |    💰 Input cost: $0.000490
+2025-07-14 18:26:11 | src.token_tracker | INFO |    💰 Output cost: $0.003230
+2025-07-14 18:26:11 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:26:11 | src.token_tracker | INFO |    💰 Total cost: $0.003720
+2025-07-14 18:26:11 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:26:11 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:26:11 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:26:11 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:26:11 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:26:11 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:26:11 | src.token_tracker | INFO |    🔢 Total calls: 26
+2025-07-14 18:26:11 | src.token_tracker | INFO |    📥 Total input tokens: 84,447
+2025-07-14 18:26:11 | src.token_tracker | INFO |    📤 Total output tokens: 144,686
+2025-07-14 18:26:11 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:26:11 | src.token_tracker | INFO |    💰 Total session cost: $0.099479
+2025-07-14 18:26:11 | src.json_storage | INFO | Stored checklist_matching response for batch 25 at json_outputs\responses\checklist_matching_batch_025_20250714_182611_session_1752497771.json
+2025-07-14 18:26:11 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:26:11 | src.gemini_client | INFO | Found 2 items, 48 not found
+2025-07-14 18:26:11 | src.enhanced_batch_processor | INFO | Completed batch 26 with 50 results
+2025-07-14 18:26:11 | src.enhanced_batch_processor | INFO | Processing batch 27/27 with 50 items
+2025-07-14 18:26:11 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 18:26:50 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 18:26:50 | src.token_tracker | INFO |    📥 Input tokens: 3,161
+2025-07-14 18:26:50 | src.token_tracker | INFO |    📤 Output tokens: 5,711
+2025-07-14 18:26:50 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 18:26:50 | src.token_tracker | INFO |    💰 Input cost: $0.000474
+2025-07-14 18:26:50 | src.token_tracker | INFO |    💰 Output cost: $0.003427
+2025-07-14 18:26:50 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 18:26:50 | src.token_tracker | INFO |    💰 Total cost: $0.003901
+2025-07-14 18:26:50 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 18:26:50 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 18:26:50 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 18:26:50 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 18:26:50 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 18:26:50 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 18:26:50 | src.token_tracker | INFO |    🔢 Total calls: 27
+2025-07-14 18:26:50 | src.token_tracker | INFO |    📥 Total input tokens: 87,608
+2025-07-14 18:26:50 | src.token_tracker | INFO |    📤 Total output tokens: 150,397
+2025-07-14 18:26:50 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 18:26:50 | src.token_tracker | INFO |    💰 Total session cost: $0.103379
+2025-07-14 18:26:50 | src.json_storage | INFO | Stored checklist_matching response for batch 26 at json_outputs\responses\checklist_matching_batch_026_20250714_182650_session_1752497810.json
+2025-07-14 18:26:50 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 18:26:50 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 18:26:50 | src.enhanced_batch_processor | INFO | Completed batch 27 with 50 results
+2025-07-14 18:26:50 | src.enhanced_batch_processor | INFO | === ENHANCED BATCH PROCESSOR SYNC: COMPLETED PROCESSING 27 BATCHES ===
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 3.7% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 7.4% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 11.1% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 14.8% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 18.5% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 22.2% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 25.9% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 29.6% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 33.3% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 37.0% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 40.7% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 44.4% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 48.1% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 51.9% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 55.6% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 59.3% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 63.0% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 66.7% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 70.4% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 74.1% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 77.8% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 81.5% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 85.2% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 88.9% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 92.6% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 96.3% complete
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 100.0% complete
+2025-07-14 18:26:50 | src.matching_engine | INFO | Completed processing with 1350 validated results
+2025-07-14 18:26:50 | src.output_generator | INFO | Compiled clean output for process b45c38ba-5d32-41c2-954c-1c5490024131 with 1350 items
+2025-07-14 18:26:50 | src.output_generator | INFO | Updated progress for c2c967a6-b5df-4fa0-b4e2-1ca3fad5b2ad: 100.0% complete
+2025-07-14 18:26:50 | src.matching_engine | INFO | Processing completed for b45c38ba-5d32-41c2-954c-1c5490024131: 26/1350 items found
+2025-07-14 18:26:52 | src.gemini_client | INFO | Cleaned up cache: 8c7f0f3d9f8841365ae04a0a546ac6c2
+2025-07-14 18:26:52 | src.matching_engine | INFO | Cleaned up process: b45c38ba-5d32-41c2-954c-1c5490024131
+2025-07-14 18:26:52 | __main__ | INFO | Creating combined JSON for session: 61f2a955-eff4-4ff3-840e-92a4ebbfbef3, process: 30e38a6d-c5b1-4933-8393-44fc415c743e
+2025-07-14 18:26:52 | src.enhanced_batch_processor | INFO | Creating combined JSON for session: 61f2a955-eff4-4ff3-840e-92a4ebbfbef3, process: 30e38a6d-c5b1-4933-8393-44fc415c743e
+2025-07-14 18:26:52 | src.json_combiner | INFO | Combining JSON outputs for session: 61f2a955-eff4-4ff3-840e-92a4ebbfbef3, process: 30e38a6d-c5b1-4933-8393-44fc415c743e
+2025-07-14 18:26:52 | src.json_combiner | INFO | Found 0 successful response files
+2025-07-14 18:26:52 | src.json_combiner | INFO | Found 0 failed response files
+2025-07-14 18:26:52 | src.json_combiner | INFO | Combined JSON created with 0 total responses
+2025-07-14 18:26:52 | src.json_combiner | INFO | Success rate: 0.00%
+2025-07-14 18:26:52 | src.json_combiner | INFO | Total tokens used: 0
+2025-07-14 18:26:52 | src.json_combiner | INFO | Total cost: $0.000000
+2025-07-14 18:26:52 | src.json_combiner | INFO | Combined JSON saved to: json_outputs\combined\combined_session_61f2a955-eff4-4ff3-840e-92a4ebbfbef3_process_30e38a6d-c5b1-4933-8393-44fc415c743e_20250714_182652.json
+2025-07-14 18:26:52 | src.enhanced_batch_processor | INFO | Combined JSON created successfully: json_outputs\combined\combined_session_61f2a955-eff4-4ff3-840e-92a4ebbfbef3_process_30e38a6d-c5b1-4933-8393-44fc415c743e_20250714_182652.json
+2025-07-14 18:26:52 | __main__ | INFO | Combined JSON created successfully: json_outputs\combined\combined_session_61f2a955-eff4-4ff3-840e-92a4ebbfbef3_process_30e38a6d-c5b1-4933-8393-44fc415c743e_20250714_182652.json
+2025-07-14 18:43:03 | __main__ | INFO | Clean JSON file created for download: C:\Users\kinga\AppData\Local\Temp\tmps4fibkdr.json

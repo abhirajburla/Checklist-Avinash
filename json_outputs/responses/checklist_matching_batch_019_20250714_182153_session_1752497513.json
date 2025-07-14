@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "timestamp": "2025-07-14T18:21:53.105341",
+    "batch_index": 19,
+    "operation": "checklist_matching",
+    "success": true,
+    "session_id": "session_1752497513",
+    "filepath": "json_outputs\\responses\\checklist_matching_batch_019_20250714_182153_session_1752497513.json"
+  },
+  "response_text": "```json\n{\n  \"matches\": [\n    {\n      \"checklist_index\": 33,\n      \"found\": true,\n      \"confidence\": \"HIGH\",\n      \"sheet_references\": [\"A00-40\"],\n      \"spec_references\": [],\n      \"notes\": \"The drawing includes a 'RECESSED WALL CABINET DETAIL' (D2), which directly relates to 'wall cabs' or 'cabinets' mentioned in the checklist item.\",\n      \"reasoning\": \"Detail D2 on sheet A00-40 is explicitly labeled 'RECESSED WALL CABINET DETAIL', which is a type of cabinet falling under the scope of Carpentry and Millwork.\"\n    },\n    {\n      \"checklist_index\": 35,\n      \"found\": true,\n      \"confidence\": \"HIGH\",\n      \"sheet_references\": [\"A00-40\"],\n      \"spec_references\": [],\n      \"notes\": \"Note 1 under detail B4 'ACOUSTICAL PARTITION PLAN DETAIL' states 'CAULK ALL VOIDS BETWEEN GYP BD AND BOX'. This is a direct instruction for caulking.\",\n      \"reasoning\": \"Sheet A00-40, specifically the notes for detail B4, contains a direct instruction regarding caulking, which matches the checklist item's focus on caulking requirements.\"\n    }\n  ],\n  \"total_items\": 50,\n  \"found_count\": 2,\n  \"not_found_count\": 48\n}\n```",
+  "custom_metadata": {
+    "batch_size": 50,
+    "cache_id": "8c7f0f3d9f8841365ae04a0a546ac6c2",
+    "model": "gemini-2.5-flash",
+    "timeout_used": 300
+  }
+}

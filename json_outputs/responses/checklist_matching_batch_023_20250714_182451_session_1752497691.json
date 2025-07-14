@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "timestamp": "2025-07-14T18:24:51.551098",
+    "batch_index": 23,
+    "operation": "checklist_matching",
+    "success": true,
+    "session_id": "session_1752497691",
+    "filepath": "json_outputs\\responses\\checklist_matching_batch_023_20250714_182451_session_1752497691.json"
+  },
+  "response_text": "```json\n{\n  \"matches\": [\n    {\n      \"checklist_index\": 5,\n      \"found\": true,\n      \"confidence\": \"HIGH\",\n      \"sheet_references\": [\"A00-40\"],\n      \"spec_references\": [],\n      \"notes\": \"The document shows 'SOUND ATTENUATION BATTS WHERE LOCATED ON REFLECTED CEILING PLAN' and 'EXTEND FROM FLOOR TO STRUCTURE ABOVE' in partition head sections, indicating insulation in the ceiling plenum.\",\n      \"reasoning\": \"Detail C5 'PARTITION HEAD SECTION' explicitly shows 'SOUND ATTENUATION BATTS WHERE LOCATED ON REFLECTED CEILING PLAN' and 'GYP BD EXTENDS TO 6\\\" ABOVE FINISHED CEILING', directly addressing insulation above ceilings in the context of partition construction.\"\n    },\n    {\n      \"checklist_index\": 6,\n      \"found\": true,\n      \"confidence\": \"HIGH\",\n      \"sheet_references\": [\"A00-40\"],\n      \"spec_references\": [],\n      \"notes\": \"The document provides extensive information on 'ACOUSTICAL TEST NUMBER' and 'FIRE TEST NUMBER (WHERE APPLICABLE)' for various partition types (D, B, F, A), including notes on STC predictions and UL fire designs.\",\n      \"reasoning\": \"The tables for partition types 'D', 'B', 'F', and 'A' on sheet A00-40 list 'ACOUSTICAL TEST NUMBER' and 'FIRE TEST NUMBER (WHERE APPLICABLE)' with specific UL Design numbers (e.g., U419, U448, U465, U805). Notes below these tables also mention STC predictions and fire rating details, directly addressing fire rating requirements and test results for the partition systems, which are part of the overall building system.\"\n    }\n  ],\n  \"total_items\": 50,\n  \"found_count\": 2,\n  \"not_found_count\": 48\n}\n```",
+  "custom_metadata": {
+    "batch_size": 50,
+    "cache_id": "8c7f0f3d9f8841365ae04a0a546ac6c2",
+    "model": "gemini-2.5-flash",
+    "timeout_used": 300
+  }
+}

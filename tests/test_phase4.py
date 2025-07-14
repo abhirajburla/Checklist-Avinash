@@ -328,45 +328,30 @@ def test_final_output_compilation(generator=None):
         
         # Compile final output
         print("Compiling final output...")
-        final_output = generator.compile_final_output(process_id, tracker_id, raw_results, document_info)
-        print(f"✓ Final output compiled: {type(final_output)}")
+        clean_results = generator.compile_final_output(process_id, tracker_id, raw_results, document_info)
+        print(f"✓ Final output compiled: {type(clean_results)}")
         
         print("Checking final output assertions...")
-        assert isinstance(final_output, FinalOutput), f"Type: {type(final_output)}"
+        assert isinstance(clean_results, list), f"Type: {type(clean_results)}"
         print("✓ Type check passed")
         
-        assert final_output.metadata.process_id == process_id, f"Process ID: {final_output.metadata.process_id}"
-        print("✓ Process ID check passed")
+        assert len(clean_results) == 3, f"Results count: {len(clean_results)}"
+        print("✓ Results count check passed")
         
-        assert final_output.metadata.total_items == 150, f"Total items: {final_output.metadata.total_items}"
-        print("✓ Total items check passed")
+        # Check that all required fields are present
+        required_fields = ["row_id", "category", "scope_of_work", "checklist", "sector", "sheet_number", "spec_section", "notes", "reasoning", "found", "confidence", "validation_score"]
+        for field in required_fields:
+            assert field in clean_results[0], f"Missing field: {field}"
+        print("✓ Required fields check passed")
         
-        assert final_output.metadata.found_items == 3, f"Found items: {final_output.metadata.found_items}"  # 3 items marked as found in test data
-        print("✓ Found items check passed")
+        # Check that row_id is properly set
+        assert clean_results[0]["row_id"] == 1, f"Row ID: {clean_results[0]['row_id']}"
+        print("✓ Row ID check passed")
         
-        assert final_output.metadata.success_rate > 0, f"Success rate: {final_output.metadata.success_rate}"
-        print("✓ Success rate check passed")
-        
-        assert len(final_output.documents) == 2, f"Documents count: {len(final_output.documents)}"
-        print("✓ Documents count check passed")
-        
-        assert len(final_output.checklist_results) == 3, f"Checklist results count: {len(final_output.checklist_results)}"
-        print("✓ Checklist results count check passed")
-        
-        assert final_output.summary["total_items_processed"] == 150, f"Summary total: {final_output.summary['total_items_processed']}"
-        print("✓ Summary total check passed")
-        
-        assert final_output.summary["items_found"] == 3, f"Summary found: {final_output.summary['items_found']}"
-        print("✓ Summary found check passed")
-        
-        assert final_output.summary["documents_processed"] == 2, f"Summary docs: {final_output.summary['documents_processed']}"
-        print("✓ Summary docs check passed")
-        
-        assert final_output.summary["drawings_count"] == 1, f"Drawings count: {final_output.summary['drawings_count']}"
-        print("✓ Drawings count check passed")
-        
-        assert final_output.summary["specifications_count"] == 1, f"Specs count: {final_output.summary['specifications_count']}"
-        print("✓ Specs count check passed")
+        # Check that found items are properly marked
+        found_count = sum(1 for item in clean_results if item.get("found", False))
+        assert found_count == 3, f"Found count: {found_count}"
+        print("✓ Found count check passed")
         
         print("✅ Final output compilation passed")
         return generator, process_id
@@ -385,8 +370,8 @@ def test_json_output_generation():
         if not process_id:
             return False
         
-        # Generate JSON output
-        json_output = generator.generate_json_output(process_id, pretty_print=True)
+        # Generate clean JSON output
+        json_output = generator.generate_clean_json_output(process_id, pretty_print=True)
         
         assert json_output is not None
         assert len(json_output) > 0
@@ -394,24 +379,15 @@ def test_json_output_generation():
         # Parse JSON to verify structure
         parsed_output = json.loads(json_output)
         
-        assert "metadata" in parsed_output
-        assert "documents" in parsed_output
-        assert "checklist_results" in parsed_output
-        assert "summary" in parsed_output
-        assert "generated_at" in parsed_output
+        # Check that it's a list of checklist items
+        assert isinstance(parsed_output, list)
+        assert len(parsed_output) > 0
         
-        # Check metadata structure
-        metadata = parsed_output["metadata"]
-        assert metadata["process_id"] == process_id
-        assert "start_time" in metadata
-        assert "end_time" in metadata
-        assert "total_processing_time" in metadata
-        
-        # Check summary structure
-        summary = parsed_output["summary"]
-        assert "total_items_processed" in summary
-        assert "items_found" in summary
-        assert "success_rate_percentage" in summary
+        # Check that each item has the required fields
+        required_fields = ["row_id", "category", "scope_of_work", "checklist", "sector", "sheet_number", "spec_section", "notes", "reasoning", "found", "confidence", "validation_score"]
+        for item in parsed_output:
+            for field in required_fields:
+                assert field in item, f"Missing field {field} in item"
         
         print("✅ JSON output generation passed")
         return True
@@ -429,7 +405,7 @@ def test_file_saving():
             return False
         
         # Save to file
-        filepath = generator.save_output_to_file(process_id)
+        filepath = generator.save_clean_output_to_file(process_id)
         
         assert filepath is not None
         assert Path(filepath).exists()
@@ -442,12 +418,12 @@ def test_file_saving():
         
         # Parse to verify it's valid JSON
         parsed_content = json.loads(content)
-        assert "metadata" in parsed_content
-        assert "checklist_results" in parsed_content
+        assert isinstance(parsed_content, list)
+        assert len(parsed_content) > 0
         
         # Test custom filename
         custom_filename = "custom_results.json"
-        custom_filepath = generator.save_output_to_file(process_id, custom_filename)
+        custom_filepath = generator.save_clean_output_to_file(process_id, custom_filename)
         
         assert Path(custom_filepath).name == custom_filename
         assert Path(custom_filepath).exists()

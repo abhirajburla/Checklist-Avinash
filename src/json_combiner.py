@@ -52,7 +52,23 @@ class JSONCombiner:
             
             # Process successful responses
             if responses_dir.exists():
-                response_files = list(responses_dir.glob(f"*session_{session_id}*.json"))
+                # Look for files by reading their metadata to find the correct session
+                # Files are named like: checklist_matching_batch_000_20250714_155535_session_1752488735.json
+                # But we need to match by the actual session ID in the metadata
+                response_files = []
+                for file_path in responses_dir.glob("*.json"):
+                    try:
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            data = json.load(f)
+                            file_session_id = data.get("metadata", {}).get("session_id", "")
+                            # Check if this file belongs to our session
+                            if session_id in file_session_id or file_session_id in session_id:
+                                response_files.append(file_path)
+                    except Exception as e:
+                        logger.warning(f"Error reading file {file_path} to check session ID: {e}")
+                        # Fallback: check filename pattern
+                        if session_id in file_path.name or f"session_{session_id}" in file_path.name:
+                            response_files.append(file_path)
                 logger.info(f"Found {len(response_files)} successful response files")
                 
                 for file_path in sorted(response_files):
@@ -79,7 +95,23 @@ class JSONCombiner:
             
             # Process failed responses
             if failed_dir.exists():
-                failed_files = list(failed_dir.glob(f"*session_{session_id}*.json"))
+                # Look for files by reading their metadata to find the correct session
+                # Files are named like: failed_checklist_matching_batch_000_20250714_155535_session_1752488735.json
+                # But we need to match by the actual session ID in the metadata
+                failed_files = []
+                for file_path in failed_dir.glob("*.json"):
+                    try:
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            data = json.load(f)
+                            file_session_id = data.get("metadata", {}).get("session_id", "")
+                            # Check if this file belongs to our session
+                            if session_id in file_session_id or file_session_id in session_id:
+                                failed_files.append(file_path)
+                    except Exception as e:
+                        logger.warning(f"Error reading file {file_path} to check session ID: {e}")
+                        # Fallback: check filename pattern
+                        if session_id in file_path.name or f"session_{session_id}" in file_path.name:
+                            failed_files.append(file_path)
                 logger.info(f"Found {len(failed_files)} failed response files")
                 
                 for file_path in sorted(failed_files):
@@ -222,7 +254,8 @@ class JSONCombiner:
     def _extract_batch_info(self, filename: str) -> Dict[str, Any]:
         """Extract batch information from filename"""
         try:
-            # Expected format: checklist_matching_batch_000_session_123_20250714_140241.json
+            # Actual format: checklist_matching_batch_000_20250714_155535_session_1752488735.json
+            # or: failed_checklist_matching_batch_000_20250714_155535_session_1752488735.json
             parts = filename.replace('.json', '').split('_')
             
             batch_info = {}
@@ -236,14 +269,21 @@ class JSONCombiner:
                     except ValueError:
                         batch_info["batch_number"] = None
             
-            # Extract timestamp
-            if len(parts) >= 2:
-                try:
-                    timestamp_str = f"{parts[-2]}_{parts[-1]}"
-                    timestamp = datetime.strptime(timestamp_str, "%Y%m%d_%H%M%S")
-                    batch_info["timestamp"] = timestamp.isoformat()
-                except (ValueError, IndexError):
-                    batch_info["timestamp"] = None
+            # Extract timestamp (format: YYYYMMDD_HHMMSS)
+            # Look for parts that match the timestamp pattern
+            for i, part in enumerate(parts):
+                if len(part) == 8 and part.isdigit() and i + 1 < len(parts):
+                    # This might be the date part (YYYYMMDD)
+                    next_part = parts[i + 1]
+                    if len(next_part) == 6 and next_part.isdigit():
+                        # This is the time part (HHMMSS)
+                        try:
+                            timestamp_str = f"{part}_{next_part}"
+                            timestamp = datetime.strptime(timestamp_str, "%Y%m%d_%H%M%S")
+                            batch_info["timestamp"] = timestamp.isoformat()
+                            break
+                        except ValueError:
+                            continue
             
             return batch_info
             

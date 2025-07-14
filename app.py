@@ -236,7 +236,7 @@ def get_progress(tracker_id):
 
 @app.route('/results/<process_id>')
 def get_results(process_id):
-    """Get final results"""
+    """Get final results in clean JSON format"""
     try:
         # Find the tracker that contains this process_id
         tracker_id = None
@@ -258,25 +258,32 @@ def get_results(process_id):
         # Get actual results
         results = status.get('results', [])
         
-        found_items = sum(1 for item in results if item.get('found', False))
-        not_found_items = len(results) - found_items
+        if not results:
+            logger.warning(f"No results found for process {process_id}")
+            return jsonify({"error": "No results found"}), 404
         
-        response_data = {
-            "total_items": len(results),
-            "found_items": found_items,
-            "not_found_items": not_found_items,
-            "processing_time": "Processing completed",
-            "results": results
+        # Create the data structure expected by the output generator
+        output_data = {
+            "checklist_results": results
         }
         
-        return jsonify(response_data)
+        # Store in output generator cache
+        matching_engine.output_generator.output_cache[process_id] = output_data
+        
+        # Generate clean JSON output
+        clean_json = matching_engine.output_generator.generate_clean_json_output(process_id, pretty_print=True)
+        
+        # Parse the JSON to return as response
+        clean_results = json.loads(clean_json)
+        
+        return jsonify(clean_results)
     except Exception as e:
         logger.error(f"Results error: {str(e)}")
         return jsonify({"error": "Failed to get results"}), 500
 
 @app.route('/download/<process_id>')
 def download_results(process_id):
-    """Download results as combined JSON file with all successful and failed responses"""
+    """Download results as clean JSON file with essential fields only"""
     try:
         # Find the tracker that contains this process_id
         tracker_id = None
@@ -295,59 +302,36 @@ def download_results(process_id):
             logger.warning(f"Process {process_id} not completed yet. Status: {status['status']}")
             return jsonify({"error": "Processing not completed"}), 400
         
-        # Get session ID from upload_id (use upload_id as session_id for simplicity)
-        upload_id = status.get('upload_id', 'unknown')
-        session_id = upload_id
+        # Get results from the tracker
+        results = status.get('results', [])
         
-        # Try to get existing combined JSON file
-        combined_file_path = matching_engine.enhanced_batch_processor.get_combined_json_path(session_id, process_id)
+        if not results:
+            logger.warning(f"No results found for process {process_id}")
+            return jsonify({"error": "No results found"}), 404
         
-        if not combined_file_path:
-            # Create combined JSON if it doesn't exist
-            logger.info(f"Creating combined JSON for session: {session_id}, process: {process_id}")
-            combined_file_path = matching_engine.enhanced_batch_processor.create_combined_json(session_id, process_id)
+        # Create the data structure expected by the output generator
+        output_data = {
+            "checklist_results": results
+        }
         
-        if not combined_file_path or not os.path.exists(combined_file_path):
-            logger.warning(f"Combined JSON file not found, falling back to basic results")
-            
-            # Fallback to basic results
-            results = status.get('results', [])
-            found_items = sum(1 for item in results if item.get('found', False))
-            not_found_items = len(results) - found_items
-            
-            download_data = {
-                "process_id": process_id,
-                "timestamp": datetime.now().isoformat(),
-                "total_items": len(results),
-                "found_items": found_items,
-                "not_found_items": not_found_items,
-                "processing_time": "Processing completed",
-                "results": results,
-                "note": "Combined JSON not available, showing basic results only"
-            }
-            
-            # Create temporary file
-            import tempfile
-            temp_file = tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.json')
-            json.dump(download_data, temp_file, indent=2)
-            temp_file.close()
-            
-            logger.info(f"Fallback temporary file created: {temp_file.name}")
-            
-            return send_file(
-                temp_file.name,
-                as_attachment=True,
-                download_name=f'checklist_results_{process_id}.json',
-                mimetype='application/json'
-            )
+        # Store in output generator cache
+        matching_engine.output_generator.output_cache[process_id] = output_data
         
-        # Return the combined JSON file
-        logger.info(f"Serving combined JSON file: {combined_file_path}")
+        # Generate clean JSON output
+        clean_json = matching_engine.output_generator.generate_clean_json_output(process_id, pretty_print=True)
+        
+        # Create temporary file for download
+        import tempfile
+        temp_file = tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.json', encoding='utf-8')
+        temp_file.write(clean_json)
+        temp_file.close()
+        
+        logger.info(f"Clean JSON file created for download: {temp_file.name}")
         
         return send_file(
-            combined_file_path,
+            temp_file.name,
             as_attachment=True,
-            download_name=f'combined_checklist_results_{process_id}.json',
+            download_name=f'checklist_results_{process_id}.json',
             mimetype='application/json'
         )
         

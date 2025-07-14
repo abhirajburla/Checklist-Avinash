@@ -44,12 +44,14 @@ class JSONStorage:
         batch_index: int, 
         operation: str = "checklist_matching",
         success: bool = True,
-        metadata: Optional[Dict[str, Any]] = None
+        metadata: Optional[Dict[str, Any]] = None,
+        session_id: Optional[str] = None
     ) -> str:
         """Store a Gemini API response"""
         try:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            session_id = f"session_{int(time.time())}"
+            if session_id is None:
+                session_id = f"session_{int(time.time())}"
             
             # Determine folder based on success
             folder = self.responses_folder if success else self.failed_folder
@@ -89,12 +91,14 @@ class JSONStorage:
         batch_index: int, 
         error: str,
         operation: str = "checklist_matching",
-        metadata: Optional[Dict[str, Any]] = None
+        metadata: Optional[Dict[str, Any]] = None,
+        session_id: Optional[str] = None
     ) -> str:
         """Store a failed Gemini API response with error details"""
         try:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            session_id = f"session_{int(time.time())}"
+            if session_id is None:
+                session_id = f"session_{int(time.time())}"
             
             filename = f"failed_{operation}_batch_{batch_index:03d}_{timestamp}_{session_id}.json"
             filepath = self.failed_folder / filename

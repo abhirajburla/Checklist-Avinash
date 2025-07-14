@@ -49,17 +49,18 @@ class ProgressUpdate:
 @dataclass
 class ChecklistItem:
     """Individual checklist item structure (Phase 4)"""
-    item_id: str
+    row_id: int
     category: str
-    description: str
+    checklist: str
+    scope_of_work: str
+    sector: str
     found: bool
-    confidence_score: float
-    sheet_references: List[str]
-    sheet_reasoning: str
-    spec_references: List[str]
-    spec_reasoning: str
+    confidence: str
+    validation_score: float
+    sheet_number: str
+    spec_section: str
     notes: str
-    processing_time: float
+    reasoning: str
 
 @dataclass
 class DocumentReference:
@@ -215,33 +216,35 @@ class OutputGenerator:
             if not raw_item.get("category") or not raw_item.get("checklist"):
                 raise ValueError("Missing required fields for checklist item")
             return ChecklistItem(
-                item_id=str(raw_item.get("row_id", "")),
+                row_id=int(raw_item.get("row_id", 0)),
                 category=str(raw_item.get("category", "")),
-                description=str(raw_item.get("checklist", "")),
+                checklist=str(raw_item.get("checklist", "")),
+                scope_of_work=str(raw_item.get("scope_of_work", "")),
+                sector=str(raw_item.get("sector", "")),
                 found=bool(raw_item.get("found", False)),
-                confidence_score=float(raw_item.get("validation_score", 0.0)),
-                sheet_references=raw_item.get("sheet_number", "").split(", ") if raw_item.get("sheet_number") else [],
-                sheet_reasoning=str(raw_item.get("reasoning", "")),
-                spec_references=raw_item.get("spec_section", "").split(", ") if raw_item.get("spec_section") else [],
-                spec_reasoning=str(raw_item.get("reasoning", "")),
+                confidence=str(raw_item.get("confidence", "LOW")),
+                validation_score=float(raw_item.get("validation_score", 0.0)),
+                sheet_number=str(raw_item.get("sheet_number", "")),
+                spec_section=str(raw_item.get("spec_section", "")),
                 notes=str(raw_item.get("notes", "")),
-                processing_time=float(raw_item.get("processing_time", 0.0))
+                reasoning=str(raw_item.get("reasoning", ""))
             )
         except Exception as e:
             logger.error(f"Error formatting checklist item: {e}")
             # Return a default item
             return ChecklistItem(
-                item_id=str(raw_item.get("item_id", "unknown")),
+                row_id=0,
                 category="error",
-                description="Error formatting item",
+                checklist="Error formatting item",
+                scope_of_work="",
+                sector="",
                 found=False,
-                confidence_score=0.0,
-                sheet_references=[],
-                sheet_reasoning="Error occurred during formatting",
-                spec_references=[],
-                spec_reasoning="Error occurred during formatting",
+                confidence="LOW",
+                validation_score=0.0,
+                sheet_number="",
+                spec_section="",
                 notes=f"Formatting error: {str(e)}",
-                processing_time=0.0
+                reasoning="Error occurred during formatting"
             )
     
     def format_document_reference(self, raw_doc: Dict[str, Any]) -> DocumentReference:
@@ -270,80 +273,106 @@ class OutputGenerator:
     
     def compile_final_output(self, process_id: str, tracker_id: str, 
                            raw_results: Dict[str, Any], 
-                           document_info: List[Dict[str, Any]]) -> FinalOutput:
-        """Compile final output with proper JSON structure"""
+                           document_info: List[Dict[str, Any]]) -> List[Dict]:
+        """Compile final output with clean JSON structure"""
         try:
-            # Get tracker info
-            tracker = self.progress_trackers.get(tracker_id, {})
-            
-            # Calculate processing time
-            start_time = datetime.fromisoformat(tracker.get("start_time", datetime.now().isoformat()))
-            end_time = datetime.now()
-            total_time = (end_time - start_time).total_seconds()
-            
-            # Calculate success rate
-            total_items = tracker.get("total_items", 0)
-            found_items = tracker.get("found_items", 0)
-            success_rate = (found_items / total_items * 100) if total_items > 0 else 0
-            
-            # Create metadata
-            metadata = ProcessingMetadata(
-                process_id=process_id,
-                upload_id=raw_results.get("upload_id", ""),
-                start_time=tracker.get("start_time", datetime.now().isoformat()),
-                end_time=end_time.isoformat(),
-                total_processing_time=total_time,
-                total_items=total_items,
-                found_items=found_items,
-                not_found_items=tracker.get("not_found_items", 0),
-                success_rate=success_rate,
-                system_version="1.0.0",
-                gemini_model=self.config.GEMINI_MODEL
-            )
-            
-            # Format document references
-            documents = [self.format_document_reference(doc) for doc in document_info]
-            
-            # Format checklist results
-            checklist_results = []
+            # Get raw checklist results
             raw_checklist = raw_results.get("checklist_results", [])
-            for item in raw_checklist:
-                formatted_item = self.format_checklist_item(item)
-                checklist_results.append(formatted_item)
             
-            # Create summary
-            summary = {
-                "total_items_processed": total_items,
-                "items_found": found_items,
-                "items_not_found": tracker.get("not_found_items", 0),
-                "success_rate_percentage": success_rate,
-                "processing_time_seconds": total_time,
-                "batches_processed": tracker.get("current_batch", 0),
-                "total_batches": tracker.get("total_batches", 0),
-                "documents_processed": len(documents),
-                "drawings_count": len([d for d in documents if d.document_type == "drawing"]),
-                "specifications_count": len([d for d in documents if d.document_type == "specification"])
+            # Convert to clean format with all required fields
+            clean_results = []
+            for item in raw_checklist:
+                clean_result = {
+                    "row_id": item.get("row_id", 0),
+                    "category": item.get("category", ""),
+                    "scope_of_work": item.get("scope_of_work", ""),
+                    "checklist": item.get("checklist", ""),
+                    "sector": item.get("sector", ""),
+                    "sheet_number": item.get("sheet_number", ""),
+                    "spec_section": item.get("spec_section", ""),
+                    "notes": item.get("notes", ""),
+                    "reasoning": item.get("reasoning", ""),
+                    "found": item.get("found", False),
+                    "confidence": item.get("confidence", "LOW"),
+                    "validation_score": item.get("validation_score", 0.0)
+                }
+                clean_results.append(clean_result)
+            
+            # Sort by row_id to maintain checklist order
+            clean_results.sort(key=lambda x: x.get('row_id', 0))
+            
+            # Cache the clean output
+            self.output_cache[process_id] = {
+                "checklist_results": clean_results
             }
             
-            # Create final output
-            final_output = FinalOutput(
-                metadata=metadata,
-                documents=documents,
-                checklist_results=checklist_results,
-                summary=summary,
-                generated_at=datetime.now().isoformat()
-            )
-            
-            # Cache the output
-            self.output_cache[process_id] = asdict(final_output)
-            
-            logger.info(f"Compiled final output for process {process_id}")
-            return final_output
+            logger.info(f"Compiled clean output for process {process_id} with {len(clean_results)} items")
+            return clean_results
             
         except Exception as e:
             logger.error(f"Error compiling final output: {e}")
             raise
     
+    def generate_clean_json_output(self, process_id: str, pretty_print: bool = True) -> str:
+        """Generate clean JSON output with only essential fields for download"""
+        if process_id not in self.output_cache:
+            raise ValueError(f"No output cached for process {process_id}")
+        
+        output_data = self.output_cache[process_id]
+        checklist_results = output_data.get("checklist_results", [])
+        
+        # The results are already in the correct format from enhanced batch processor
+        # Just ensure they have all required fields and sort by row_id
+        clean_results = []
+        for item in checklist_results:
+            # Ensure all required fields are present with defaults
+            clean_result = {
+                "row_id": item.get("row_id", 0),
+                "category": item.get("category", ""),
+                "scope_of_work": item.get("scope_of_work", ""),
+                "checklist": item.get("checklist", ""),
+                "sector": item.get("sector", ""),
+                "sheet_number": item.get("sheet_number", ""),
+                "spec_section": item.get("spec_section", ""),
+                "notes": item.get("notes", ""),
+                "reasoning": item.get("reasoning", ""),
+                "found": item.get("found", False),
+                "confidence": item.get("confidence", "LOW"),
+                "validation_score": item.get("validation_score", 0.0)
+            }
+            clean_results.append(clean_result)
+        
+        # Sort by row_id to maintain checklist order
+        clean_results.sort(key=lambda x: x.get('row_id', 0))
+        
+        if pretty_print:
+            return json.dumps(clean_results, indent=2, ensure_ascii=False)
+        else:
+            return json.dumps(clean_results, ensure_ascii=False)
+    
+    def save_clean_output_to_file(self, process_id: str, filename: Optional[str] = None) -> str:
+        """Save clean output to a JSON file with only essential fields"""
+        if process_id not in self.output_cache:
+            raise ValueError(f"No output cached for process {process_id}")
+        
+        if not filename:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"checklist_results_clean_{process_id}_{timestamp}.json"
+        
+        filepath = Path(self.config.RESULTS_FOLDER) / filename
+        
+        try:
+            clean_json = self.generate_clean_json_output(process_id, pretty_print=True)
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(clean_json)
+            
+            logger.info(f"Saved clean output to {filepath}")
+            return str(filepath)
+            
+        except Exception as e:
+            logger.error(f"Error saving clean output to file: {e}")
+            raise
+
     def generate_json_output(self, process_id: str, pretty_print: bool = True) -> str:
         """Generate JSON output for download"""
         if process_id not in self.output_cache:
@@ -398,6 +427,7 @@ class OutputGenerator:
             excel_data = []
             for item in checklist_results:
                 excel_data.append({
+                    "Row ID": item.get("row_id", ""),
                     "Category": item.get("category", ""),
                     "Scope of Work": item.get("scope_of_work", ""),
                     "Checklist": item.get("checklist", ""),
@@ -405,7 +435,10 @@ class OutputGenerator:
                     "Sheet Number": item.get("sheet_number", ""),
                     "Specification Reference": item.get("spec_section", ""),
                     "Notes": item.get("notes", ""),
-                    "Reasoning": item.get("reasoning", "")
+                    "Reasoning": item.get("reasoning", ""),
+                    "Found": item.get("found", False),
+                    "Confidence": item.get("confidence", "LOW"),
+                    "Validation Score": item.get("validation_score", 0.0)
                 })
             
             # Create DataFrame and save to Excel

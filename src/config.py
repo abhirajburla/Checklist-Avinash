@@ -69,7 +69,7 @@ class Config:
     CACHE_TTL = int(os.getenv('CACHE_TTL', '3600'))  # 1 hour cache TTL
     
     # Master checklist configuration
-    MASTER_CHECKLIST_PATH = os.getenv('MASTER_CHECKLIST_PATH', 'MASTER CHECKLIST.csv')
+    MASTER_CHECKLIST_PATH = os.getenv('MASTER_CHECKLIST_PATH', 'MASTER TEMP.csv')
     
     # Document processing configuration
     MAX_DOCUMENT_PAGES = int(os.getenv('MAX_DOCUMENT_PAGES', '1000'))  # Gemini limit

@@ -458,7 +458,12 @@ Token Usage Summary:
                     throw new Error(results.error || 'Failed to load results');
                 }
 
-                console.log(`Results loaded - Total: ${results.total_items}, Found: ${results.found_items}, Not found: ${results.not_found_items}`);
+                // Calculate statistics from the results array
+                const totalItems = results.length;
+                const foundItems = results.filter(item => item.found).length;
+                const notFoundItems = totalItems - foundItems;
+
+                console.log(`Results loaded - Total: ${totalItems}, Found: ${foundItems}, Not found: ${notFoundItems}`);
 
                 // Show results
                 resultsSection.style.display = 'block';
@@ -466,9 +471,9 @@ Token Usage Summary:
                 
                 resultsContent.innerHTML = `
                     <p><strong>✅ Processing Complete!</strong></p>
-                    <p>Total checklist items: ${results.total_items}</p>
-                    <p>Items found: ${results.found_items}</p>
-                    <p>Items not found: ${results.not_found_items}</p>
+                    <p>Total checklist items: ${totalItems}</p>
+                    <p>Items found: ${foundItems}</p>
+                    <p>Items not found: ${notFoundItems}</p>
                 `;
 
                 console.log('Results displayed in UI');

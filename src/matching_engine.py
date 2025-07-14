@@ -198,7 +198,7 @@ class MatchingEngine:
                         document_info.append(file_info)
                     
                     # Compile final output
-                    final_output = self.output_generator.compile_final_output(
+                    clean_results = self.output_generator.compile_final_output(
                         process_id, tracker_id, self.results_cache[process_id], document_info
                     )
                     

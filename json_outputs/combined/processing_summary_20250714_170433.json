@@ -1,0 +1,31 @@
+{
+  "processing_summary": {
+    "timestamp": "20250714_170433",
+    "files_processed": 26,
+    "total_matches": 1300,
+    "unique_checklist_items": 50,
+    "found_count": 434,
+    "not_found_count": 866
+  },
+  "data_structure": {
+    "fields": [
+      "row_id",
+      "category",
+      "scope_of_work",
+      "checklist",
+      "sector",
+      "sheet_number",
+      "spec_section",
+      "notes",
+      "reasoning",
+      "found",
+      "confidence",
+      "validation_score"
+    ],
+    "total_items": 1300
+  },
+  "file_info": {
+    "output_file": "json_outputs\\combined\\all_responses_clean_20250714_170433.json",
+    "file_size_mb": 0.85
+  }
+}
