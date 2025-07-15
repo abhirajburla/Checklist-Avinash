@@ -17,7 +17,7 @@ def load_master_checklist() -> Dict[int, Dict[str, str]]:
     """Load master checklist and create index mapping"""
     try:
         # Load the master checklist CSV
-        checklist_path = Path("MASTER TEMP.csv")
+        checklist_path = Path("MASTER_TEMP.csv")
         if not checklist_path.exists():
             print(f"❌ Master checklist file not found: {checklist_path}")
             return {}

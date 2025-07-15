@@ -382,7 +382,7 @@ Token Usage Summary:
                 console.log(`Process started - Process ID: ${currentProcessId}, Tracker ID: ${currentTrackerId}`);
                 console.log(`Processing ${processResult.total_items} items in ${processResult.batches} batches`);
                 
-                updateProgress(50, `Processing ${processResult.total_items} checklist items in ${processResult.batches} batches...`);
+                updateProgress(10, `Processing started - ${processResult.total_items} checklist items in ${processResult.batches} batches...`);
 
                 // Poll for progress
                 console.log('Starting progress polling...');
@@ -419,7 +419,9 @@ Token Usage Summary:
                 const percentage = Math.round(progress.progress_percentage);
                 console.log(`Progress: ${percentage}% - Batch ${progress.current_batch}/${progress.total_batches} - Items: ${progress.items_processed}/${progress.total_items}`);
                 
-                updateProgress(50 + (percentage * 0.4), 
+                // Calculate progress: 10% (start) + 80% (processing) + 10% (completion)
+                const totalProgress = 10 + (percentage * 0.8);
+                updateProgress(totalProgress, 
                     `Processing batch ${progress.current_batch}/${progress.total_batches}... (${progress.items_processed}/${progress.total_items} items)`);
 
                 if (result.status === 'completed') {

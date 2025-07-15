@@ -8393,3 +8393,1019 @@
 2025-07-14 18:26:52 | src.enhanced_batch_processor | INFO | Combined JSON created successfully: json_outputs\combined\combined_session_61f2a955-eff4-4ff3-840e-92a4ebbfbef3_process_30e38a6d-c5b1-4933-8393-44fc415c743e_20250714_182652.json
 2025-07-14 18:26:52 | __main__ | INFO | Combined JSON created successfully: json_outputs\combined\combined_session_61f2a955-eff4-4ff3-840e-92a4ebbfbef3_process_30e38a6d-c5b1-4933-8393-44fc415c743e_20250714_182652.json
 2025-07-14 18:43:03 | __main__ | INFO | Clean JSON file created for download: C:\Users\kinga\AppData\Local\Temp\tmps4fibkdr.json
+2025-07-14 19:01:36 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 19:01:36 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 19:01:36 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 19:01:36 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 19:01:36 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 19:01:36 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 19:01:36 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 19:01:36 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 19:01:36 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 19:01:36 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 19:01:36 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 19:01:36 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 19:01:36 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 19:01:36 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 19:01:36 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 19:01:36 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 19:01:36 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 19:01:36 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 19:01:36 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 19:01:36 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 19:01:36 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 19:01:40 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 19:01:40 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 19:01:40 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 19:01:40 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 19:01:40 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 19:01:40 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 19:01:40 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 19:01:40 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 19:01:40 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 19:01:40 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 19:01:40 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 19:01:40 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 19:01:40 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 19:01:40 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 19:01:40 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 19:01:40 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 19:01:40 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 19:01:40 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 19:01:40 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 19:01:40 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 19:01:40 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 19:01:40 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 20:33:14 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 20:33:14 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:33:14 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 20:33:14 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 20:33:14 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 20:33:14 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 20:33:14 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 20:33:14 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:33:14 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:33:14 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 20:33:14 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:33:14 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 20:33:14 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:33:14 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:33:14 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:33:14 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:33:14 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 20:33:14 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:33:14 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:33:14 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:33:14 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:33:15 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 20:33:35 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 20:33:35 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:33:35 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 20:33:35 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 20:33:35 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 20:33:35 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 20:33:35 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 20:33:35 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:33:35 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:33:35 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 20:33:35 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:33:35 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 20:33:35 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:33:35 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:33:35 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:33:35 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:33:35 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 20:33:35 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:33:35 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:33:35 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:33:35 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:33:35 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 20:33:42 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 20:33:42 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:33:42 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 20:33:42 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 20:33:42 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 20:33:42 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 20:33:42 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 20:33:42 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:33:42 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:33:42 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 20:33:42 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:33:42 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 20:33:42 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:33:42 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:33:42 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:33:42 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:33:42 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 20:33:42 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:33:42 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:33:43 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:33:43 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:33:46 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 20:33:46 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:33:46 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 20:33:46 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 20:33:46 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 20:33:46 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 20:33:46 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 20:33:46 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:33:46 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:33:46 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 20:33:46 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:33:46 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 20:33:46 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:33:46 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:33:46 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:33:46 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:33:46 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 20:33:46 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:33:46 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:33:46 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:33:46 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:33:46 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 20:34:13 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 20:34:13 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 20:34:13 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:34:13 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 20:34:13 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 20:34:13 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 20:34:13 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 20:34:13 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:34:13 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 20:34:13 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 20:34:13 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 20:34:13 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:34:13 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:34:13 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 20:34:13 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:34:13 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 20:34:13 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 20:34:13 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 20:34:13 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 20:34:13 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:34:13 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:34:13 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 20:34:13 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:34:13 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:34:13 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:34:13 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:34:13 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:34:13 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 20:34:13 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 20:34:16 | __main__ | WARNING | Tracker invalid-tracker-id not found in processing_status
+2025-07-14 20:34:18 | src.document_handler | INFO | File processed successfully: test_drawing.pdf -> drawing_4f8be271549d4923aa22c4a1cfb1c60a.pdf
+2025-07-14 20:34:18 | src.document_handler | INFO | File processed successfully: test_spec.pdf -> specification_915c80cef8d843dbace87d1ab3145a84.pdf
+2025-07-14 20:34:18 | src.document_handler | INFO | Upload processed successfully: {'upload_id': '71813e9f-4b68-41f3-813d-d6eeab2f34b5', 'upload_dir': 'uploads\\71813e9f-4b68-41f3-813d-d6eeab2f34b5', 'total_files': 2, 'drawings_count': 1, 'specifications_count': 1, 'errors_count': 0, 'files': {'drawings': [{'original_name': 'test_drawing.pdf', 'saved_name': 'drawing_4f8be271549d4923aa22c4a1cfb1c60a.pdf', 'file_path': 'uploads\\71813e9f-4b68-41f3-813d-d6eeab2f34b5\\drawing_4f8be271549d4923aa22c4a1cfb1c60a.pdf', 'file_size': 0, 'file_type': 'drawing', 'pdf_info': {'pages': 1, 'title': 'drawing_4f8be271549d4923aa22c4a1cfb1c60a.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 13}}], 'specifications': [{'original_name': 'test_spec.pdf', 'saved_name': 'specification_915c80cef8d843dbace87d1ab3145a84.pdf', 'file_path': 'uploads\\71813e9f-4b68-41f3-813d-d6eeab2f34b5\\specification_915c80cef8d843dbace87d1ab3145a84.pdf', 'file_size': 0, 'file_type': 'specification', 'pdf_info': {'pages': 1, 'title': 'specification_915c80cef8d843dbace87d1ab3145a84.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 13}}], 'errors': []}}
+2025-07-14 20:34:18 | __main__ | INFO | Upload successful - Upload ID: 71813e9f-4b68-41f3-813d-d6eeab2f34b5
+2025-07-14 20:34:20 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:34:20 | src.output_generator | INFO | Created progress tracker 673ae876-33fe-464d-8aa0-8ef155353d84 for process 70adab59-5f06-4164-8876-d1920ae8dbc7
+2025-07-14 20:34:20 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:20 | src.gemini_client | INFO | Uploading 2 documents to Gemini
+2025-07-14 20:34:22 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:24 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:26 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:28 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:30 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:31 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: e86cae938ce86be0ddf26abc9311a542
+2025-07-14 20:34:31 | src.enhanced_batch_processor | INFO | === ENHANCED BATCH PROCESSOR SYNC: STARTING PROCESSING OF 27 BATCHES ===
+2025-07-14 20:34:31 | src.enhanced_batch_processor | INFO | Cache ID: e86cae938ce86be0ddf26abc9311a542
+2025-07-14 20:34:31 | src.enhanced_batch_processor | INFO | Document context length: 65 characters
+2025-07-14 20:34:31 | src.enhanced_batch_processor | INFO | Processing batch 1/27 with 50 items
+2025-07-14 20:34:31 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 20:34:32 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:34 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:36 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:38 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:40 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:42 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:44 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:46 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:48 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:50 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:52 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:54 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:56 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:34:58 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:35:00 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:35:02 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:35:04 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:35:06 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:35:08 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:35:10 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:35:12 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 20:35:17 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 20:35:17 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:35:17 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 20:35:17 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 20:35:17 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 20:35:17 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 20:35:17 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 20:35:17 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:35:17 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:35:17 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 20:35:17 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:35:17 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 20:35:17 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:35:17 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:35:17 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:35:17 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:35:17 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 20:35:17 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:35:17 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:35:17 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:35:17 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:35:17 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 20:35:19 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 20:35:19 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:35:19 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 20:35:19 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 20:35:19 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 20:35:19 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 20:35:19 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 20:35:19 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:35:19 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:35:19 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 20:35:19 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:35:19 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 20:35:19 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:35:19 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:35:19 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:35:19 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:35:19 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 20:35:19 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:35:19 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:35:19 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:35:19 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:35:19 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 20:35:57 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 20:35:57 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:35:57 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 20:35:57 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 20:35:57 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 20:35:57 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 20:35:57 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 20:35:57 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:35:57 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:35:57 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 20:35:57 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:35:57 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 20:35:57 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:35:57 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:35:57 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:35:57 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:35:57 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 20:35:57 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:35:57 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:35:57 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:35:57 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:36:00 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 20:36:00 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:36:00 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 20:36:00 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 20:36:00 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 20:36:00 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 20:36:00 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 20:36:00 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 20:36:00 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:36:00 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 20:36:00 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 20:36:00 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 20:36:00 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:36:00 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:36:00 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:36:00 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:36:00 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 20:36:00 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 20:36:00 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 20:36:00 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 20:36:00 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 20:36:00 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 21:11:08 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 21:11:08 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:11:08 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 21:11:08 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 21:11:08 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 21:11:08 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 21:11:08 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 21:11:08 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:11:08 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:11:08 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 21:11:08 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:11:08 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 21:11:08 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 21:11:08 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 21:11:08 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 21:11:08 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:11:08 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 21:11:08 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 21:11:08 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 21:11:08 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 21:11:08 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:11:11 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 21:11:11 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:11:11 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 21:11:11 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 21:11:11 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 21:11:11 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 21:11:11 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 21:11:11 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:11:11 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:11:11 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 21:11:11 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:11:11 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 21:11:11 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 21:11:11 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 21:11:11 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 21:11:11 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:11:11 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 21:11:11 | src.checklist_processor | INFO | Loaded master checklist with 1358 items
+2025-07-14 21:11:11 | src.checklist_processor | INFO | Successfully loaded and cleaned 1350 checklist items
+2025-07-14 21:11:11 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 21:11:11 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:11:11 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 21:11:17 | src.document_handler | INFO | File processed successfully: FPHQ A0040.pdf -> drawing_98c7684fe4364e83a7614d77f16468e0.pdf
+2025-07-14 21:11:17 | src.document_handler | INFO | Upload processed successfully: {'upload_id': '6c178a2b-14f3-4f68-85c4-cf0a614ff063', 'upload_dir': 'uploads\\6c178a2b-14f3-4f68-85c4-cf0a614ff063', 'total_files': 1, 'drawings_count': 1, 'specifications_count': 0, 'errors_count': 0, 'files': {'drawings': [{'original_name': 'FPHQ A0040.pdf', 'saved_name': 'drawing_98c7684fe4364e83a7614d77f16468e0.pdf', 'file_path': 'uploads\\6c178a2b-14f3-4f68-85c4-cf0a614ff063\\drawing_98c7684fe4364e83a7614d77f16468e0.pdf', 'file_size': 0, 'file_type': 'drawing', 'pdf_info': {'pages': 1, 'title': 'drawing_98c7684fe4364e83a7614d77f16468e0.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 131124}}], 'specifications': [], 'errors': []}}
+2025-07-14 21:11:17 | __main__ | INFO | Upload successful - Upload ID: 6c178a2b-14f3-4f68-85c4-cf0a614ff063
+2025-07-14 21:11:17 | src.checklist_processor | INFO | Created 27 batches of size 50
+2025-07-14 21:11:17 | src.output_generator | INFO | Created progress tracker fb912c5e-649f-46e8-b565-b5fcbc18ae50 for process 3b6fb080-3f3d-493e-8638-e15567ad88ff
+2025-07-14 21:11:17 | __main__ | INFO | Processing started - Initial progress set to 5%
+2025-07-14 21:11:17 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:17 | src.gemini_client | INFO | Uploading 1 documents to Gemini
+2025-07-14 21:11:18 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:19 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:20 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:21 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:22 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: e269e290dfa9caf320022f717cc08c4d
+2025-07-14 21:11:22 | src.enhanced_batch_processor | INFO | === ENHANCED BATCH PROCESSOR SYNC: STARTING PROCESSING OF 27 BATCHES ===
+2025-07-14 21:11:22 | src.enhanced_batch_processor | INFO | Cache ID: e269e290dfa9caf320022f717cc08c4d
+2025-07-14 21:11:22 | src.enhanced_batch_processor | INFO | Document context length: 65 characters
+2025-07-14 21:11:22 | src.enhanced_batch_processor | INFO | Processing batch 1/27 with 50 items
+2025-07-14 21:11:22 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 21:11:22 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:23 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:24 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:25 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:26 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:27 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:28 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:29 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:30 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:31 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:32 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:33 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:34 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:35 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:36 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:37 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:38 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:39 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:40 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:41 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:42 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:43 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:44 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:45 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:46 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:47 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:48 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:50 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:51 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:52 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:53 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:54 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:55 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:56 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:57 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:58 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:11:59 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:00 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:01 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:02 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:03 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:04 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:05 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:06 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:07 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:08 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:09 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:10 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:10 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 21:12:10 | src.token_tracker | INFO |    📥 Input tokens: 3,407
+2025-07-14 21:12:10 | src.token_tracker | INFO |    📤 Output tokens: 6,033
+2025-07-14 21:12:10 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 21:12:10 | src.token_tracker | INFO |    💰 Input cost: $0.000511
+2025-07-14 21:12:10 | src.token_tracker | INFO |    💰 Output cost: $0.003620
+2025-07-14 21:12:10 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 21:12:10 | src.token_tracker | INFO |    💰 Total cost: $0.004131
+2025-07-14 21:12:10 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 21:12:10 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 21:12:10 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 21:12:10 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 21:12:10 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 21:12:10 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 21:12:10 | src.token_tracker | INFO |    🔢 Total calls: 1
+2025-07-14 21:12:10 | src.token_tracker | INFO |    📥 Total input tokens: 3,407
+2025-07-14 21:12:10 | src.token_tracker | INFO |    📤 Total output tokens: 6,033
+2025-07-14 21:12:10 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 21:12:10 | src.token_tracker | INFO |    💰 Total session cost: $0.004131
+2025-07-14 21:12:10 | src.json_storage | INFO | Stored checklist_matching response for batch 0 at json_outputs\responses\checklist_matching_batch_000_20250714_211210_session_1752507730.json
+2025-07-14 21:12:10 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 21:12:10 | src.gemini_client | INFO | Found 1 items, 49 not found
+2025-07-14 21:12:10 | src.enhanced_batch_processor | INFO | Completed batch 1 with 50 results
+2025-07-14 21:12:10 | src.enhanced_batch_processor | INFO | Processing batch 2/27 with 50 items
+2025-07-14 21:12:10 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 21:12:11 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:12 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:13 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:14 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:15 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:16 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:17 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:18 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:19 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:20 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:21 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:22 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:23 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:24 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:25 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:26 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:27 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:28 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:29 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:30 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:31 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:32 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:33 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:34 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:35 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:36 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:36 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 21:12:36 | src.token_tracker | INFO |    📥 Input tokens: 3,498
+2025-07-14 21:12:36 | src.token_tracker | INFO |    📤 Output tokens: 5,493
+2025-07-14 21:12:36 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 21:12:36 | src.token_tracker | INFO |    💰 Input cost: $0.000525
+2025-07-14 21:12:36 | src.token_tracker | INFO |    💰 Output cost: $0.003296
+2025-07-14 21:12:36 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 21:12:36 | src.token_tracker | INFO |    💰 Total cost: $0.003820
+2025-07-14 21:12:36 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 21:12:36 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 21:12:36 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 21:12:36 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 21:12:36 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 21:12:36 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 21:12:36 | src.token_tracker | INFO |    🔢 Total calls: 2
+2025-07-14 21:12:36 | src.token_tracker | INFO |    📥 Total input tokens: 6,905
+2025-07-14 21:12:36 | src.token_tracker | INFO |    📤 Total output tokens: 11,526
+2025-07-14 21:12:36 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 21:12:36 | src.token_tracker | INFO |    💰 Total session cost: $0.007951
+2025-07-14 21:12:36 | src.json_storage | INFO | Stored checklist_matching response for batch 1 at json_outputs\responses\checklist_matching_batch_001_20250714_211236_session_1752507756.json
+2025-07-14 21:12:36 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 21:12:36 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 21:12:36 | src.enhanced_batch_processor | INFO | Completed batch 2 with 50 results
+2025-07-14 21:12:36 | src.enhanced_batch_processor | INFO | Processing batch 3/27 with 50 items
+2025-07-14 21:12:36 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 21:12:37 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:38 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:39 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:40 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:41 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:42 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:43 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:44 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:45 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:46 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:47 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:48 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:49 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:50 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:51 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:52 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:53 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:54 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:55 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:56 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:57 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:58 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:12:59 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:00 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:01 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:02 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:03 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:04 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:05 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:06 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:07 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:08 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:09 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:10 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:11 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:12 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:13 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:14 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:15 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:16 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:17 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:18 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:19 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:20 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:21 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:22 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:23 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:24 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 21:13:24 | src.token_tracker | INFO |    📥 Input tokens: 3,320
+2025-07-14 21:13:24 | src.token_tracker | INFO |    📤 Output tokens: 6,226
+2025-07-14 21:13:24 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 21:13:24 | src.token_tracker | INFO |    💰 Input cost: $0.000498
+2025-07-14 21:13:24 | src.token_tracker | INFO |    💰 Output cost: $0.003736
+2025-07-14 21:13:24 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 21:13:24 | src.token_tracker | INFO |    💰 Total cost: $0.004234
+2025-07-14 21:13:24 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 21:13:24 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 21:13:24 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 21:13:24 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 21:13:24 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 21:13:24 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 21:13:24 | src.token_tracker | INFO |    🔢 Total calls: 3
+2025-07-14 21:13:24 | src.token_tracker | INFO |    📥 Total input tokens: 10,225
+2025-07-14 21:13:24 | src.token_tracker | INFO |    📤 Total output tokens: 17,752
+2025-07-14 21:13:24 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 21:13:24 | src.token_tracker | INFO |    💰 Total session cost: $0.012185
+2025-07-14 21:13:24 | src.json_storage | INFO | Stored checklist_matching response for batch 2 at json_outputs\responses\checklist_matching_batch_002_20250714_211324_session_1752507804.json
+2025-07-14 21:13:24 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 21:13:24 | src.gemini_client | INFO | Found 0 items, 50 not found
+2025-07-14 21:13:24 | src.enhanced_batch_processor | INFO | Completed batch 3 with 50 results
+2025-07-14 21:13:24 | src.enhanced_batch_processor | INFO | Processing batch 4/27 with 50 items
+2025-07-14 21:13:24 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 21:13:24 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:25 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:26 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:27 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:28 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:29 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:30 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:31 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:32 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:33 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:34 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:35 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:36 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:13:37 | __main__ | INFO | Progress update - Batch 0/27 (0.0%)
+2025-07-14 21:16:55 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 21:16:55 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:16:55 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 21:16:55 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 21:16:55 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 21:16:55 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 21:16:55 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 21:16:55 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:16:55 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:16:55 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 21:16:55 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:16:55 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 21:16:55 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:16:55 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:16:55 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:16:55 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:16:55 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 21:16:55 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:16:55 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:16:55 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:16:55 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:17:01 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 21:17:01 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:17:01 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 21:17:01 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 21:17:01 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 21:17:01 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 21:17:01 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 21:17:01 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:17:01 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:17:01 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 21:17:01 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:17:01 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 21:17:01 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:17:01 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:17:01 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:17:01 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:17:01 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 21:17:01 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:17:01 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:17:01 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:17:01 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:17:01 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 21:18:00 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 21:18:00 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:18:00 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 21:18:00 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 21:18:00 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 21:18:00 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 21:18:00 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 21:18:00 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:18:00 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:18:00 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 21:18:00 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:18:00 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 21:18:00 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:18:00 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:18:00 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:18:00 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:18:00 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 21:18:00 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:18:00 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:18:00 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:18:00 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:18:02 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 21:18:02 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:18:02 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 21:18:02 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 21:18:02 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 21:18:02 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 21:18:02 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 21:18:02 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:18:02 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:18:02 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 21:18:02 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:18:02 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 21:18:02 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:18:02 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:18:02 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:18:02 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:18:02 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 21:18:02 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:18:02 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:18:02 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:18:02 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:18:02 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 21:18:08 | src.document_handler | INFO | File processed successfully: FPHQ A0040.pdf -> drawing_a696837f0c0246dbacaa0928a2080c6a.pdf
+2025-07-14 21:18:08 | src.document_handler | INFO | Upload processed successfully: {'upload_id': '6a5722a0-9909-40a6-a4f7-6769659dedc9', 'upload_dir': 'uploads\\6a5722a0-9909-40a6-a4f7-6769659dedc9', 'total_files': 1, 'drawings_count': 1, 'specifications_count': 0, 'errors_count': 0, 'files': {'drawings': [{'original_name': 'FPHQ A0040.pdf', 'saved_name': 'drawing_a696837f0c0246dbacaa0928a2080c6a.pdf', 'file_path': 'uploads\\6a5722a0-9909-40a6-a4f7-6769659dedc9\\drawing_a696837f0c0246dbacaa0928a2080c6a.pdf', 'file_size': 0, 'file_type': 'drawing', 'pdf_info': {'pages': 1, 'title': 'drawing_a696837f0c0246dbacaa0928a2080c6a.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 131124}}], 'specifications': [], 'errors': []}}
+2025-07-14 21:18:08 | __main__ | INFO | Upload successful - Upload ID: 6a5722a0-9909-40a6-a4f7-6769659dedc9
+2025-07-14 21:18:08 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:18:08 | src.output_generator | INFO | Created progress tracker ede95261-b388-4f57-857d-cdb57a207456 for process f92f5e0a-e5f6-419c-8ff0-e8632175bc06
+2025-07-14 21:18:08 | __main__ | INFO | Processing started - Initial progress set to 5%
+2025-07-14 21:18:08 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:08 | src.gemini_client | INFO | Uploading 1 documents to Gemini
+2025-07-14 21:18:09 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:10 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:11 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:12 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: 48b616aad2d1594868a2cda9f7223ef5
+2025-07-14 21:18:12 | src.enhanced_batch_processor | INFO | === ENHANCED BATCH PROCESSOR SYNC: STARTING PROCESSING OF 2 BATCHES ===
+2025-07-14 21:18:12 | src.enhanced_batch_processor | INFO | Cache ID: 48b616aad2d1594868a2cda9f7223ef5
+2025-07-14 21:18:12 | src.enhanced_batch_processor | INFO | Document context length: 65 characters
+2025-07-14 21:18:12 | src.enhanced_batch_processor | INFO | Processing batch 1/2 with 50 items
+2025-07-14 21:18:12 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 21:18:12 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:13 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:14 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:15 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:16 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:17 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:18 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:19 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:20 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:21 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:22 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:23 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:24 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:25 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:26 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:27 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:28 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:29 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:30 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:31 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:32 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:33 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:34 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:35 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:36 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:37 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:38 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:39 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:40 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:41 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:42 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:43 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:44 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:45 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:46 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:47 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:48 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:49 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:50 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:51 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:52 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:53 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:54 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:55 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:56 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:57 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:58 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:18:59 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:00 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:01 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:01 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 21:19:01 | src.token_tracker | INFO |    📥 Input tokens: 3,407
+2025-07-14 21:19:01 | src.token_tracker | INFO |    📤 Output tokens: 5,831
+2025-07-14 21:19:01 | src.token_tracker | INFO |    💾 Cached tokens: 0
+2025-07-14 21:19:01 | src.token_tracker | INFO |    💰 Input cost: $0.000511
+2025-07-14 21:19:01 | src.token_tracker | INFO |    💰 Output cost: $0.003499
+2025-07-14 21:19:01 | src.token_tracker | INFO |    💰 Cached cost: $0.000000
+2025-07-14 21:19:01 | src.token_tracker | INFO |    💰 Total cost: $0.004010
+2025-07-14 21:19:01 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 21:19:01 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 21:19:01 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 21:19:01 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 21:19:01 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 21:19:01 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 21:19:01 | src.token_tracker | INFO |    🔢 Total calls: 1
+2025-07-14 21:19:01 | src.token_tracker | INFO |    📥 Total input tokens: 3,407
+2025-07-14 21:19:01 | src.token_tracker | INFO |    📤 Total output tokens: 5,831
+2025-07-14 21:19:01 | src.token_tracker | INFO |    💾 Total cached tokens: 0
+2025-07-14 21:19:01 | src.token_tracker | INFO |    💰 Total session cost: $0.004010
+2025-07-14 21:19:01 | src.json_storage | INFO | Stored checklist_matching response for batch 0 at json_outputs\responses\checklist_matching_batch_000_20250714_211901_session_1752508141.json
+2025-07-14 21:19:01 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 21:19:01 | src.gemini_client | INFO | Found 1 items, 49 not found
+2025-07-14 21:19:01 | src.enhanced_batch_processor | INFO | Completed batch 1 with 50 results
+2025-07-14 21:19:01 | src.enhanced_batch_processor | INFO | Processing batch 2/2 with 49 items
+2025-07-14 21:19:01 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 21:19:02 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:03 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:04 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:05 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:06 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:07 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:08 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:09 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:10 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:11 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:12 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:13 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:14 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:15 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:16 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:17 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:18 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:19 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:20 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:21 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:22 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:23 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:24 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:25 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:26 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:27 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:28 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:29 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:30 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:31 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:32 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:33 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:19:34 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:22 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 21:21:22 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:21:22 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 21:21:22 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 21:21:22 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 21:21:22 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 21:21:22 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 21:21:22 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:21:22 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:21:22 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 21:21:22 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:21:22 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 21:21:22 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:21:22 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:21:22 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:21:22 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:21:22 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 21:21:22 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:21:22 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:21:22 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:21:22 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:21:25 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 21:21:25 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:21:25 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 21:21:25 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 21:21:25 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 21:21:25 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 21:21:25 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 21:21:25 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:21:25 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:21:25 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 21:21:25 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:21:25 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 21:21:25 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:21:25 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:21:25 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:21:25 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:21:25 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 21:21:25 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:21:25 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:21:25 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:21:25 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:21:25 | werkzeug | WARNING |  * Debugger is active!
+2025-07-14 21:21:28 | src.document_handler | INFO | File processed successfully: FPHQ A0040.pdf -> drawing_ee027dc9b4b44a508f1bc08335e8fe24.pdf
+2025-07-14 21:21:28 | src.document_handler | INFO | Upload processed successfully: {'upload_id': '22aaef70-08d0-4f73-b41d-74577d0844a1', 'upload_dir': 'uploads\\22aaef70-08d0-4f73-b41d-74577d0844a1', 'total_files': 1, 'drawings_count': 1, 'specifications_count': 0, 'errors_count': 0, 'files': {'drawings': [{'original_name': 'FPHQ A0040.pdf', 'saved_name': 'drawing_ee027dc9b4b44a508f1bc08335e8fe24.pdf', 'file_path': 'uploads\\22aaef70-08d0-4f73-b41d-74577d0844a1\\drawing_ee027dc9b4b44a508f1bc08335e8fe24.pdf', 'file_size': 0, 'file_type': 'drawing', 'pdf_info': {'pages': 1, 'title': 'drawing_ee027dc9b4b44a508f1bc08335e8fe24.pdf', 'author': '', 'subject': '', 'creator': '', 'file_size': 131124}}], 'specifications': [], 'errors': []}}
+2025-07-14 21:21:28 | __main__ | INFO | Upload successful - Upload ID: 22aaef70-08d0-4f73-b41d-74577d0844a1
+2025-07-14 21:21:28 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:21:28 | src.output_generator | INFO | Created progress tracker 0a8cf894-3711-400a-b770-2ea636f8c178 for process ac660164-c110-4c07-9d02-6afe52bb75bc
+2025-07-14 21:21:28 | __main__ | INFO | Processing started - Initial progress set to 5%
+2025-07-14 21:21:28 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:28 | src.gemini_client | INFO | Uploading 1 documents to Gemini
+2025-07-14 21:21:29 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:30 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:31 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:32 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:32 | src.matching_engine | INFO | Documents uploaded successfully, cache_id: ee42ef3a19e66d8fa99f140d80aa77d2
+2025-07-14 21:21:32 | src.enhanced_batch_processor | INFO | === ENHANCED BATCH PROCESSOR SYNC: STARTING PROCESSING OF 2 BATCHES ===
+2025-07-14 21:21:32 | src.enhanced_batch_processor | INFO | Cache ID: ee42ef3a19e66d8fa99f140d80aa77d2
+2025-07-14 21:21:32 | src.enhanced_batch_processor | INFO | Document context length: 65 characters
+2025-07-14 21:21:32 | src.enhanced_batch_processor | INFO | Processing batch 1/2 with 50 items
+2025-07-14 21:21:32 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 21:21:33 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:34 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:35 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:36 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:37 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:38 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:39 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:40 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:41 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:42 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:43 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:44 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:45 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:46 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:47 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:48 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:49 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:50 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:51 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:52 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:53 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:54 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:55 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:56 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:57 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:58 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:21:59 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:00 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:01 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:02 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:03 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:04 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:05 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:06 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:07 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:08 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:09 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:10 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:11 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:12 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:13 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:14 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:15 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:16 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:17 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 21:22:17 | src.token_tracker | INFO |    📥 Input tokens: 3,407
+2025-07-14 21:22:17 | src.token_tracker | INFO |    📤 Output tokens: 5,673
+2025-07-14 21:22:17 | src.token_tracker | INFO |    💾 Cached tokens: 3,400
+2025-07-14 21:22:17 | src.token_tracker | INFO |    💰 Input cost: $0.000511
+2025-07-14 21:22:17 | src.token_tracker | INFO |    💰 Output cost: $0.003404
+2025-07-14 21:22:17 | src.token_tracker | INFO |    💰 Cached cost: $0.000127
+2025-07-14 21:22:17 | src.token_tracker | INFO |    💰 Total cost: $0.004042
+2025-07-14 21:22:17 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 21:22:17 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 21:22:17 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 21:22:17 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 21:22:17 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 21:22:17 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 21:22:17 | src.token_tracker | INFO |    🔢 Total calls: 1
+2025-07-14 21:22:17 | src.token_tracker | INFO |    📥 Total input tokens: 3,407
+2025-07-14 21:22:17 | src.token_tracker | INFO |    📤 Total output tokens: 5,673
+2025-07-14 21:22:17 | src.token_tracker | INFO |    💾 Total cached tokens: 3,400
+2025-07-14 21:22:17 | src.token_tracker | INFO |    💰 Total session cost: $0.004042
+2025-07-14 21:22:17 | src.json_storage | INFO | Stored checklist_matching response for batch 0 at json_outputs\responses\checklist_matching_batch_000_20250714_212217_session_1752508337.json
+2025-07-14 21:22:17 | src.gemini_client | INFO | Processed 50 checklist items
+2025-07-14 21:22:17 | src.gemini_client | INFO | Found 1 items, 49 not found
+2025-07-14 21:22:17 | src.enhanced_batch_processor | INFO | Completed batch 1 with 50 results
+2025-07-14 21:22:17 | src.enhanced_batch_processor | INFO | Processing batch 2/2 with 49 items
+2025-07-14 21:22:17 | src.gemini_client | INFO | Sending matching prompt to Gemini...
+2025-07-14 21:22:17 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:18 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:19 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:20 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:21 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:22 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:23 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:24 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:25 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:26 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:27 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:28 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:29 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:30 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:31 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:32 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:33 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:34 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:35 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:36 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:37 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:38 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:39 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:40 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:41 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:42 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:43 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:44 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:45 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:46 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:47 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:48 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:49 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:50 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:51 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:52 | __main__ | INFO | Progress update - Batch 0/2 (0.0%)
+2025-07-14 21:22:53 | src.token_tracker | INFO | 🔢 TOKEN USAGE - Checklist Batch Matching with System Instructions
+2025-07-14 21:22:53 | src.token_tracker | INFO |    📥 Input tokens: 3,441
+2025-07-14 21:22:53 | src.token_tracker | INFO |    📤 Output tokens: 5,166
+2025-07-14 21:22:53 | src.token_tracker | INFO |    💾 Cached tokens: 3,422
+2025-07-14 21:22:53 | src.token_tracker | INFO |    💰 Input cost: $0.000516
+2025-07-14 21:22:53 | src.token_tracker | INFO |    💰 Output cost: $0.003100
+2025-07-14 21:22:53 | src.token_tracker | INFO |    💰 Cached cost: $0.000128
+2025-07-14 21:22:53 | src.token_tracker | INFO |    💰 Total cost: $0.003744
+2025-07-14 21:22:53 | src.token_tracker | INFO |    📊 Pricing (per 1M tokens):
+2025-07-14 21:22:53 | src.token_tracker | INFO |       Input: $0.150000
+2025-07-14 21:22:53 | src.token_tracker | INFO |       Output: $0.600000
+2025-07-14 21:22:53 | src.token_tracker | INFO |       Cached: $0.037500
+2025-07-14 21:22:53 | src.token_tracker | INFO |       Thoughts: $0.150000
+2025-07-14 21:22:53 | src.token_tracker | INFO | 📊 SESSION SUMMARY
+2025-07-14 21:22:53 | src.token_tracker | INFO |    🔢 Total calls: 2
+2025-07-14 21:22:53 | src.token_tracker | INFO |    📥 Total input tokens: 6,848
+2025-07-14 21:22:53 | src.token_tracker | INFO |    📤 Total output tokens: 10,839
+2025-07-14 21:22:53 | src.token_tracker | INFO |    💾 Total cached tokens: 6,822
+2025-07-14 21:22:53 | src.token_tracker | INFO |    💰 Total session cost: $0.007786
+2025-07-14 21:22:53 | src.json_storage | INFO | Stored checklist_matching response for batch 1 at json_outputs\responses\checklist_matching_batch_001_20250714_212253_session_1752508373.json
+2025-07-14 21:22:53 | src.gemini_client | INFO | Processed 49 checklist items
+2025-07-14 21:22:53 | src.gemini_client | INFO | Found 0 items, 49 not found
+2025-07-14 21:22:53 | src.enhanced_batch_processor | INFO | Completed batch 2 with 49 results
+2025-07-14 21:22:53 | src.enhanced_batch_processor | INFO | === ENHANCED BATCH PROCESSOR SYNC: COMPLETED PROCESSING 2 BATCHES ===
+2025-07-14 21:22:53 | src.output_generator | INFO | Updated progress for 0a8cf894-3711-400a-b770-2ea636f8c178: 50.0% complete
+2025-07-14 21:22:53 | src.output_generator | INFO | Updated progress for 0a8cf894-3711-400a-b770-2ea636f8c178: 100.0% complete
+2025-07-14 21:22:53 | src.matching_engine | INFO | Completed processing with 99 validated results
+2025-07-14 21:22:53 | src.output_generator | INFO | Compiled clean output for process ac660164-c110-4c07-9d02-6afe52bb75bc with 99 items
+2025-07-14 21:22:53 | src.output_generator | INFO | Updated progress for 0a8cf894-3711-400a-b770-2ea636f8c178: 100.0% complete
+2025-07-14 21:22:53 | src.matching_engine | INFO | Processing completed for ac660164-c110-4c07-9d02-6afe52bb75bc: 1/99 items found
+2025-07-14 21:22:53 | __main__ | INFO | Progress update - Batch 2/2 (100.0%)
+2025-07-14 21:22:54 | src.gemini_client | INFO | Cleaned up cache: ee42ef3a19e66d8fa99f140d80aa77d2
+2025-07-14 21:22:54 | src.matching_engine | INFO | Cleaned up process: ac660164-c110-4c07-9d02-6afe52bb75bc
+2025-07-14 21:22:54 | __main__ | INFO | Creating combined JSON for session: 22aaef70-08d0-4f73-b41d-74577d0844a1, process: 2a4523f5-7170-46e5-b083-19a7758df653
+2025-07-14 21:22:54 | src.enhanced_batch_processor | INFO | Creating combined JSON for session: 22aaef70-08d0-4f73-b41d-74577d0844a1, process: 2a4523f5-7170-46e5-b083-19a7758df653
+2025-07-14 21:22:54 | src.json_combiner | INFO | Combining JSON outputs for session: 22aaef70-08d0-4f73-b41d-74577d0844a1, process: 2a4523f5-7170-46e5-b083-19a7758df653
+2025-07-14 21:22:54 | src.json_combiner | INFO | Found 0 successful response files
+2025-07-14 21:22:54 | src.json_combiner | INFO | Found 0 failed response files
+2025-07-14 21:22:54 | src.json_combiner | INFO | Combined JSON created with 0 total responses
+2025-07-14 21:22:54 | src.json_combiner | INFO | Success rate: 0.00%
+2025-07-14 21:22:54 | src.json_combiner | INFO | Total tokens used: 0
+2025-07-14 21:22:54 | src.json_combiner | INFO | Total cost: $0.000000
+2025-07-14 21:22:54 | src.json_combiner | INFO | Combined JSON saved to: json_outputs\combined\combined_session_22aaef70-08d0-4f73-b41d-74577d0844a1_process_2a4523f5-7170-46e5-b083-19a7758df653_20250714_212254.json
+2025-07-14 21:22:54 | src.enhanced_batch_processor | INFO | Combined JSON created successfully: json_outputs\combined\combined_session_22aaef70-08d0-4f73-b41d-74577d0844a1_process_2a4523f5-7170-46e5-b083-19a7758df653_20250714_212254.json
+2025-07-14 21:22:54 | __main__ | INFO | Combined JSON created successfully: json_outputs\combined\combined_session_22aaef70-08d0-4f73-b41d-74577d0844a1_process_2a4523f5-7170-46e5-b083-19a7758df653_20250714_212254.json
+2025-07-14 21:24:06 | src.logger_config | INFO | Logging configured - Level: INFO, File: logs/app.log, Console: True
+2025-07-14 21:24:06 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:24:06 | src.token_tracker | INFO | TokenTracker initialized for model: gemini-2.5-flash
+2025-07-14 21:24:06 | src.token_tracker | INFO | Model supports thinking mode: True
+2025-07-14 21:24:06 | src.json_storage | INFO | JSONStorage initialized with folder: json_outputs
+2025-07-14 21:24:06 | src.gemini_client | INFO | GeminiClient initialized with model: gemini-2.5-flash
+2025-07-14 21:24:06 | src.gemini_client | INFO | API timeout: 300s, Batch timeout: 600s
+2025-07-14 21:24:06 | src.document_handler | INFO | DocumentHandler initialized with upload folder: uploads
+2025-07-14 21:24:06 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:24:06 | src.enhanced_batch_processor | INFO | EnhancedBatchProcessor initialized with max_retries=3, batch_size=50, retry_delay=5.0, backoff_factor=3.0, max_concurrent_batches=3
+2025-07-14 21:24:06 | src.reference_validator | INFO | ReferenceValidator initialized
+2025-07-14 21:24:06 | src.output_generator | INFO | OutputGenerator initialized
+2025-07-14 21:24:06 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:24:06 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:24:06 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:24:06 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:24:06 | src.matching_engine | INFO | MatchingEngine initialized with enhanced batch processing, validation, and output generation
+2025-07-14 21:24:06 | src.checklist_processor | INFO | Loaded master checklist with 99 items
+2025-07-14 21:24:06 | src.checklist_processor | INFO | Successfully loaded and cleaned 99 checklist items
+2025-07-14 21:24:06 | src.checklist_processor | INFO | Created 2 batches of size 50
+2025-07-14 21:24:06 | src.checklist_processor | INFO | Checklist processor initialized successfully
+2025-07-14 21:24:06 | werkzeug | WARNING |  * Debugger is active!

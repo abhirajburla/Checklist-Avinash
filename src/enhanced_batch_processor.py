@@ -444,10 +444,12 @@ IMPORTANT:
         return processed_results
 
     def process_multiple_batches_sync(
-        self, 
-        batches: List[List[Dict]], 
-        cache_id: str, 
-        document_context: str
+        self,
+        batches: List[List[Dict]],
+        cache_id: str,
+        document_context: str,
+        tracker_id: str = None,
+        output_generator = None
     ) -> List[List[Dict]]:
         """Process multiple batches synchronously (no asyncio)"""
         
@@ -473,6 +475,9 @@ IMPORTANT:
                 batch_results.append(validated_result)
                 
                 logger.info(f"Completed batch {batch_index + 1} with {len(validated_result)} results")
+                # Update progress after each batch
+                if tracker_id and output_generator:
+                    output_generator.update_progress(tracker_id, batch_index, validated_result, "processing")
                 
             except Exception as e:
                 logger.error(f"Exception while processing batch {batch_index}: {e}")
@@ -497,6 +502,9 @@ IMPORTANT:
                 
                 batch_results.append(fallback_results)
                 logger.info(f"Added fallback results for batch {batch_index + 1}")
+                # Update progress for failed batch
+                if tracker_id and output_generator:
+                    output_generator.update_progress(tracker_id, batch_index, fallback_results, "failed", str(e))
         
         logger.info(f"=== ENHANCED BATCH PROCESSOR SYNC: COMPLETED PROCESSING {len(batch_results)} BATCHES ===")
         return batch_results

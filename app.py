@@ -140,23 +140,48 @@ def process_documents():
                 # Get results from matching engine
                 engine_process_id = matching_result["process_id"]
                 
-                # Wait for matching engine to complete
+                # Update initial progress
+                processing_status[tracker_id]['progress']['progress_percentage'] = 5.0
+                processing_status[tracker_id]['progress']['current_batch'] = 0
+                logger.info("Processing started - Initial progress set to 5%")
+                
+                # Wait for matching engine to complete with progress updates
                 max_wait_time = matching_engine.config.PROCESSING_TIMEOUT  # Use configurable timeout
-                wait_interval = 2  # 2 seconds
+                wait_interval = 1  # Check more frequently
                 elapsed_time = 0
                 
                 while elapsed_time < max_wait_time:
-                    status = matching_engine.get_processing_status(engine_process_id)
-                    
-                    if status['status'] == 'completed':
-                        break
-                    elif status['status'] == 'failed':
-                        error_msg = status.get('error', 'Unknown error')
-                        raise Exception(f"Matching engine failed: {error_msg}")
-                    
-                    import time
-                    time.sleep(wait_interval)
-                    elapsed_time += wait_interval
+                    try:
+                        status = matching_engine.get_processing_status(engine_process_id)
+                        
+                        # Update progress based on matching engine status
+                        if 'completed_batches' in status and 'total_batches' in status:
+                            completed_batches = status['completed_batches']
+                            total_batches = status['total_batches']
+                            percentage = (completed_batches / total_batches) * 100 if total_batches > 0 else 0
+                            
+                            # Update Flask app progress
+                            processing_status[tracker_id]['progress']['current_batch'] = completed_batches
+                            processing_status[tracker_id]['progress']['progress_percentage'] = percentage
+                            processing_status[tracker_id]['progress']['items_processed'] = int(status.get('total_items', 0) * (completed_batches / total_batches)) if total_batches > 0 else 0
+                            
+                            logger.info(f"Progress update - Batch {completed_batches}/{total_batches} ({percentage:.1f}%)")
+                        
+                        if status['status'] == 'completed':
+                            break
+                        elif status['status'] == 'failed':
+                            error_msg = status.get('error', 'Unknown error')
+                            raise Exception(f"Matching engine failed: {error_msg}")
+                        
+                        import time
+                        time.sleep(wait_interval)
+                        elapsed_time += wait_interval
+                        
+                    except Exception as e:
+                        logger.error(f"Error checking progress: {e}")
+                        import time
+                        time.sleep(wait_interval)
+                        elapsed_time += wait_interval
                 
                 if elapsed_time >= max_wait_time:
                     raise Exception(f"Matching engine processing timed out after {max_wait_time} seconds")
@@ -172,6 +197,7 @@ def process_documents():
                 found_items = sum(1 for item in real_results if item.get('found', False))
                 processing_status[tracker_id]['progress']['found_items'] = found_items
                 processing_status[tracker_id]['progress']['not_found_items'] = len(real_results) - found_items
+                processing_status[tracker_id]['progress']['progress_percentage'] = 100.0
                 
                 # Clean up matching engine process
                 matching_engine.cleanup_process(engine_process_id)

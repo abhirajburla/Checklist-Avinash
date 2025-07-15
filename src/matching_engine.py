@@ -135,7 +135,7 @@ class MatchingEngine:
                     # Use enhanced batch processor with system instructions (synchronous version)
                     try:
                         batch_results = self.enhanced_batch_processor.process_multiple_batches_sync(
-                            batches, cache_id, document_context
+                            batches, cache_id, document_context, tracker_id, self.output_generator
                         )
                         
                         # Process batch results (they are lists of results, not BatchResult objects)
@@ -149,6 +149,12 @@ class MatchingEngine:
                                     self.output_generator.update_progress(
                                         tracker_id, batch_index, batch_result, "processing"
                                     )
+                                    # Also update the global progress tracker dict if needed
+                                    if hasattr(self.output_generator, 'progress_trackers'):
+                                        self.output_generator.progress_trackers[tracker_id]["current_batch"] = batch_index + 1
+                                        self.output_generator.progress_trackers[tracker_id]["status"] = "processing"
+                                        self.output_generator.progress_trackers[tracker_id]["items_processed"] = len(all_results)
+                                        self.output_generator.progress_trackers[tracker_id]["progress_percentage"] = ((batch_index + 1) / len(batch_results)) * 100
                             else:
                                 logger.error(f"Batch {batch_index+1} returned unexpected result type: {type(batch_result)}")
                                 # Update progress with error

@@ -15,7 +15,7 @@ def test_master_checklist_structure():
     print("🔍 Testing Master Checklist Structure...")
     
     try:
-        checklist_path = Path("MASTER TEMP.csv")
+        checklist_path = Path("MASTER_TEMP.csv")
         if not checklist_path.exists():
             print("❌ Master checklist file not found")
             return False
